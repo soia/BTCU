@@ -1,0 +1,7 @@
+/* eslint-disable */
+
+export const GET_MODL = {
+    GET_MODL_REQUEST: 'GET_MODL_REQUEST',
+    GET_MODL_SUCCESS: 'GET_MODL_SUCCESS',
+    GET_MODL_FAILURE: 'GET_MODL_FAILURE',
+};

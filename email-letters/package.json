@@ -1,0 +1,25 @@
+{
+  "name": "email_ieo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:coin": "node_modules/.bin/mjml -w coin.mjml",
+    "dev:ieo": "node_modules/.bin/mjml -w ieo.mjml",
+    "dev:otc-buy": "node_modules/.bin/mjml -w otc-buy.mjml",
+    "dev:otc-sell": "node_modules/.bin/mjml -w otc-sell.mjml",
+    "dev:fortem": "node_modules/.bin/mjml -w fortem.mjml",
+    "dev:dmi-emails": "node_modules/.bin/mjml -w dmi-emails.mjml",
+    "dev:confirm-withdrawal-request": "node_modules/.bin/mjml -w confirm-withdrawal-request.mjml",
+    "dev:login-request": "node_modules/.bin/mjml -w login-request.mjml",
+    "dev:confirm-account-registration": "node_modules/.bin/mjml -w confirm-account-registration.mjml",
+    "dev:confirm-reset-password": "node_modules/.bin/mjml -w confirm-reset-password.mjml",
+    "dev:weekly-update-digest": "node_modules/.bin/mjml -w weekly-update-digest.mjml",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mjml": "^4.4.0-beta.2"
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "home": "Главная",
+    "blockchain": "Блокчейн",
+    "tokens": "Токены",
+    "resources": "Ресурсы",
+    "more": "Больше",
+    "signIn": "Войти",
+    "sponsored": "Спонсор",
+    "learnMore": "Узнать больше",
+    "sponsorText": "Почему BTCU - следующая важная вещь в Explorer",
+    "allFilters": "Все фильтры",
+    "searchBy": "Поиск по адресу/Tx хэшу/блоку/токену",
+    "error": {
+        "wrong_email": "Неверный email"
+    }
+}

@@ -1,0 +1,9 @@
+registration:
+  FIRST_ROW: 'Thank you for signing up to <a href="https://dmicoin.com/" target="_blank" style="font-family: Montserrat, sans-serif;">dmicoin.com</a>!'
+  SECOND_ROW: '<b style="font-family: Montserrat, sans-serif;"><a href="{REGISTRATION_LINK}" style="font-family: Montserrat, sans-serif;">Click here</a></b> to confirm your email address.'
+confirmation:
+  FIRST_ROW: 'Thank you for signing up to <a href="https://dmicoin.com/" target="_blank" style="font-family: Montserrat, sans-serif;">dmicoin.com</a>!'
+  SECOND_ROW: 'Use this code to login: <span style="font-family: Montserrat, sans-serif; font-size: 18px;"><b style="font-family: Montserrat, sans-serif;">{CONFIRMATION_CODE}</b></span>'
+reset-password:
+  FIRST_ROW: 'You are trying to reset your password on <a href="https://dmicoin.com/" target="_blank" style="font-family: Montserrat, sans-serif;">dmicoin.com</a>!'
+  SECOND_ROW: '<b style="font-family: Montserrat, sans-serif;"><a href="{RESET_PASSWORD_LINK}" style="font-family: Montserrat, sans-serif;">Click here</a></b> to change your password.'

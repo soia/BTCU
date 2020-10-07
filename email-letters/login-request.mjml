@@ -1,0 +1,37 @@
+<mjml>
+  <mj-head>
+
+    <mj-include path="./email-comps/email-head.mjml" />
+
+    <mj-title>BTCU Explorer withdrawal request</mj-title>
+  </mj-head>
+  <mj-body background-color="white" width="595px">
+
+    <mj-include path="./email-comps/email-top-section-with-image.mjml" />
+
+    <mj-section>
+      <mj-column>
+        <mj-text font-size="22px" font-weight="300">
+          Login notification mail
+        </mj-text>
+        <mj-text mj-class="txt">
+        We noticed a recent login for your account:
+        </mj-text>
+        <mj-text mj-class="txt">
+        <mj-text class="txt-orange">{IP}</mj-text>
+          <br/>
+          <mj-text class="txt-orange">{DEVICE}</mj-text>
+            <br/>
+          <mj-text class="txt-orange">{TIME}</mj-text>
+        </mj-text>
+
+        <mj-text mj-class="txt">
+          If you did not make this request, it is very important that you contact us immediately.
+        </mj-text>
+
+        <mj-include path="./email-comps/confirm-signature.mjml" />
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

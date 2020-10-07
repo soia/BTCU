@@ -1,0 +1,97 @@
+<mj-attributes>
+  <mj-class name="txt" font-size="16px" font-weight="300" line-height="23px" />
+  <mj-class name="txt-red" color="#D0021B" />
+  <mj-class name="txt-bold" font-weight="bold" />
+  <!-- <mj-class name="txt-underlined" text-decoration="underline" /> -->
+  <mj-class name="button" border-radius="25px" background-color="#FA4868" color="white" height="40px" align="left" />
+  <mj-font name="Montserrat" href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" />
+</mj-attributes>
+<mj-style inline="inline">
+  .txt,
+  .txt div {
+    font-size: 16px;
+    font-weight: 300;
+    text-height: 23px;
+  }
+
+  .txt-14, .txt-14 div {
+    font-size: 14px;
+  }
+
+  .txt-12, .txt-12 div {
+    font-size: 12px;
+  }
+  .txt-grey, .txt-grey div {
+    color: grey;
+  }
+  .txt-bold, .txt-bold div {
+    font-weight: bold;
+  }
+  .txt-main, .txt-main div {
+    color: #FB9112;
+  }
+
+  .txt-underline,
+  .txt-underline div {
+    text-decoration: underline;
+  }
+
+  .txt-orange,
+  .txt-orange div {
+    color: #FA4868
+  }
+
+  .txt-bold,
+  .txt-bold div {
+    font-weight: bold;
+  }
+
+  .txt-black,
+  .txt-black div {
+    color: black;
+  }
+
+  .txt-red,
+  .txt-red div {
+    color: #D0021B;
+  }
+
+  .txt-white,
+  .txt-white div {
+    color: white;
+  }
+
+  .txt-center,
+  .txt-center div {
+    text-align: center;
+  }
+
+  .txt-no-decoration,
+  .txt-no-decoration div {
+    text-decoration: none;
+  }
+
+  .txt-underline,
+  .txt-underline div {
+    text-decoration: underline;
+  }
+
+  .txt-signature,
+  .txt-signature div {
+    opacity: 0.7;
+  }
+
+  .dot {
+      display: inline-block;
+      background-color: #FA4868;
+      border-radius: 50%;
+      border: 3px solid #fcedd3;
+      width: 9px;
+      height: 9px;
+      margin-right: 5px;
+  }
+
+  .table-vertical-align-top {
+      vertical-align: top;
+  }
+</mj-style>

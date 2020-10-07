@@ -1,0 +1,79 @@
+@import '../../assets/styles/variables';
+
+.container {
+    position: relative;
+
+    &__inputWrrapper {
+        display: flex;
+        align-items: center;
+        border-bottom: $desctop1px solid $tolopeaColor;
+
+        @media only screen and (max-width: 499px) {
+            border-bottom: $mobile1px solid $tolopeaColor;
+        }
+
+        &_label {
+            font-family: $Montserrat500;
+            font-size: $desctop19px;
+            line-height: 120%;
+            color: $tolopeaColor;
+            position: absolute;
+            left: $desctop36px;
+            bottom: 0.9vw;
+            transition: color .3s ease,font-size .3s ease,bottom .3s ease,font-weight .3s ease;
+            -webkit-transform: translateZ(0);
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile17px;
+                left: 9.5vw;
+                bottom: 3.5vw;
+            }
+        }
+
+        &_labelActive {
+            bottom: $desctop40px;
+            font-family: $Montserrat500;
+            font-size: $desctop9px;
+
+            @media only screen and (max-width: 499px) {
+                bottom: 11.5vw;
+                font-size: $mobile10px;
+            }
+        }
+
+        &_input {
+            width: 100%;
+            background: none;
+            border: none;
+            outline: none;
+            height: $desctop50px;
+            font-size: $desctop19px;
+            color: $tolopeaColor;
+            padding: 0.5vw 2.3vw 0 $desctop12px;
+            position: relative;
+            z-index: 2;
+
+            @media only screen and (max-width: 499px) {
+                height: $mobile50px;
+                font-size: $mobile17px;
+                padding: 2vw 7.7vw 0 3vw;
+            }
+        }
+    }
+
+    &__eye{
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: $desctop21px;
+        height: $desctop24px;
+
+        @media only screen and (max-width: 499px) {
+            width: $mobile21px;
+            height: $mobile24px;
+        }
+    }
+}

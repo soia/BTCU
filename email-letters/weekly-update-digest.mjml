@@ -1,0 +1,307 @@
+<mjml>
+  <mj-head>
+
+    <mj-include path="./email-comps/email-head.mjml" />
+
+    <mj-style>
+      .txt-thead {
+        font-size: 12px;
+        color: black;
+        opacity: 0.5;
+      }
+
+      .wrapper-comming-soon {
+        margin-top: 25px !important;
+      }
+
+      .card-tr {
+      }
+
+      .card-col-1 { width: 10% }
+      .card-col-2 { width: 45% }
+      .card-col-3 { width: 45% }
+
+      a { color: #FB9112; }
+
+      .card-container {
+        margin-bottom: 10px;
+        display: block;
+        background-color: #f5f5f5;
+      }
+
+      .latest-news-section {
+        background-color: #f5f5f5;
+      }
+
+      .news-card-col-1 { width: 35%; }
+      .news-card-col-2, 
+      .news-card-col-3 { width: 30%; padding-bottom: 10px }
+
+      .latest-news-table-card {
+        
+      }
+
+      .footer-nav-link {
+        text-decoration: none;
+      }
+    </mj-style>
+
+    <mj-title>Coinsbit reset password</mj-title>
+  </mj-head>
+  <mj-body background-color="white" width="660px">
+
+    <!-- TOP HEADER -->
+    <mj-section padding-bottom="0">
+      <mj-column width="25%" vertical-align="middle">
+        <mj-text mj-class="txt">
+          <span>
+            COINSBIT
+          </span>
+        </mj-text>
+      </mj-column>
+      <mj-column padding="0px" width="50%">
+        <mj-text mj-class="txt" font-weight="800" align="center" font-size="14px">
+          Weekly Update Digest
+        </mj-text>
+      </mj-column>
+      <mj-column width="25%" padding="0">
+        <mj-text mj-class="txt" align="right" font-size="12px">
+          <a href="https://coinsbit.io" target="_blank">coinsbit.io</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- COMMON COINSBIT IMAGE -->
+    <mj-include path="./email-comps/email-top-section-with-image.mjml" />
+
+    <!-- TEXT -->
+    <mj-section padding-top="0">
+      <mj-column>
+        <mj-text mj-class="txt" align="center" font-size="12px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+
+    <!-- LISTING BLOCK -->
+    <mj-wrapper padding="0px 25px">
+      <mj-section border="1px solid #dadada" padding-top="10px">
+        <mj-column padding="0 15px">
+
+          <mj-text mj-class="txt" font-size="16px" font-weight="800">
+            New listing on Coinsbit
+          </mj-text>
+
+          <mj-table css-class="card-container">
+            <tr class="card-tr">
+              <td class="card-col-1" rowspan="3">
+                <img src="https://dummyimage.com/22x22/7388ff/fff.jpg" />
+              </td>
+              <td class="card-col-2 txt-thead">Token</td>
+              <td class="card-col-3 txt-thead">Pairs</td>
+            </tr>
+            <tr class="card-tr">
+              <td class="txt txt-14 txt-bold">Ethereum New</td>
+              <td rowspan="2" class="txt-main">
+                <span style="margin-right:10px">ETN/BTC</span>
+                <span style="margin-right:10px">ETN/BTC</span>
+                <span style="margin-right:10px">ETN/BTC</span>
+              </td>
+            </tr>
+            <tr class="card-tr">
+              <td><a href="https://coinsbit.io">More details</a></td>
+            </tr>
+          </mj-table>
+
+          <mj-table css-class="card-container">
+            <tr class="card-tr">
+              <td class="card-col-1" rowspan="3">
+                <img src="https://dummyimage.com/22x22/7388ff/fff.jpg" />
+              </td>
+              <td class="card-col-2 txt-thead">Token</td>
+              <td class="card-col-3 txt-thead">Pairs</td>
+            </tr>
+            <tr class="card-tr">
+              <td class="txt txt-14 txt-bold">Ethereum New</td>
+              <td rowspan="2" class="txt-main">
+                <span style="margin-right:10px">ETN/BTC</span>
+                <span style="margin-right:10px">ETN/BTC</span>
+                <span style="margin-right:10px">ETN/BTC</span>
+              </td>
+            </tr>
+            <tr class="card-tr">
+              <td><a href="https://coinsbit.io">More details</a></td>
+            </tr>
+          </mj-table>
+
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+
+    <!-- COMMING SOON BLOCK -->
+    <mj-wrapper padding="0px 25px" css-class="wrapper-comming-soon">
+      <mj-section border="1px solid #dadada" padding-top="10px">
+        <mj-column padding="0 15px">
+
+          <mj-text mj-class="txt" font-size="16px" font-weight="800">
+            Comming soon on Coinsbit
+          </mj-text>
+
+          <mj-table css-class="card-container">
+            <tr class="card-tr">
+              <td class="card-col-1" rowspan="3">
+                <img src="https://dummyimage.com/22x22/7388ff/fff.jpg" />
+              </td>
+              <td class="card-col-2 txt-thead">Token</td>
+              <td class="card-col-3 txt-thead">Pairs</td>
+            </tr>
+            <tr class="card-tr">
+              <td class="txt txt-14 txt-bold">Ethereum New</td>
+              <td rowspan="2" class="txt-main">
+                <span style="margin-right:10px">ETN/BTC</span>
+                <span style="margin-right:10px">ETN/BTC</span>
+                <span style="margin-right:10px">ETN/BTC</span>
+              </td>
+            </tr>
+            <tr class="card-tr">
+              <td><a href="https://coinsbit.io">More details</a></td>
+            </tr>
+          </mj-table>
+
+          <mj-table css-class="card-container">
+            <tr class="card-tr">
+              <td class="card-col-1" rowspan="3">
+                <img src="https://dummyimage.com/22x22/7388ff/fff.jpg" />
+              </td>
+              <td class="card-col-2 txt-thead">Token</td>
+              <td class="card-col-3 txt-thead">Pairs</td>
+            </tr>
+            <tr class="card-tr">
+              <td class="txt txt-14 txt-bold">Ethereum New</td>
+              <td rowspan="2" class="txt-main">
+                <span style="margin-right:10px">ETN/BTC</span>
+                <span style="margin-right:10px">ETN/BTC</span>
+                <span style="margin-right:10px">ETN/BTC</span>
+              </td>
+            </tr>
+            <tr class="card-tr">
+              <td><a href="https://coinsbit.io">More details</a></td>
+            </tr>
+          </mj-table>
+
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+    <!-- BLOCK WITH NEWS -->
+    <mj-wrapper padding="25px">
+      <mj-section css-class="latest-news-section">
+        <mj-column>
+          <mj-text mj-class="txt" font-size="16px" font-weight="800">
+            New listing on Coinsbit
+          </mj-text>
+
+          <!-- NEWS CARD -->
+          <mj-table css-class="latest-news-table-card">
+            <tr>
+              <td class="news-card-col-1 txt txt-12" rowspan="2">
+                <img src="https://dummyimage.com/168x98/7388ff/fff.jpg" >
+              </td>
+              <td class="news-card-col-2 txt txt-14 txt-bold txt-main">Top Trading Pairs</td>
+              <td class="news-card-col-3 txt txt-12 txt-grey">September, 12 - September, 21</td>
+            </tr>
+            <tr>
+              <td class="txt txt-12" colspan="2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              </td>
+            </tr>
+          </mj-table>
+
+          <!-- NEWS CARD -->
+          <mj-table css-class="latest-news-table-card">
+            <tr>
+              <td class="news-card-col-1 txt txt-12" rowspan="2">
+                <img src="https://dummyimage.com/168x98/7388ff/fff.jpg" >
+              </td>
+              <td class="news-card-col-2 txt txt-14 txt-bold txt-main">Top Trading Pairs</td>
+              <td class="news-card-col-3 txt txt-12 txt-grey">September, 12 - September, 21</td>
+            </tr>
+            <tr>
+              <td class="txt txt-12" colspan="2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              </td>
+            </tr>
+          </mj-table>
+
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+    <!-- DOWNLOAD APPS -->
+    <mj-section>
+      <mj-column>
+        <mj-table width="40%" align="center">
+          <tr>
+            <td style="width:50%">
+              <a href="">
+                <img style="height:34px" src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred_2x.png" >
+              </a>
+            </td>
+            <td style="width:50%">
+              <a href="">
+                <img style="height:34px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1200px-Google_Play_Store_badge_EN.svg.png" >
+              </a>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <!-- SOCIAL -->
+    <mj-section>
+      <mj-column>
+        <mj-social font-size="15px" icon-size="30px" mode="horizontal">
+          <mj-social-element name="twitter" href="https://mjml.io/" />
+          <mj-social-element name="facebook" href="https://mjml.io/" />
+          <mj-social-element name="instagram" href="https://mjml.io/" background-color="#cd0075"/>
+          <mj-social-element href="url" background-color="#cd0075" src="https://image.flaticon.com/icons/png/512/124/124019.png">
+        </mj-social>
+      </mj-column>
+    </mj-section>
+
+    <!-- FOOTER -->
+    <mj-section padding="25px">
+      <mj-column background-color="#413F64" padding-top="30px">
+        <mj-table width="60%" align="center">
+          <tr>
+            <td class="txt txt-white txt-14 txt-bold txt-center">
+              <a href="" class="footer-nav-link txt-white">About</a>
+            </td>
+            <td class="txt txt-white txt-14 txt-bold txt-center">
+              <a href="" class="footer-nav-link txt-white">Product</a>
+            </td>
+            <td class="txt txt-white txt-14 txt-bold txt-center">
+              <a href="" class="footer-nav-link txt-white">Contacts</a>
+            </td>
+            <td class="txt txt-white txt-14 txt-bold txt-center">
+              <a href="" class="footer-nav-link txt-white">Community</a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" class="txt txt-white txt-12 txt-center" style="padding:40px 0 20px">
+              2018-2020 Coinsbit.io. All rights reserved
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <!-- <mj-section>
+      <mj-column>
+          <mj-include path="./email-comps/confirm-signature.mjml" />
+      </mj-column>
+    </mj-section> -->
+  </mj-body>
+</mjml>

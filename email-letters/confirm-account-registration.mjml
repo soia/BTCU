@@ -1,0 +1,49 @@
+<mjml>
+  <mj-head>
+
+    <mj-include path="./email-comps/email-head.mjml" />
+
+    <mj-title>BTCU Explorer account registration</mj-title>
+  </mj-head>
+  <mj-body background-color="white" width="595px">
+
+    <mj-include path="./email-comps/email-top-section-with-image.mjml" />
+
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="txt" font-size="22px">
+          Account Registration
+        </mj-text>
+
+        <mj-text mj-class="txt" font-size="18px" padding="10px 25px 0px">
+         Welcome to BTCU Explorer
+        </mj-text>
+
+        <mj-text mj-class="txt">
+        If you completed our registration form and you were expecting this e-mail, please click the button below to confirm registration:
+        </mj-text>
+
+        <mj-button mj-class="button" href="{CONFIRMATION_LINK}">
+          Confirm Registration
+        </mj-button>
+
+        <mj-text mj-class="txt">
+          If you are unable to confirm by clicking the button above, you may copy the link below into your browser's address bar to confirm:
+        </mj-text>
+
+        <mj-text mj-class="txt" css-class="txt-underline">
+          <a class="" href="{CONFIRMATION_LINK}">
+            {CONFIRMATION_LINK}
+          </a>
+        </mj-text>
+
+        <mj-text mj-class="txt">
+       If you did not make this request, please do not confirm the registration. It is also recommended that you review your e-mail account security as a precaution. If you have any questions or concerns, please feel free to contact our support team.
+        </mj-text>
+
+        <mj-include path="./email-comps/confirm-signature.mjml" />
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

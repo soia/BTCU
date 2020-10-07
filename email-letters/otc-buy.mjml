@@ -1,0 +1,77 @@
+<mjml>
+  <mj-head>
+
+    <mj-include path="./email-comps/email-head.mjml" />
+
+    <mj-title>OTC User Buy Request</mj-title>
+  </mj-head>
+  <mj-body background-color="white" width="595px">
+
+    <mj-include path="./email-comps/email-top-section-with-image.mjml" />
+
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="txt" font-size="22px">
+          OTC User Buy Request
+        </mj-text>
+
+        <mj-text mj-class="txt">
+          You have requested to make a <b>buy crypto</b> order from user:
+        </mj-text>
+
+        <mj-table>
+          <tr>
+            <td class="txt"><b><span>You will receive:</span><span class="txt-orange"> {RECEIVE_VALUE} {RECEIVE_TICKER}</span></b></td>
+            <td class="txt"><b><span>You need to pay:</span> <span class="txt-orange">{TO_PAY_VALUE} {TO_PAY_TICKER}</span></b></td>
+          </tr>
+        </mj-table>
+
+        <mj-text mj-class="txt">
+          Before you confirm the payment, please <b>verify that you have received payment from the user carefully</b>. If you confirm the order, it can’t be canceled. Don’t forget to change your fiat amount after closing this deal!
+        </mj-text>
+
+        <mj-text mj-class="txt">
+          Note some actions by the next cases:
+        </mj-text>
+
+        <mj-table cellpadding="3">
+          <tr>
+            <td class="txt table-vertical-align-top"><span class="dot"></span></td>
+            <td class="txt"><span>If the user doesn’t contact you for a long time, or you think that is not a real deal - please tell us about that, and we will contact the user;</span></td>
+          </tr>
+          <tr>
+            <td class="txt table-vertical-align-top"><span class="dot"></span></td>
+            <td class="txt"><span>If you have any issue - please contact us, and we will fix it ASAP;</span></td>
+          </tr>
+          <tr>
+            <td class="txt table-vertical-align-top"><span class="dot"></span></td>
+            <td class="txt"><span>If you have some advice - please contact us, and we’ll try to make it real!</span></td>
+          </tr>
+        </mj-table>
+        
+        <!-- <mj-text mj-class="txt" padding-right="100px">
+          <span class="dot"></span>
+          <span>If the user doesn’t contact you for a long time, or you think that is not a real deal - please tell us about that, and we will contact the user;</span>
+        </mj-text>
+
+        <mj-text mj-class="txt">
+          <span class="dot"></span>
+          <span>If you have any issue - please contact us, and we will fix it ASAP;</span>
+        </mj-text>
+
+        <mj-text mj-class="txt">
+          <span class="dot"></span>
+          <span>If you have some advice - please contact us, and we’ll try to make it real!</span>
+        </mj-text> -->
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+
+        <mj-include path="./email-comps/confirm-signature.mjml" />
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

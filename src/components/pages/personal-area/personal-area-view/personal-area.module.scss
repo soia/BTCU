@@ -1,0 +1,11 @@
+@import '../../../assets/styles/variables';
+
+.container {
+    flex: 1 1;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    background: $zirconColor;
+}

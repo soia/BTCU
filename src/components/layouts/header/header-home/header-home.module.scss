@@ -1,0 +1,92 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixin';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: $desctop80px;
+    padding: 0 $desctop30px 0 $desctop135px;
+    position: relative;
+
+    &__leftSide,
+    &__rightSide {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: $desctop35px;
+
+        &_img {
+           width: $desctop70px;
+           height: $desctop27px;
+        }
+
+        &_ticker {
+            font-family: $HelveticaNeue500;
+            color: $whiteColor;
+            font-size: $desctop10px;
+            letter-spacing: $desctop1px;
+            text-transform: uppercase;
+            margin-top: $desctop3px;
+        }
+
+        &_price {
+            font-size: $desctop11px;
+            color: $redColor;
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+
+        &_item  {
+            &:not(:last-child) {
+                margin-right: $desctop50px;
+            }
+        }
+
+        &_item > * {
+            font-family: $Montserrat500;
+            color: $whiteColor;
+            font-size: $desctop10px;
+            letter-spacing: $desctop1px;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $redColor;
+            }
+        }
+    }
+
+    &__login {
+        display: flex;
+        align-items: center;
+        margin-right: $desctop40px;
+
+        &:hover > * {
+            transition: all 0.2s;
+
+            color: $redColor;
+            path {
+                fill: $redColor;
+            }
+        }
+
+        & > * {
+            font-family: $Montserrat500;
+            color: $whiteColor;
+            font-size: $desctop10px;
+            letter-spacing: $desctop1px;
+            text-transform: uppercase;
+        }
+
+        &_icon {
+            width: $desctop17px;
+            height: $desctop17px;
+            margin-right: $desctop9px;
+        }
+    }
+}

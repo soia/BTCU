@@ -1,0 +1,114 @@
+<mjml>
+  <mj-head>
+    <mj-style inline="inline">
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+      * {
+        font-family: Montserrat, sans-serif;
+      }
+      .link-nostyle {
+        color: black;
+      }
+    </mj-style>
+    <mj-title>Coinsbit Titan-Coin</mj-title>
+    <mj-font name="Montserrat" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" />
+  </mj-head>
+
+  <mj-body background-color="white">
+    <mj-section padding="0">
+      <mj-column>
+        <mj-image src="https://i.imgur.com/B0b4t5P.png" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0">
+      <mj-column>
+        <mj-text font-weight="bold" padding="20px 0 0px" font-size="22px" align="center" color="#FF9F00" padding="0" font-family="Montserrat, sans-serif">
+          Good day, dear Coinsbit traders!
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0 50px">
+      <mj-column>
+        <mj-text padding="0" font-size="13px" line-height="21px" align="center" font-family="Montserrat, sans-serif">
+          <p>
+            We are pleased to announce that Fortem Capital Token IEO starts on the 4th of July
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="20px 0 0">
+      <mj-column>
+        <mj-image src="https://coinsbit.io/img/projects/3.png" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0 50px">
+      <mj-column>
+        <mj-text padding="30px 0 10px" font-weight="bold" font-size="17px" line-height="17px" align="center" font-family="Montserrat, sans-serif">
+          What is FCQ?
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0 50px">
+      <mj-column>
+        <mj-text padding="0" font-size="13px" line-height="21px" align="center" font-family="Montserrat, sans-serif">
+          <p>
+            Fortem Capital is creating a platform utilizing the blockchain technology, which 
+            will enable investors to benefit from the potential of real estate market, mostly 
+            modernized tenements, post-industrial spaces rearranged into contemporary penthouse 
+            apartments, newly erected buildings or lands. Fortem Capital token (FCQ) can help you 
+            to make a profit from the sales of finished projects through the designated transaction 
+            platform while keeping the right to sell all their tokens on the secondary market.
+          </p>
+          <p>
+            <b>210 000 000.00 FCQ</b>
+            <br> were allocated for the IEO session. Do not miss the 
+            chance to be one of the first investors!
+          </p>
+          <p>
+            Your Coinsbit team.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0">
+      <mj-column>
+        <mj-button height="40px" font-size="15px" font-family="Montserrat, sans-serif" background-color="#FF9F00" color="white" font-weight="bold" text-align="center" href="https://coinsbit.io/ieo-list/FCQ_23">
+          Learn more about FCQ
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-table width="100px" align="center">
+          <tr>
+            <td style="padding:0 10px">
+              <a target="_blank" href="https://t.me/fortemcapital"><img align="center" style="max-width:20px;max-height:20px" height="20px" src="http://coinsbit.io/img/icons/sicial-png/icon_social_1.png" /></a>
+            </td>
+            <td style="padding:0 10px">
+              <a target="_blank" href="https://twitter.com/CapitalFortem"><img align="center" style="max-width:20px;max-height:20px" height="20px" src="https://coinsbit.io/img/icons/sicial-png/icon_social_3.png" /></a>
+            </td>
+            <td style="padding:0 10px">
+              <a target="_blank" href="https://www.facebook.com/Fortemcapitalsa"><img align="center" style="max-width:20px;max-height:20px" height="20px" src="https://coinsbit.io/img/icons/sicial-png/icon_social_4.png" /></a>
+            </td>
+            <td style="padding:0 10px">
+              <a target="_blank" href="https://www.instagram.com/fortemcapitalsa/"><img align="center" style="max-width:20px;max-height:20px" height="20px" src="https://coinsbit.io/img/icons/sicial-png/icon_social_5.png" /></a>
+            </td>
+            <td style="padding:0 10px">
+              <a target="_blank" href="https://www.reddit.com/user/Fortemcapital"><img align="center" style="max-width:20px;max-height:20px" height="20px" src="https://coinsbit.io/img/icons/sicial-png/icon_social_2.png" /></a>
+            </td>
+            <td style="padding:0 10px">
+              <a target="_blank" href="https://medium.com/@CapitalFortem"><img align="center" style="max-width:20px;max-height:20px" height="20px" src="https://coinsbit.io/img/icons/sicial-png/iconmonstr-medium-2.png" /></a>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

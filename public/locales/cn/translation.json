@@ -1,0 +1,16 @@
+{
+    "home": "家",
+    "blockchain": "区块链",
+    "tokens": "代币",
+    "resources": "资源资源",
+    "more": "资源资源",
+    "signIn": "登录",
+    "sponsored": "赞助商",
+    "learnMore": "学到更多",
+    "sponsorText": "为什么BTCU是下一个大问题Explorer",
+    "allFilters": "所有过滤器",
+    "searchBy": "按地址/Txn哈希/块/令牌搜索",
+    "error": {
+        "wrong_email": "不正确的电子邮件"
+    }
+}

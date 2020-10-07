@@ -1,0 +1,16 @@
+{
+    "home": "Home",
+    "blockchain": "Blockchain",
+    "tokens": "Tokens",
+    "resources": "Resources",
+    "more": "More",
+    "signIn": "Sign In",
+    "sponsored": "Sponsored",
+    "learnMore": "Learn More",
+    "sponsorText": "Why BTCU is the next big thing in Explorer",
+    "allFilters": "All filters",
+    "searchBy": "Search by adress/Txn hash/block/token",
+    "error": {
+        "wrong_email": "Incorrect email"
+    }
+}

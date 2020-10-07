@@ -1,0 +1,105 @@
+<mjml>
+  <mj-head>
+    <mj-style inline="inline">
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+      * {
+        font-family: Montserrat, sans-serif;
+      }
+    </mj-style>
+    <mj-title>Coinsbit IEO</mj-title>
+    <mj-font name="Montserrat" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" />
+  </mj-head>
+
+  <mj-body background-color="white">
+    <mj-section padding="0">
+      <mj-column>
+        <mj-image src="https://i.imgur.com/B0b4t5P.png" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="10px 0 0">
+      <mj-column>
+        <mj-text font-weight="bold" font-size="22px" align="center" color="#FF9F00" padding="0" font-family="Montserrat, Helvetica">
+          Greetings Dear Subscriber
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0 50px">
+      <mj-column>
+        <mj-text padding="0" font-size="13px" line-height="21px" align="center" font-family="Montserrat, Helvetica">
+          <p>
+            Let’s begin the week with a look at Coinsbit current progress. 
+            At the moment, we are working on development of IEO Launchpad module.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="20px 0 0">
+      <mj-column>
+        <mj-image src="https://i.imgur.com/Ec0J1PK.png" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0">
+      <mj-column width="80%">
+        <mj-text align="center" font-size="17px" font-weight="bold" line-height="24px" font-family="Montserrat, Helvetica" font-size="15px">
+          What is IEO? 
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0 50px 20px">
+      <mj-column>
+        <mj-text padding="0" font-size="13px" line-height="21px" align="center" font-family="Montserrat, Helvetica">
+          <p>
+            An Initial Exchange Offering (IEO) relies on having an exchange (or set of exchanges) 
+            function as the counter-party. Developers mint the project’s tokens and send them to the 
+            exchange, which will then sell the tokens to individual contributors for Ether. 
+          </p>
+          <p>
+            Subject to the agreement between the developers and the exchange, conditions traditionally 
+            found in an ICO can be emplaced in an IEO. 
+          </p>
+          <p>
+            These conditions include capping the contribution per individual and having a fixed price per token.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0">
+      <mj-column>
+        <mj-button height="40px" font-size="15px" font-family="Helvetica" background-color="#FF9F00" color="white" font-weight="bold" text-align="center" href="https://coinsbit.io">
+          Learn more about IEO
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-table width="100px" align="center">
+          <tr>
+            <td style="padding:0 10px">
+              <a target="_blank" href="https://coinmarketcap.com/exchanges/coinsbit/"><img align="center" width="20px" height="20px" src="https://i.imgur.com/hkWxUGv.png" /></a>
+            </td>
+            <td style="padding:0 10px">
+              <a target="_blank" href="https://t.me/coinsbit_chat"><img align="center" width="20px" height="20px" src="https://i.imgur.com/Q5TTIv7.png" /></a>
+            </td>
+            <td style="padding:0 10px">
+              <a target="_blank" href="https://twitter.com/c0insbit"><img align="center" width="20px" height="20px" src="https://i.imgur.com/4YdLkYM.png" /></a>
+            </td>
+            <td style="padding:0 10px">
+              <a target="_blank" href="https://www.facebook.com/coinsbit.io.cr/"><img align="center" width="20px" height="20px" src="https://i.imgur.com/NYL1QcQ.png" /></a>
+            </td>
+            <td style="padding:0 10px">
+              <a target="_blank" href="https://www.instagram.com/coinsbit.io/"><img align="center" width="20px" height="20px" src="https://i.imgur.com/JrdKHp6.png" /></a>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

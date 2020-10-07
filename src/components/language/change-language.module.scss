@@ -1,0 +1,36 @@
+@import '../assets/styles/variables';
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+
+    &:hover {
+        .container__lang {
+            color: $redColor;
+        }
+    }
+
+    &__flagIcon {
+        width: $desctop22px;
+        height: $desctop22px;
+        border: $desctop2px solid rgba(241, 241, 241, 0.4);
+        border-radius: 50%;
+        box-sizing: content-box;
+    }
+
+    &__lang {
+        font-family: $Montserrat900;
+        font-size: $desctop10px;
+        letter-spacing: $desctop1px;
+        color: $whiteColor;
+        text-transform: uppercase;
+        position: absolute;
+        transform: rotate(-90deg);
+        bottom: -1.5vw;
+        margin-left: $desctop1px;
+        user-select: none;
+        transition: all 0.2s;
+    }
+}
