@@ -9,6 +9,10 @@
     "learnMore": "学到更多",
     "sponsorText": "为什么BTCU是下一个大问题Explorer",
     "allFilters": "所有过滤器",
+    "addresses": "地址",
+    "nameLogs": "名称日志",
+    "labels": "标签",
+    "websites": "网站",
     "searchBy": "按地址/Txn哈希/块/令牌搜索",
     "error": {
         "wrong_email": "不正确的电子邮件"

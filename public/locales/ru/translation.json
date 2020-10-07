@@ -9,6 +9,10 @@
     "learnMore": "Узнать больше",
     "sponsorText": "Почему BTCU - следующая важная вещь в Explorer",
     "allFilters": "Все фильтры",
+    "addresses": "Адреса",
+    "nameLogs": "Логи",
+    "labels": "Лейбл",
+    "websites": "Сайты",
     "searchBy": "Поиск по адресу/Tx хэшу/блоку/токену",
     "error": {
         "wrong_email": "Неверный email"
