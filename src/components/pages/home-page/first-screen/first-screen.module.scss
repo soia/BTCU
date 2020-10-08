@@ -128,7 +128,7 @@
             background: $whiteColor;
             border: $desctop1px solid rgba(36, 36, 68, 0.1);
             border-radius: $desctop17px;
-            padding: $desctop17px $desctop20px;
+            padding: $desctop10px $desctop20px;
             min-width: 8vw;
             opacity: 0;
             user-select: none;
@@ -142,10 +142,7 @@
                 color: $bunkerColor;
                 cursor: pointer;
                 transition: color 0.25s;
-
-                &:not(:last-child) {
-                    margin-bottom: $desctop8px;
-                }
+                padding: $desctop4px 0;
 
                 &:hover {
                     color: $redColor;
