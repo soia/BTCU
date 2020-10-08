@@ -9,7 +9,6 @@ import style from './footer.module.scss';
 
 const Footer = () => {
     const { t } = useTranslation();
-
     return (
         <footer className={style.footer} id="footer">
             <div className={style.footer__top}>
