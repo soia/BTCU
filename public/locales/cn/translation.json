@@ -14,6 +14,15 @@
     "labels": "标签",
     "websites": "网站",
     "searchBy": "搜索依据",
+    "company": "公司",
+    "aboutUs": "关于我们",
+    "advantages": "优点",
+    "airdrop": "Airdrop",
+    "partners": "合作伙伴",
+    "location": "位置",
+    "hongKongChina": "中国香港",
+    "contact": "联系人",
+    "allRightsReserved": "保留所有权利",
     "error": {
         "wrong_email": "不正确的电子邮件"
     }

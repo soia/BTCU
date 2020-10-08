@@ -14,6 +14,15 @@
     "labels": "Labels",
     "websites": "Websites",
     "searchBy": "Search by",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "advantages": "Advantages",
+    "airdrop": "Airdrop",
+    "partners": "Partners",
+    "location": "Location",
+    "hongKongChina": "Hong Kong, China",
+    "contact": "Contact",
+    "allRightsReserved": "All rights reserved",
     "error": {
         "wrong_email": "Incorrect email"
     }

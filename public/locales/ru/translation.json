@@ -14,6 +14,15 @@
     "labels": "Лейбл",
     "websites": "Сайты",
     "searchBy": "Поиск по",
+    "company": "Компания",
+    "aboutUs": "О нас",
+    "advantages": "Преимущества",
+    "airdrop": "Airdrop",
+    "partners": "Партнеры",
+    "location": "Местоположение",
+    "hongKongChina": "Гонконг, Китай",
+    "contact": "Контакт",
+    "allRightsReserved": "Все права защищены",
     "error": {
         "wrong_email": "Неверный email"
     }
