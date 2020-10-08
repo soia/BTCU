@@ -30,6 +30,12 @@
     "viewMore": "Посмотреть больше",
     "viewGrowthChart": "Посмотреть график роста сложности",
     "averageHashRate": "Средняя скорость хеширования",
+    "latestsBlocks": "Последние блоки",
+    "latestsTransactions": "Последние транзакции",
+    "viewAll": "Посмотреть все",
+    "blockReward": "Вознаграждение за блок",
+    "from": "От",
+    "to": "к",
     "error": {
         "wrong_email": "Неверный email"
     }

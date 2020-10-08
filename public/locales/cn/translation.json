@@ -30,6 +30,12 @@
     "viewMore": "查看更多",
     "viewGrowthChart": "查看难度增长图",
     "averageHashRate": "平均哈希率",
+    "latestsBlocks": "最新块",
+    "latestsTransactions": "最新交易",
+    "viewAll": "查看全部",
+    "blockReward": "块奖励",
+    "from": "从",
+    "to": "至",
     "error": {
         "wrong_email": "不正确的电子邮件"
     }

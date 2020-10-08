@@ -30,6 +30,12 @@
     "viewMore": "View more",
     "viewGrowthChart": "View difficulty growth chart",
     "averageHashRate": "Average hash rate",
+    "latestsBlocks": "Latests blocks",
+    "latestsTransactions": "Latests Transactions",
+    "viewAll": "View all",
+    "blockReward": "Block reward",
+    "from": "From",
+    "to": "To",
     "error": {
         "wrong_email": "Incorrect email"
     }
