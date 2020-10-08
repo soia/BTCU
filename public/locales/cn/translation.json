@@ -23,6 +23,13 @@
     "hongKongChina": "中国香港",
     "contact": "联系人",
     "allRightsReserved": "保留所有权利",
+    "price": "价钱",
+    "transactions": "交易次数",
+    "viewHistoricalPrice": "查看历史BTCU价格",
+    "transactionsCounter": "总交易柜台",
+    "viewMore": "查看更多",
+    "viewGrowthChart": "查看难度增长图",
+    "averageHashRate": "平均哈希率",
     "error": {
         "wrong_email": "不正确的电子邮件"
     }

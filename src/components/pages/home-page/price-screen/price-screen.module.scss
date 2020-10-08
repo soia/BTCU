@@ -1,0 +1,78 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixin';
+
+.priceScreen {
+    padding: $desctop45px $desctop135px $desctop30px;
+
+    &__row {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: $desctop30px;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    margin-right: $desctop30px;
+
+    &:first-child {
+        width: 22vw;
+
+        .card__content {
+            max-width: 19vw;
+        }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+        width: 14vw;
+
+        .card__content {
+            max-width: 11vw;
+        }
+    }
+
+    &__icon {
+        width: $desctop40px;
+        height: $desctop40px;
+        margin-right: $desctop11px;
+    }
+
+    &__wrapper {
+        width: 100%;
+    }
+
+    &__title {
+        font-family: $Montserrat500;
+        font-size: $desctop10px;
+        line-height: $desctop10px;
+        letter-spacing: $desctop1px;
+        text-transform: uppercase;
+        color: $redColor;
+        margin-bottom: $desctop4px;
+    }
+
+    &__content {
+        font-family: $Montserrat500;
+        font-size: $desctop16px;
+        color: $tolopeaColor;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &:hover {
+            color: $tolopeaColor;
+
+            .card__content_price {
+                color: $redColor;
+            }
+        }
+
+        &_small {
+            font-size: $desctop12px;
+        }
+    }
+}

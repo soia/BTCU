@@ -23,6 +23,13 @@
     "hongKongChina": "Hong Kong, China",
     "contact": "Contact",
     "allRightsReserved": "All rights reserved",
+    "price": "Price",
+    "transactions": "Transactions",
+    "viewHistoricalPrice": "View historical BTCU price",
+    "transactionsCounter": "Total transactions counter",
+    "viewMore": "View more",
+    "viewGrowthChart": "View difficulty growth chart",
+    "averageHashRate": "Average hash rate",
     "error": {
         "wrong_email": "Incorrect email"
     }

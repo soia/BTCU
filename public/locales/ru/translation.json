@@ -23,6 +23,13 @@
     "hongKongChina": "Гонконг, Китай",
     "contact": "Контакт",
     "allRightsReserved": "Все права защищены",
+    "price": "Цена",
+    "transactions": "Транзакции",
+    "viewHistoricalPrice": "Посмотреть историю цен BTCU",
+    "transactionsCounter": "Общий счетчик транзакций",
+    "viewMore": "Посмотреть больше",
+    "viewGrowthChart": "Посмотреть график роста сложности",
+    "averageHashRate": "Средняя скорость хеширования",
     "error": {
         "wrong_email": "Неверный email"
     }

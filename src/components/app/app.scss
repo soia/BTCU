@@ -374,6 +374,27 @@ input[type='file']::-webkit-file-upload-button {
 
 // wallet-countdown
 
+// tooltip
+.ant-tooltip {
+    max-width: 255px;
+}
+
+.ant-tooltip-inner {
+    background-color: #313162;
+    font-family: "Montserrat500", Arial, Helvetica, sans-serif;
+}
+
+.ant-tooltip-placement-top .ant-tooltip-arrow,
+.ant-tooltip-placement-topLeft .ant-tooltip-arrow,
+.ant-tooltip-placement-topRight .ant-tooltip-arrow {
+    border-top-color: #313162;
+}
+
+.ant-tooltip-arrow::before {
+    background-color: #313162;
+}
+
+// tooltip
 
 header #selectLangeage div:hover {
     color: #fff;
