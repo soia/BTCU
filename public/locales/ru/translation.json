@@ -13,7 +13,7 @@
     "nameLogs": "Логи",
     "labels": "Лейбл",
     "websites": "Сайты",
-    "searchBy": "Поиск по адресу/Tx хэшу/блоку/токену",
+    "searchBy": "Поиск по",
     "error": {
         "wrong_email": "Неверный email"
     }

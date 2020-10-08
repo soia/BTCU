@@ -1,3 +1,5 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
@@ -21,6 +23,7 @@ class FirstScreen extends Component {
 
     state = {
         search: '',
+        filter: this.props.t('allFilters'),
     };
 
     inputOnChange = event => {
@@ -28,17 +31,23 @@ class FirstScreen extends Component {
         this.setState({
             [name]: value,
         });
-    }
+    };
 
     submitSearch = event => {
         event.preventDefault();
         const { search } = this.state;
         console.log(search, 'search');
+    };
+
+    setFilter = filter => {
+        this.setState({
+            filter,
+        });
     }
 
     render() {
         const { t } = this.props;
-        const { search } = this.state;
+        const { search, filter } = this.state;
 
         return (
             <div className={style.firstScreen}>
@@ -50,11 +59,33 @@ class FirstScreen extends Component {
                     <div className={style.filter}>
                         <div className={style.filter__allFilters}>
                             <p className={style.filter__allFilters_text}>
-                                {t('allFilters')}
+                                {filter}
                             </p>
                             <ArrowDownIcon
                                 className={style.filter__allFilters_arrowDown}
                             />
+                            <div className={style.filter__allFilters_menu}>
+                                <ul>
+                                    <li onClick={() => this.setFilter(t('allFilters'))}>
+                                        {t('allFilters')}
+                                    </li>
+                                    <li onClick={() => this.setFilter(t('addresses'))}>
+                                        {t('addresses')}
+                                    </li>
+                                    <li onClick={() => this.setFilter(t('tokens'))}>
+                                        {t('tokens')}
+                                    </li>
+                                    <li onClick={() => this.setFilter(t('nameLogs'))}>
+                                        {t('nameLogs')}
+                                    </li>
+                                    <li onClick={() => this.setFilter(t('labels'))}>
+                                        {t('labels')}
+                                    </li>
+                                    <li onClick={() => this.setFilter(t('websites'))}>
+                                        {t('websites')}
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <form
                             className={style.filter__inputtWrapper}
@@ -65,7 +96,7 @@ class FirstScreen extends Component {
                                 name="search"
                                 value={search}
                                 className={style.filter__inputtWrapper_input}
-                                placeholder={t('searchBy')}
+                                placeholder={`${t('searchBy')} ${filter}`}
                                 onChange={this.inputOnChange}
                             />
                             <button

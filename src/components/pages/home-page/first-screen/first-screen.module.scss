@@ -77,8 +77,10 @@
         align-items: center;
         padding-left: $desctop24px;
         border-right: $desctop1px solid rgba(255, 255, 255, 0.1);
-        height: 80%;
+        height: 100%;
         cursor: pointer;
+        position: relative;
+        min-width: 9.9vw;
 
         &:hover {
             .filter__allFilters_text {
@@ -92,6 +94,14 @@
                     fill: $redColor;
                 }
             }
+
+            .filter__allFilters_menu {
+                transition: transform 0.4s;
+                opacity: 1;
+                user-select: auto;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
         }
 
         &_text {
@@ -99,6 +109,7 @@
             font-size: $desctop13px;
             line-height: $desctop24px;
             color: $whiteColor;
+            margin-right: auto;
             transition: all 0.25s;
         }
 
@@ -107,6 +118,39 @@
             height: $desctop5px;
             margin: 0 $desctop19px;
             transition: all 0.25s;
+        }
+
+        &_menu {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 3.05vw;
+            background: $whiteColor;
+            border: $desctop1px solid rgba(36, 36, 68, 0.1);
+            border-radius: $desctop17px;
+            padding: $desctop17px $desctop20px;
+            min-width: 8vw;
+            opacity: 0;
+            user-select: none;
+            pointer-events: none;
+            transform: translateY(1vw);
+
+            li {
+                font-family: $Montserrat500;
+                font-size: $desctop13px;
+                line-height: $desctop19px;
+                color: $bunkerColor;
+                cursor: pointer;
+                transition: color 0.25s;
+
+                &:not(:last-child) {
+                    margin-bottom: $desctop8px;
+                }
+
+                &:hover {
+                    color: $redColor;
+                }
+            }
         }
     }
 

@@ -13,7 +13,7 @@
     "nameLogs": "Name logs",
     "labels": "Labels",
     "websites": "Websites",
-    "searchBy": "Search by adress/Txn hash/block/token",
+    "searchBy": "Search by",
     "error": {
         "wrong_email": "Incorrect email"
     }

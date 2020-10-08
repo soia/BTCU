@@ -13,7 +13,7 @@
     "nameLogs": "名称日志",
     "labels": "标签",
     "websites": "网站",
-    "searchBy": "按地址/Txn哈希/块/令牌搜索",
+    "searchBy": "搜索依据",
     "error": {
         "wrong_email": "不正确的电子邮件"
     }
