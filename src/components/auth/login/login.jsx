@@ -53,10 +53,6 @@ class Login extends PureComponent {
         captchaToken: '',
     };
 
-    componentWillUnmount() {
-        this.captchaRef.current.resetCaptcha();
-    }
-
     inputOnChange = async event => {
         const { name, value } = event.target;
 
