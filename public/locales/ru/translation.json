@@ -38,7 +38,27 @@
     "to": "к",
     "transactionHistoryInDays": "История транзакций за 14 дней",
     "detailedChart": "Подробная диаграмма",
+    "loginToYourAccount": "Войдите в свой аккаунт",
+    "login": "Логин",
+    "password": "Пароль",
+    "dontHaveAccount": "Нет учетной записи?",
+    "signUp": "Зарегистрироваться",
+    "forgotPassword": "Забыли пароль?",
     "error": {
-        "wrong_email": "Неверный email"
+        "wrong_email": "Неверный email",
+        "one_lowercase_char": "Один строчный латинский символ",
+        "one_upperrcase_char": "Один заглавный латинский символ",
+        "one_number": "Одно число",
+        "one_special_char": "Один специальный символ",
+        "min_length": "Минимум {{digit}} символов",
+        "password_does_not_match": "Пароль не совпадает",
+        "invalid_email_or_password": "Неверный логин или пароль.",
+        "email_already_taken": "Этот электронный адрес уже занят.",
+        "login_already_taken": "Этот логин уже занят.",
+        "invalid_verification_link": "Ссылка на подтверждение не валидна.",
+        "user_is_not_found": "Пользователь не найден.",
+        "invalid_password_recovery_link": "Ссылка на восстановления пароля не валидна.",
+        "passwordNotChanged": "Пароль не изменен",
+        "invalid_withdraw_link": "Ссылка для вывода недействительна."
     }
 }

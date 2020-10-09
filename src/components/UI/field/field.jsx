@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import style from './field.module.scss';
-import visibleIcon from '../../assets/images/inputs-icons/visible_icon.svg';
-import hideIcon from '../../assets/images/inputs-icons/hidden_icon.svg';
+import visibleIcon from '../../assets/images/icons/visible_icon.svg';
+import hideIcon from '../../assets/images/icons/hidden_icon.svg';
 
 class Field extends Component {
     state = {
@@ -61,17 +61,29 @@ class Field extends Component {
             disabled,
             step,
             icon,
+            error,
         } = this.props;
         const { focused, inputType, isVisibleEye } = this.state;
 
-        const labelStyle = focused || value.lenth
+        let labelStyle = focused || value.length
             ? classNames(
                 style.container__inputWrrapper_label,
                 style.container__inputWrrapper_labelActive,
             )
             : style.container__inputWrrapper_label;
 
-        const inputClassNames = classNames(inputStyle, style.container__inputWrrapper_input);
+        labelStyle = error
+            ? classNames(labelStyle, style.container__inputWrrapper_labelError)
+            : labelStyle;
+
+        const inputClassNames = error
+            ? classNames(
+                inputStyle,
+                style.container__inputWrrapper_input,
+                style.container__inputWrrapper_inputError,
+            )
+            : classNames(inputStyle, style.container__inputWrrapper_input);
+
 
         const eye = isVisibleEye ? (
             <img className={style.container__eye} src={hideIcon} alt="icon" />
@@ -95,7 +107,7 @@ class Field extends Component {
                         onChange={onChange}
                         onKeyDown={onKeyDown}
                         name={name}
-                        maxLenth="80"
+                        maxlenth="80"
                         min={min}
                         max={max}
                         autoComplete="new-password"
@@ -121,6 +133,7 @@ Field.defaultProps = {
     step: '',
     onChange: () => {},
     disabled: false,
+    error: false,
     icon: '',
 };
 
@@ -138,6 +151,7 @@ Field.propTypes = {
     step: PropTypes.string,
     inputStyle: PropTypes.string,
     disabled: PropTypes.bool,
+    error: PropTypes.bool,
     icon: PropTypes.any,
 };
 

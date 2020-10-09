@@ -5,6 +5,8 @@ import ScrollToTop from '../../helpers/scroll-to-top';
 import { PageNotFound } from '../pages';
 import HomePage from '../pages/home-page/home-page';
 import Footer from '../layouts/footer';
+import Login from '../auth/login';
+import { loginPath } from '../../constants';
 import '../assets/styles/reset.scss';
 import './app.scss';
 import '../assets/styles/fonts.scss';
@@ -15,6 +17,7 @@ const App = () => (
         <ScrollToTop>
             <Switch>
                 <Route path="/" component={HomePage} exact />
+                <Route path={loginPath} component={Login} exact />
                 <Route component={PageNotFound} />
             </Switch>
             <Footer />

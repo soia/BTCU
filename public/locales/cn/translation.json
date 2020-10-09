@@ -38,7 +38,27 @@
     "to": "至",
     "transactionHistoryInDays": "14天内的交易记录",
     "detailedChart": "详细图表",
+    "loginToYourAccount": "登录到您的帐户",
+    "login": "登录",
+    "password": "密码",
+    "dontHaveAccount": "还没有帐号？",
+    "signUp": "注册",
+    "forgotPassword": "忘记密码？",
     "error": {
-        "wrong_email": "不正确的电子邮件"
+        "wrong_email": "不正确的电子邮件",
+        "one_lowercase_char": "一个拉丁小写字符",
+        "one_upperrcase_char": "一个拉丁大写字符",
+        "one_number": "一个号码",
+        "one_special_char": "一个特殊字符",
+        "min_length": "{{digit}} 最少字符",
+        "password_does_not_match": "密码不匹配",
+        "invalid_email_or_password": "无效的登录名或密码。",
+        "email_already_taken": "该电子邮件地址已被使用。",
+        "login_already_taken": "此登录名已被使用。",
+        "invalid_verification_link": "确认链接无效。",
+        "user_is_not_found": "找不到用户。",
+        "invalid_password_recovery_link": "密码恢复链接无效。",
+        "passwordNotChanged": "密码未更改",
+        "sessionTimedOut.": "会话已超时。"
     }
 }

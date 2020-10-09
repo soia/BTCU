@@ -38,7 +38,27 @@
     "to": "To",
     "transactionHistoryInDays": "Transaction history in 14 days",
     "detailedChart": "Detailed chart",
+    "loginToYourAccount": "Login to your account",
+    "login": "Login",
+    "password": "Password",
+    "dontHaveAccount": "Don't have an account?",
+    "signUp": "Sign up",
+    "forgotPassword": "Forgot password?",
     "error": {
-        "wrong_email": "Incorrect email"
+        "wrong_email": "Incorrect email",
+        "one_lowercase_char": "One latin lowercase character",
+        "one_upperrcase_char": "One latin uppercase character",
+        "one_number": "One number",
+        "one_special_char": "One special character",
+        "min_length": "{{digit}} character minimum",
+        "password_does_not_match": "Password does not match",
+        "invalid_email_or_password": "Invalid login or password.",
+        "email_already_taken": "This email address is already taken.",
+        "login_already_taken": "This login is already taken.",
+        "invalid_verification_link": "Confirmation link is invalid.",
+        "user_is_not_found": "User is not found.",
+        "invalid_password_recovery_link": "Password recovery link is invalid.",
+        "passwordNotChanged": "Password not changed",
+        "sessionTimedOut.": "The session has timed out."
     }
 }

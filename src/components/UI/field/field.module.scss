@@ -6,19 +6,13 @@
     &__inputWrrapper {
         display: flex;
         align-items: center;
-        border-bottom: $desctop1px solid $tolopeaColor;
-
-        @media only screen and (max-width: 499px) {
-            border-bottom: $mobile1px solid $tolopeaColor;
-        }
 
         &_label {
             font-family: $Montserrat500;
-            font-size: $desctop19px;
-            line-height: 120%;
-            color: $tolopeaColor;
+            font-size: $desctop18px;
+            color: $whiteColor;
             position: absolute;
-            left: $desctop36px;
+            left: $desctop16px;
             bottom: 0.9vw;
             transition: color .3s ease,font-size .3s ease,bottom .3s ease,font-weight .3s ease;
             -webkit-transform: translateZ(0);
@@ -31,7 +25,7 @@
         }
 
         &_labelActive {
-            bottom: $desctop40px;
+            bottom: 3.6vw;
             font-family: $Montserrat500;
             font-size: $desctop9px;
 
@@ -41,15 +35,20 @@
             }
         }
 
+        &_labelError {
+            color: $redColor;
+        }
+
         &_input {
             width: 100%;
             background: none;
-            border: none;
+            border: $desctop1px solid rgba(255, 255, 255, 0.1);
+            border-radius: $desctop30px;
             outline: none;
-            height: $desctop50px;
-            font-size: $desctop19px;
-            color: $tolopeaColor;
-            padding: 0.5vw 2.3vw 0 $desctop12px;
+            height: $desctop45px;
+            font-size: $desctop18px;
+            color: $whiteColor;
+            padding: 0 $desctop16px;
             position: relative;
             z-index: 2;
 
@@ -59,12 +58,16 @@
                 padding: 2vw 7.7vw 0 3vw;
             }
         }
+
+        &_inputError {
+            border: $desctop1px solid $redColor;
+        }
     }
 
     &__eye{
         position: absolute;
         z-index: 2;
-        right: 0;
+        right: $desctop16px;
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;

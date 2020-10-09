@@ -3,7 +3,6 @@ import {
     USER_CONSTANTS,
     ERROR_LOGIN_PASSWORD_INVALID,
     ERROR_USER_NOT_VERIFICATION,
-    dashboardPath,
 } from '../constants';
 import { login } from '../services/auth.service';
 import { alertActions } from '.';
@@ -25,7 +24,7 @@ const loginAction = (laginValue, password, captchaToken, history, t) => {
                     localStorage.setItem('user', JSON.stringify(user));
                     dispatch(success(user.data));
                     dispatch(alertActions.success('Authorization successful'));
-                    history.push(`${dashboardPath}`);
+                    history.push('/');
                     store.addNotification({
                         message: t('authorizationSuccessful'),
                         type: 'success',
