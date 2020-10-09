@@ -2,24 +2,33 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { Tooltip } from 'antd';
+import ArrowRightIcon from '../../../assets/images/icons/arrow-right';
 import { compose } from '../../../../utils';
 import logo from '../../../assets/images/icons/btcu-blue-icon.svg';
 import style from './latest-screen.module.scss';
+import Button from '../../../UI/button';
 
 class LatestScreen extends Component {
     static defaultProps = {
         t: () => {},
+        history: {},
     };
 
     static propTypes = {
         t: PropTypes.func,
+        history: PropTypes.object,
     };
 
     state = {};
+
+    pushToAll = () => {
+        const { history } = this.props;
+        history.push('/');
+    };
 
     render() {
         const { t } = this.props;
@@ -104,7 +113,14 @@ class LatestScreen extends Component {
                         <h3 className={style.latest__column_title}>
                             {t('latestsBlocks')}
                         </h3>
-                        <button>{t('viewAll')}</button>
+                        <Button
+                            className={style.latest__header_button}
+                            onClick={this.pushToAll}
+                            type="button"
+                        >
+                            <ArrowRightIcon className={style.latest__header_buttonIcon} />
+                            {t('viewAll')}
+                        </Button>
                     </div>
                     {data.map(item => {
                         const {
@@ -170,7 +186,14 @@ class LatestScreen extends Component {
                         <h3 className={style.latest__column_title}>
                             {t('latestsTransactions')}
                         </h3>
-                        <button>{t('viewAll')}</button>
+                        <Button
+                            className={style.latest__header_button}
+                            onClick={this.pushToAll}
+                            type="button"
+                        >
+                            <ArrowRightIcon className={style.latest__header_buttonIcon} />
+                            {t('viewAll')}
+                        </Button>
                     </div>
                     {data.map(item => {
                         const {
@@ -236,4 +259,4 @@ class LatestScreen extends Component {
     }
 }
 
-export default compose(withTranslation())(LatestScreen);
+export default compose(withTranslation(), withRouter)(LatestScreen);

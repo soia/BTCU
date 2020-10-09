@@ -16,6 +16,20 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: $desctop15px;
+
+        &_button {
+            @include mainBtnStyle;
+            @include filledButton;
+            width: $desctop100px;
+            height: $desctop30px;
+            text-transform: uppercase;
+        }
+
+        &_buttonIcon {
+            width: $desctop6px;
+            height: $desctop6px;
+            margin-right: $desctop4px;
+        }
     }
 }
 

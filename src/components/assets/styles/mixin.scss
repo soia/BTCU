@@ -3,21 +3,16 @@
 @mixin mainBtnStyle {
     cursor: pointer;
     font-family: $Montserrat500;
-    font-size: $desctop18px;
+    font-size: $desctop10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    letter-spacing: 0.1em;
-    padding: $desctop17px $desctop30px;
-    min-width: 13.334vw;
-    height: $desctop60px;
+    letter-spacing: $desctop1px;
     outline: none;
 
     @media only screen and (max-width: 499px) {
-        font-size: $mobile16px;
+        font-size: $mobile10px;
         line-height: 120%;
-        padding: $mobile5px $mobile30px;
-        height: $mobile50px;
     }
 }
 
@@ -83,12 +78,11 @@
 }
 
 @mixin filledButton {
-    border: $desctop2px solid $redColor;
-    box-sizing: border-box;
-    border-radius: $desctop25px;
+    border-radius: $desctop32px;
     transition: all 0.25s;
     color: #fff;
-    background: $redColor;;
+    background: $redColor;
+    border: none;
 
     @media only screen and (max-width: 499px) {
         border: $mobile2px solid $redColor;
@@ -120,25 +114,7 @@
     }
 
     &:hover {
-        color: $redColor;
-        background: transparent;
-        border: $desctop2px solid $redColor;
+        background: rgba(255, 48, 21, 0.5);
         box-shadow: 0px 15px 15px -12px rgba(250, 72, 104, 0.35);
-
-        @media only screen and (max-width: 499px) {
-            border: $mobile2px solid $redColor;;
-        }
-
-        span {
-            svg {
-                fill: $redColor;
-            }
-        }
-
-        svg {
-            path {
-                fill: $redColor;
-            }
-        }
     }
 }
