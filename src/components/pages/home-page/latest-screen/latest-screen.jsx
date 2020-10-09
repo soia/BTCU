@@ -35,70 +35,70 @@ class LatestScreen extends Component {
 
         const data = [
             {
-                number: '0x62a965b2cc',
+                number: '0xw62a965fb2cc',
                 time: '29 secs ago',
                 from: '0x5852b7c16fdc8b45540dc30x5852b7c16fdc8b45540dc3',
                 to: '0xf0a540f934fce68ede99f3g0xf0a540f934fce68ede99f3g',
                 reward: '24.40335',
             },
             {
-                number: '0x62a965b2cc',
+                number: '0xe62a965b2dgcc',
                 time: '29 secs ago',
                 from: '0x5852b7c16fdc8b45540dc30x5852b7c16fdc8b45540dc3',
                 to: '0xf0a540f934fce68ede99f3g0xf0a540f934fce68ede99f3g',
                 reward: '24.40335',
             },
             {
-                number: '0x62a965b2cc',
+                number: '0xw62a3965b2cc',
                 time: '29 secs ago',
                 from: '0x5852b7c16fdc8b45540dc30x5852b7c16fdc8b45540dc3',
                 to: '0xf0a540f934fce68ede99f3g0xf0a540f934fce68ede99f3g',
                 reward: '24.40335',
             },
             {
-                number: '0x62a965b2cc',
+                number: '0x62wa965b2cc',
                 time: '29 secs ago',
                 from: '0x5852b7c16fdc8b45540dc30x5852b7c16fdc8b45540dc3',
                 to: '0xf0a540f934fce68ede99f3g0xf0a540f934fce68ede99f3g',
                 reward: '24.40335',
             },
             {
-                number: '0x62a965b2cc',
+                number: '0xe62a965b2cc',
                 time: '29 secs ago',
                 from: '0x5852b7c16fdc8b45540dc30x5852b7c16fdc8b45540dc3',
                 to: '0xf0a540f934fce68ede99f3g0xf0a540f934fce68ede99f3g',
                 reward: '24.40335',
             },
             {
-                number: '0x62a965b2cc',
+                number: '0x62ar965b2cc',
                 time: '29 secs ago',
                 from: '0x5852b7c16fdc8b45540dc30x5852b7c16fdc8b45540dc3',
                 to: '0xf0a540f934fce68ede99f3g0xf0a540f934fce68ede99f3g',
                 reward: '24.40335',
             },
             {
-                number: '0x62a965b2cc',
+                number: '0x62hafg965b2cc',
                 time: '29 secs ago',
                 from: '0x5852b7c16fdc8b45540dc30x5852b7c16fdc8b45540dc3',
                 to: '0xf0a540f934fce68ede99f3g0xf0a540f934fce68ede99f3g',
                 reward: '24.40335',
             },
             {
-                number: '0x62a965b2cc',
+                number: '0x6h2a965b2cc',
                 time: '29 secs ago',
                 from: '0x5852b7c16fdc8b45540dc30x5852b7c16fdc8b45540dc3',
                 to: '0xf0a540f934fce68ede99f3g0xf0a540f934fce68ede99f3g',
                 reward: '24.40335',
             },
             {
-                number: '0x62a965b2cc',
+                number: '0x62at965b2cc',
                 time: '29 secs ago',
                 from: '0x5852b7c16fdc8b45540dc30x5852b7c16fdc8b45540dc3',
                 to: '0xf0a540f934fce68ede99f3g0xf0a540f934fce68ede99f3g',
                 reward: '24.40335',
             },
             {
-                number: '0x62a965b2cc',
+                number: '0x62ha9ew65b2cc',
                 time: '29 secs ago',
                 from: '0x5852b7c16fdc8b45540dc30x5852b7c16fdc8b45540dc3',
                 to: '0xf0a540f934fce68ede99f3g0xf0a540f934fce68ede99f3g',
@@ -128,7 +128,7 @@ class LatestScreen extends Component {
                         } = item;
 
                         return (
-                            <div className={style.card}>
+                            <div key={number} className={style.card}>
                                 <img className={style.card__logo} src={logo} alt="logo" />
                                 <div className={style.card__item}>
                                     <Link
@@ -201,7 +201,7 @@ class LatestScreen extends Component {
                         } = item;
 
                         return (
-                            <div className={style.card}>
+                            <div key={number} className={style.card}>
                                 <img className={style.card__logo} src={logo} alt="logo" />
                                 <div className={style.card__item}>
                                     <Link

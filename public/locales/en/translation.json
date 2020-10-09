@@ -36,6 +36,8 @@
     "blockReward": "Block reward",
     "from": "From",
     "to": "To",
+    "transactionHistoryInDays": "Transaction history in 14 days",
+    "detailedChart": "Detailed chart",
     "error": {
         "wrong_email": "Incorrect email"
     }

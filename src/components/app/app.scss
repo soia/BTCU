@@ -412,3 +412,28 @@ header #selectLangeage div:hover {
         display: none;
     }
 }
+
+
+// highcharts
+
+.highcharts-background {
+    fill: transparent;
+}
+
+.highcharts-root,
+.highcharts-container  {
+    overflow: visible !important;
+}
+
+.highcharts-root > * {
+    font-family: $Montserrat500 !important;
+}
+
+.highcharts-container text {
+    font-size: $desctop11px !important;
+    line-height: $desctop24px !important;
+    fill: $blackColor !important;
+    text-align: right;
+}
+
+// highcharts

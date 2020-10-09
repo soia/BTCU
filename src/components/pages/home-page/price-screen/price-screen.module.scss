@@ -2,7 +2,8 @@
 @import '../../../assets/styles/mixin';
 
 .priceScreen {
-    padding: $desctop45px $desctop135px $desctop30px;
+    display: flex;
+    padding: 6vw $desctop135px $desctop50px;
     background-color: rgba(247, 248, 248, 0.45);
 
     &__row {
@@ -27,13 +28,21 @@
         }
     }
 
-    &:nth-child(2),
-    &:nth-child(3) {
+    &:nth-child(2) {
         width: 14vw;
 
         .card__content {
             max-width: 11vw;
         }
+    }
+
+    &:nth-child(3) {
+        width: 11vw;
+
+        .card__content {
+            max-width: 11vw;
+        }
+
     }
 
     &__icon {
@@ -74,6 +83,55 @@
 
         &_small {
             font-size: $desctop12px;
+        }
+    }
+}
+
+.highchartsReact {
+    display: flex;
+    position: relative;
+
+    & > div {
+        overflow: visible !important;
+    }
+
+    &__title {
+        font-family: $Montserrat500;
+        font-size: $desctop12px;
+        line-height: $desctop24px;
+        color: $blackColor;
+        text-transform: uppercase;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -3vw;
+        white-space: nowrap;
+    }
+
+    &__subTitle {
+        font-family: $Montserrat500;
+        font-size: $desctop10px;
+        letter-spacing: $desctop1px;
+        color: $redColor;
+        text-transform: uppercase;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -3vw;
+
+        &:hover {
+            color: $redColor;
+            opacity: 0.5;
+        }
+
+        svg {
+            width: $desctop6px;
+            height: $desctop6px;
+            margin-right: $desctop4px;
+
+            path {
+                fill: $redColor;
+            }
         }
     }
 }

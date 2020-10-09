@@ -36,6 +36,8 @@
     "blockReward": "块奖励",
     "from": "从",
     "to": "至",
+    "transactionHistoryInDays": "14天内的交易记录",
+    "detailedChart": "详细图表",
     "error": {
         "wrong_email": "不正确的电子邮件"
     }

@@ -36,6 +36,8 @@
     "blockReward": "Вознаграждение за блок",
     "from": "От",
     "to": "к",
+    "transactionHistoryInDays": "История транзакций за 14 дней",
+    "detailedChart": "Подробная диаграмма",
     "error": {
         "wrong_email": "Неверный email"
     }
