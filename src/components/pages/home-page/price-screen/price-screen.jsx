@@ -35,7 +35,6 @@ class PriceScreen extends Component {
                 spacingBottom: 0,
                 spacingLeft: 0,
                 spacingRight: 10,
-                width: 400,
             },
 
             title: {
