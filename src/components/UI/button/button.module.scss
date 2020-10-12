@@ -13,7 +13,6 @@
     &__disabled {
         user-select: none;
         pointer-events: none;
-        background: #f7f8f8;
-        color: rgba(108, 113, 126, 0.45);
+        opacity: 0.5;
     }
 }

@@ -27,6 +27,7 @@ const Button = props => {
     if (disabled) {
         buttonClassNames = classNames(styles.button, styles.button__disabled, className);
     }
+
     const antIcon = <Icon type="loading" spin />;
 
     return (

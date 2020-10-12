@@ -32,7 +32,7 @@
     }
 
     &__inputContainer {
-        margin-top: $desctop25px;
+        margin-top: $desctop30px;
         position: relative;
 
         @media only screen and (max-width: 499px) {
@@ -62,7 +62,7 @@
         align-items: center;
         position: absolute;
         right: 0;
-        bottom: -1.3vw;
+        bottom: -1.4vw;
 
         @media only screen and (max-width: 499px) {
             bottom: -5.3vw;
@@ -95,106 +95,69 @@
             }
         }
     }
-}
-
-.forgotPassword {
-    display: flex;
-    text-decoration: none;
-    border-bottom: $desctop1px solid $redColor;
-    width: fit-content;
-    cursor: pointer;
-    margin: $desctop25px 0 $desctop50px 0;
-
-    @media only screen and (max-width: 499px) {
-        border-bottom: $mobile1px solid $redColor;
-        margin: $mobile25px 0 $mobile50px 0;
-    }
-
-    &__text {
-        font-family: $Montserrat500;
-        font-size: $desctop19px;
-        line-height: 145%;
-        color: $redColor;
-        transition: 0.25s;
-
-        &:hover {
-            color: $whiteColor;
-        }
-
-        @media only screen and (max-width: 499px) {
-            font-size: $mobile14px;
-        }
-    }
-}
-
-.buttonWrapper {
-    display: flex;
-    align-items: center;
-
-    @media only screen and (max-width: 499px) {
-        flex-direction: column;
-    }
-
-    &__rightSide {
-
-        @media only screen and (max-width: 499px) {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        &_text {
-            font-family: $Montserrat500;
-            font-size: $desctop19px;
-            line-height: 145%;
-            color: $whiteColor;
-            white-space: nowrap;
-
-            @media only screen and (max-width: 499px) {
-                font-size: $mobile14px;
-                margin-right: $mobile5px;
-                margin-bottom: $mobile5px;
-            }
-        }
-
-        &_link {
-            display: inline-block;
-            font-family: $Montserrat500;
-            font-size: $desctop19px;
-            line-height: 145%;
-            color: $redColor;
-            text-decoration: none;
-            border-bottom: $desctop1px solid $redColor;
-            margin-left: $desctop5px;
-            transition: 0.25s;
-
-            &:hover {
-                color: $whiteColor;
-            }
-
-            @media only screen and (max-width: 499px) {
-                font-size: $mobile14px;
-                border-bottom: $mobile1px solid $redColor;
-                margin-left: $mobile5px;
-            }
-        }
-    }
 
     &__button {
-        @include transparentButton;
+        @include filledButton;
         text-transform: uppercase;
-        margin-right: $desctop30px;
+        width: 100%;
+        height: $desctop45px;
+        font-family: $Montserrat900;
+        font-size: $desctop12px;
+        margin-top: $desctop30px;
 
         @media only screen and (max-width: 499px) {
             width: 100%;
             margin: 0 0 $mobile15px 0;
         }
+    }
 
-        &_text {
-            @media only screen and (max-width: 499px) {
-                margin-top: 1.3vw;
-            }
+    &__signUp {
+        @include transparentButton;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        width: 100%;
+        height: $desctop45px;
+        font-family: $Montserrat900;
+        font-size: $desctop12px;
+        margin-bottom: $desctop15px;
+        color: $whiteColor;
+
+        @media only screen and (max-width: 499px) {
+            width: 100%;
+            margin: 0 0 $mobile15px 0;
         }
+    }
+
+    &__dontHaveAccount {
+        font-family: $Montserrat500;
+        font-size: $desctop10px;
+        line-height: $desctop16px;
+        text-align: center;
+        color: $slateGreyColor;
+        margin: $desctop11px 0;
+    }
+}
+
+.forgotPassword {
+    display: flex;
+    cursor: pointer;
+    font-family: $Montserrat500;
+    font-size: $desctop12px;
+    color: $redColor;
+    transition: 0.25s;
+    letter-spacing: $desctop1px;
+    text-transform: uppercase;
+    width: fit-content;
+    margin: 0 auto $desctop30px;
+
+    &:hover {
+        color: $whiteColor;
+    }
+
+    @media only screen and (max-width: 499px) {
+        font-size: $mobile14px;
     }
 }
 

@@ -8,8 +8,9 @@ import { connect } from 'react-redux';
 import { compose } from '../../../utils';
 import Field from '../../UI/field/field';
 import Button from '../../UI/button/button';
+import InfoIcon from '../../assets/images/icons/info_icon';
 import loginAction from '../../../actions/login.actions';
-import { passowrdRecoveryPath } from '../../../constants';
+import { passowrdRecoveryPath, registartionPath } from '../../../constants';
 import style from './login.module.scss';
 import {
     oneLowercaseChar,
@@ -42,11 +43,11 @@ class Login extends PureComponent {
             wrongLogin: '',
         },
         passwordErrors: {
+            minLength: '',
+            oneSpecialChar: '',
+            oneNumber: '',
             oneLowercaseChar: '',
             oneUppercaseChar: '',
-            oneNumber: '',
-            oneSpecialChar: '',
-            minLength: '',
         },
         isDisabled: true,
         isPasswordError: false,
@@ -170,6 +171,7 @@ class Login extends PureComponent {
                         />
                         {wrongLogin ? (
                             <div className={style.form__error}>
+                                <InfoIcon className={style.form__error_icon} />
                                 <p className={style.form__error_text}>
                                     {t('error.min_length', { digit: 2 })}
                                 </p>
@@ -198,21 +200,29 @@ class Login extends PureComponent {
                             </Fragment>
                         ))}
                     </div>
-                    <Link to={passowrdRecoveryPath} className={style.forgotPassword}>
-                        <p className={style.forgotPassword__text}>{t('forgotPassword')}</p>
+                    <Button
+                        type="submit"
+                        disabled={isDisabled}
+                        className={style.form__button}
+                        loading={loading}
+                    >
+                        {t('login')}
+                    </Button>
+                    <p className={style.form__dontHaveAccount}>
+                        {t('dontHaveAccount')}
+                    </p>
+                    <Link
+                        to={registartionPath}
+                        className={style.form__signUp}
+                    >
+                        {t('signUp')}
                     </Link>
-                    <div className={style.buttonWrapper}>
-                        <Button
-                            type="submit"
-                            disabled={isDisabled}
-                            className={style.buttonWrapper__button}
-                            loading={loading}
-                        >
-                            <div className={style.buttonWrapper__button_text}>
-                                {t('next')}
-                            </div>
-                        </Button>
-                    </div>
+                    <Link
+                        to={passowrdRecoveryPath}
+                        className={style.forgotPassword}
+                    >
+                        {t('forgotPassword')}
+                    </Link>
                 </form>
             </div>
         );

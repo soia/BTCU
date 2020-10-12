@@ -65,16 +65,12 @@ class Field extends Component {
         } = this.props;
         const { focused, inputType, isVisibleEye } = this.state;
 
-        let labelStyle = focused || value.length
+        const labelStyle = focused || value.length
             ? classNames(
                 style.container__inputWrrapper_label,
                 style.container__inputWrrapper_labelActive,
             )
             : style.container__inputWrrapper_label;
-
-        labelStyle = error
-            ? classNames(labelStyle, style.container__inputWrrapper_labelError)
-            : labelStyle;
 
         const inputClassNames = error
             ? classNames(
