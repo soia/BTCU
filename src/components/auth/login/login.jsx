@@ -13,6 +13,7 @@ import loginAction from '../../../actions/login.actions';
 import { passowrdRecoveryPath, registartionPath } from '../../../constants';
 import style from './login.module.scss';
 import {
+    emailValid,
     oneLowercaseChar,
     oneUppercaseChar,
     oneNumber,
@@ -35,10 +36,10 @@ class Login extends PureComponent {
     };
 
     state = {
-        login: '',
+        email: '',
         passwordValue: '',
-        loginErrors: {
-            wrongLogin: '',
+        emailErrors: {
+            wrongEmail: '',
         },
         passwordErrors: {
             minLength: '',
@@ -54,8 +55,8 @@ class Login extends PureComponent {
     inputOnChange = async event => {
         const { name, value } = event.target;
 
-        if (name === 'login') {
-            await this.loginValidation(name, value);
+        if (name === 'email') {
+            await this.emailValidation(name, value);
         }
 
         if (name === 'passwordValue') {
@@ -66,25 +67,25 @@ class Login extends PureComponent {
 
         const {
             isPasswordError,
-            loginErrors: { wrongLogin },
-            login,
+            emailErrors: { wrongEmail },
+            email,
             passwordValue,
         } = this.state;
 
-        const isValidForm = login && passwordValue && !isPasswordError && !wrongLogin;
+        const isValidForm = email && passwordValue && !isPasswordError && !wrongEmail;
         this.setState({
             isDisabled: !isValidForm,
         });
     };
 
-    loginValidation = (name, value) => {
+    emailValidation = (name, value) => {
         const { t } = this.props;
         this.setState(state => ({
-            [name]: value,
-            loginErrors: {
-                ...state.loginErrors,
-                wrongLogin:
-                    value.trim().length < 2 ? t('error.min_length', { digit: 2 }) : '',
+            [name]: value.toLowerCase().trim(),
+            emailErrors: {
+                ...state.emailErrors,
+                wrongEmail: emailValid(value) ? t('error.wrong_email') : '',
+                emailLengthError: '',
             },
         }));
     };
@@ -124,18 +125,18 @@ class Login extends PureComponent {
         event.preventDefault();
         const { history, t, dispatch } = this.props;
         const {
-            isDisabled, login, passwordValue,
+            isDisabled, email, passwordValue,
         } = this.state;
         if (!isDisabled) {
-            dispatch(loginAction(login, passwordValue, history, t));
+            dispatch(loginAction(email, passwordValue, history, t));
         }
     };
 
     render() {
         const {
-            login,
+            email,
             passwordValue,
-            loginErrors: { wrongLogin },
+            emailErrors: { wrongEmail },
             isPasswordError,
             passwordErrors,
             isDisabled,
@@ -147,24 +148,24 @@ class Login extends PureComponent {
             : style.passwordErrors;
 
         return (
-            <div className={style.container} id="login">
+            <div className={style.container} id="email">
                 <form className={style.form} onSubmit={this.submitLogin}>
                     <h3 className={style.form__title}>{t('loginToYourAccount')}</h3>
                     <div className={style.form__inputContainer}>
                         <Field
-                            id="login"
+                            id="email"
                             type="text"
-                            name="login"
-                            labelText={t('login')}
-                            value={login}
+                            name="email"
+                            labelText="Email"
+                            value={email}
                             onChange={this.inputOnChange}
-                            error={!!wrongLogin}
+                            error={!!wrongEmail}
                         />
-                        {wrongLogin ? (
+                        {wrongEmail ? (
                             <div className={style.form__error}>
                                 <InfoIcon className={style.form__error_icon} />
                                 <p className={style.form__error_text}>
-                                    {t('error.min_length', { digit: 2 })}
+                                    {wrongEmail}
                                 </p>
                             </div>
                         ) : null}
