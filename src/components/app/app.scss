@@ -38,16 +38,16 @@ input::-webkit-inner-spin-button {
 }
 
 ::-webkit-scrollbar-track {
-    background: #eeeef0;
+    background: #19192D;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888996;
+    background: $ghostColor;
     border-radius: 2.5vw;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #252525;
+    background: $slateGreyColor;
 }
 
 // custom scrollbar

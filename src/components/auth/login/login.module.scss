@@ -11,7 +11,7 @@
 
 .form {
     width: 25.28vw;
-    margin: auto 0;
+    margin: $desctop60px 0;
 
     @media only screen and (max-width: 499px) {
         padding: 0 $mobile15px;
@@ -150,7 +150,7 @@
     letter-spacing: $desctop1px;
     text-transform: uppercase;
     width: fit-content;
-    margin: 0 auto $desctop30px;
+    margin: 0 auto;
 
     &:hover {
         color: $whiteColor;

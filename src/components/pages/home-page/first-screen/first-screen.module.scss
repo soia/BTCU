@@ -44,6 +44,7 @@
         line-height: $desctop24px;
         color: $whiteColor;
         padding-left: $desctop14px;
+        margin-top: $desctop32px;
 
         a {
             color: $redColor;
@@ -61,142 +62,30 @@
 }
 
 .filter {
-    display: flex;
-    align-items: center;
-    border: $desctop1px solid rgba(255, 255, 255, 0.1);
-    border-radius: $desctop30px;
-    width: fit-content;
-    height: $desctop45px;
-    border-radius: $desctop30px;
-    margin-bottom: $desctop32px;
-    position: relative;
-    z-index: 2;
-
-    &__allFilters {
+    &__button {
         display: flex;
         align-items: center;
-        padding-left: $desctop24px;
-        border-right: $desctop1px solid rgba(255, 255, 255, 0.1);
+        justify-content: center;
+        background: $redColor;
+        border-radius: $desctop32px;
+        border: none;
         height: 100%;
+        outline: none;
+        width: $desctop63px;
         cursor: pointer;
-        position: relative;
-        min-width: 9.9vw;
+        transition: all 0.25s;
 
         &:hover {
-            .filter__allFilters_text {
-                color: $redColor;
-            }
-
-            .filter__allFilters_arrowDown {
-                transform: rotate(180deg);
-
-                path {
-                    fill: $redColor;
-                }
-            }
-
-            .filter__allFilters_menu {
-                transition: transform 0.4s;
-                opacity: 1;
-                user-select: auto;
-                pointer-events: auto;
-                transform: translateY(0);
-            }
-        }
-
-        &_text {
-            font-family: $Montserrat500;
-            font-size: $desctop13px;
-            line-height: $desctop24px;
-            color: $whiteColor;
-            margin-right: auto;
-            transition: all 0.25s;
-        }
-
-        &_arrowDown {
-            width: $desctop8px;
-            height: $desctop5px;
-            margin: 0 $desctop19px;
-            transition: all 0.25s;
-        }
-
-        &_menu {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 3.05vw;
-            background: $whiteColor;
-            border: $desctop1px solid rgba(36, 36, 68, 0.1);
-            border-radius: $desctop17px;
-            padding: $desctop10px $desctop20px;
-            min-width: 8vw;
-            opacity: 0;
-            user-select: none;
-            pointer-events: none;
-            transform: translateY(0.5vw);
-
-            li {
-                font-family: $Montserrat500;
-                font-size: $desctop13px;
-                line-height: $desctop19px;
-                color: $bunkerColor;
-                cursor: pointer;
-                transition: color 0.25s;
-                padding: $desctop4px 0;
-
-                &:hover {
-                    color: $redColor;
-                }
-            }
+            opacity: 0.5;
         }
     }
 
-    &__inputtWrapper {
-        display: flex;
-        height: 100%;
+    &__searchIcon {
+        width: $desctop14px;
+        height: $desctop14px;
+    }
 
-        &_input {
-            height: 100%;
-            min-width: 30vw;
-            background-color: transparent;
-            border: none;
-            outline: none;
-            padding-left: $desctop19px;
-            font-family: $Montserrat500;
-            font-size: $desctop13px;
-            line-height: $desctop24px;
-            color: $whiteColor;
-
-            &::placeholder {
-                font-family: $Montserrat500;
-                font-size: $desctop13px;
-                line-height: $desctop24px;
-                color: $whiteColor;
-                opacity: 0.3;
-            }
-        }
-
-        &_button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: $redColor;
-            border-radius: $desctop32px;
-            border: none;
-            height: 100%;
-            outline: none;
-            width: $desctop63px;
-            cursor: pointer;
-            transition: all 0.25s;
-
-            &:hover {
-                opacity: 0.5;
-            }
-        }
-
-        &_searchIcon {
-            width: $desctop14px;
-            height: $desctop14px;
-        }
+    &__input {
+        min-width: 30vw;
     }
 }

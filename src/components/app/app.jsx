@@ -6,6 +6,7 @@ import { PageNotFound } from '../pages';
 import HomePage from '../pages/home-page/home-page';
 import Footer from '../layouts/footer';
 import Login from '../auth/login';
+import HeaderMain from '../layouts/header/header-main';
 import { loginPath } from '../../constants';
 import '../assets/styles/reset.scss';
 import './app.scss';
@@ -15,6 +16,7 @@ import 'react-notifications-component/dist/theme.css';
 const App = () => (
     <Router>
         <ScrollToTop>
+            <HeaderMain />
             <Switch>
                 <Route path="/" component={HomePage} exact />
                 <Route path={loginPath} component={Login} exact />

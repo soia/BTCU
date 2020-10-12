@@ -8,6 +8,7 @@
     height: $desctop80px;
     padding: 0 $desctop30px 0 $desctop135px;
     position: relative;
+    background: $blueGradient;
 
     &__leftSide,
     &__rightSide {
@@ -15,8 +16,14 @@
         align-items: center;
     }
 
+    &__rightSide {
+        &_margin {
+            margin: 0 $desctop10px;;
+        }
+    }
+
     &__logo {
-        margin-right: $desctop35px;
+        margin-right: $desctop10px;
 
         &_img {
            width: $desctop70px;
@@ -30,6 +37,7 @@
             letter-spacing: $desctop1px;
             text-transform: uppercase;
             margin-top: $desctop3px;
+            white-space: nowrap;
         }
 
         &_price {
@@ -45,10 +53,7 @@
         &_item  {
             display: flex;
             align-items: center;
-
-            &:not(:last-child) {
-                margin-right: $desctop50px;
-            }
+            margin-right: $desctop28px;
         }
 
         &_item > * {
@@ -67,7 +72,8 @@
     &__login {
         display: flex;
         align-items: center;
-        margin-right: $desctop40px;
+        margin: 0 $desctop15px 0 0;
+        white-space: nowrap;
 
         &:hover > * {
             transition: all 0.2s;
@@ -91,5 +97,33 @@
             height: $desctop17px;
             margin-right: $desctop9px;
         }
+    }
+}
+
+.filter {
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        height: 100%;
+        outline: none;
+        width: $desctop63px;
+        cursor: pointer;
+        transition: all 0.25s;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__searchIcon {
+        width: $desctop14px;
+        height: $desctop14px;
+    }
+
+    &__input {
+        min-width: 22.46vw;
     }
 }
