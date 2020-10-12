@@ -12,11 +12,7 @@ import fetchResetPasswordAction from '../../../actions/post-reset-password.actio
 import { compose } from '../../../utils';
 import Field from '../../UI/field/field';
 import Button from '../../UI/button/button';
-import LeftSide from '../left-side';
-import RightSide from '../right-side/right-side';
-import InfoIcon from '../../assets/images/menu-icons/info_icon';
-import ConfirmPasswordIcon from '../../assets/images/inputs-icons/confirm-icon';
-import PasswordIcon from '../../assets/images/inputs-icons/password-icon';
+import InfoIcon from '../../assets/images/icons/info_icon';
 import style from './reset-password.module.scss';
 import {
     oneLowercaseChar,
@@ -180,7 +176,6 @@ class ResetPassword extends PureComponent {
             repeatPassword,
             newPasswordErrors,
             isNewPasswordError,
-            isConfirmPasswordError,
             confirmPasswordErrors: { passwordDoesntMatch },
             isDisabled,
         } = this.state;
@@ -190,90 +185,64 @@ class ResetPassword extends PureComponent {
             ? style.container
             : classNames(style.container, style.container__loaded);
 
-        const newPasswordIconStyle = isNewPasswordError
-            ? classNames(
-                style.form__inputContainer_icon,
-                style.form__inputContainer_iconError,
-            )
-            : style.form__inputContainer_icon;
-
-        const confirmPasswordIconStyle = isConfirmPasswordError
-            ? classNames(
-                style.form__inputContainer_icon,
-                style.form__inputContainer_iconError,
-            )
-            : style.form__inputContainer_icon;
-
         const newpasswordErrorStyle = isNewPasswordError
             ? classNames(style.passwordErrors, style.passwordErrors__hasError)
             : style.passwordErrors;
 
         return (
             <div className={containerStyle}>
-                <LeftSide />
-                <RightSide>
-                    <form className={style.form}>
-                        <h3 className={style.form__title}>{t('createNewPassword')}</h3>
-                        <p className={style.form__subTitle}>{t('enterNewPassword')}</p>
-                        <div className={style.form__inputContainer}>
-                            <Field
-                                id="password"
-                                type="password"
-                                name="newPassword"
-                                labelText={t('newPassword')}
-                                value={newPassword}
-                                onChange={this.inputOnChange}
-                                icon={<PasswordIcon className={newPasswordIconStyle} />}
-                            />
-                        </div>
-                        <div className={newpasswordErrorStyle}>
-                            {Object.keys(newPasswordErrors).map((key, index) => (
-                                <Fragment key={index}>
-                                    {newPasswordErrors[key] ? (
-                                        <p className={style.passwordErrors__item}>
-                                            <span className={style.passwordErrors__dot} />
-                                            {newPasswordErrors[key]}
-                                        </p>
-                                    ) : null}
-                                </Fragment>
-                            ))}
-                        </div>
-                        <div className={style.form__inputContainer}>
-                            <Field
-                                id="repeatPassword"
-                                type="password"
-                                name="repeatPassword"
-                                labelText={t('repeatNewPassword')}
-                                value={repeatPassword}
-                                onChange={this.inputOnChange}
-                                icon={(
-                                    <ConfirmPasswordIcon
-                                        className={confirmPasswordIconStyle}
-                                    />
-                                )}
-                            />
-                            {passwordDoesntMatch ? (
-                                <div className={style.form__error}>
-                                    <InfoIcon className={style.form__error_icon} />
-                                    <p className={style.form__error_text}>
-                                        {t('error.password_does_not_match')}
+                <form className={style.form}>
+                    <h3 className={style.form__title}>{t('createNewPassword')}</h3>
+                    <div className={style.form__inputContainer}>
+                        <Field
+                            id="password"
+                            type="password"
+                            name="newPassword"
+                            labelText={t('newPassword')}
+                            value={newPassword}
+                            onChange={this.inputOnChange}
+                        />
+                    </div>
+                    <div className={newpasswordErrorStyle}>
+                        {Object.keys(newPasswordErrors).map((key, index) => (
+                            <Fragment key={index}>
+                                {newPasswordErrors[key] ? (
+                                    <p className={style.passwordErrors__item}>
+                                        <span className={style.passwordErrors__dot} />
+                                        {newPasswordErrors[key]}
                                     </p>
-                                </div>
-                            ) : null}
-                        </div>
-                        <div className={style.buttonWrapper}>
-                            <Button
-                                type="submit"
-                                disabled={isDisabled}
-                                className={style.buttonWrapper__button}
-                                onClick={this.submitNewPassword}
-                                loading={loading}
-                            >
-                                {t('create')}
-                            </Button>
-                        </div>
-                    </form>
-                </RightSide>
+                                ) : null}
+                            </Fragment>
+                        ))}
+                    </div>
+                    <div className={style.form__inputContainer}>
+                        <Field
+                            id="repeatPassword"
+                            type="password"
+                            name="repeatPassword"
+                            labelText={t('repeatNewPassword')}
+                            value={repeatPassword}
+                            onChange={this.inputOnChange}
+                        />
+                        {passwordDoesntMatch ? (
+                            <div className={style.form__error}>
+                                <InfoIcon className={style.form__error_icon} />
+                                <p className={style.form__error_text}>
+                                    {t('error.password_does_not_match')}
+                                </p>
+                            </div>
+                        ) : null}
+                    </div>
+                    <Button
+                        type="submit"
+                        disabled={isDisabled}
+                        className={style.form__button}
+                        onClick={this.submitNewPassword}
+                        loading={loading}
+                    >
+                        {t('create')}
+                    </Button>
+                </form>
             </div>
         );
     }

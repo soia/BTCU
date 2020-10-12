@@ -50,6 +50,10 @@
     "confirm": "Подтвердить",
     "alreadyHaveAccount": "Уже есть аккаунт?",
     "termsAndConditions": "Условиями и положением",
+    "createNewPassword": "Создать новый пароль",
+    "newPassword": "Новый пароль",
+    "repeatNewPassword": "Повторите новый пароль",
+    "create": "Создать",
     "error": {
         "wrong_email": "Неверный email",
         "one_lowercase_char": "Один строчный латинский символ",

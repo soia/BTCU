@@ -50,6 +50,10 @@
     "confirm": "确认",
     "alreadyHaveAccount": "已经有帐号了？",
     "termsAndConditions": "条款和条件",
+    "createNewPassword": "创建新密码",
+    "newPassword": "新密码",
+    "repeatNewPassword": "重复新密码",
+    "create": "创造",
     "error": {
         "wrong_email": "不正确的电子邮件",
         "one_lowercase_char": "一个拉丁小写字符",

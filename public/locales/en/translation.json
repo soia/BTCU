@@ -50,6 +50,10 @@
     "confirm": "Confirm",
     "alreadyHaveAccount": "Already have an account?",
     "termsAndConditions": "Terms and Conditions",
+    "createNewPassword": "Create new password",
+    "newPassword": "New password",
+    "repeatNewPassword": "Repeat new password",
+    "create": "Create",
     "error": {
         "wrong_email": "Incorrect email",
         "one_lowercase_char": "One latin lowercase character",

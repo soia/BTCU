@@ -5,4 +5,5 @@ export * from './locale.constants';
 export * from './pathLocation';
 export * from './post-verification-user.constants';
 export * from './post-password-recovery.constants';
+export * from './post-reset-password.constants';
 export * from './user.constants';
