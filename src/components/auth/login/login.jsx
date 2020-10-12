@@ -20,8 +20,6 @@ import {
 } from '../../../helpers';
 
 class Login extends PureComponent {
-    captchaRef = React.createRef();
-
     static defaultProps = {
         t: () => {},
         dispatch: () => {},
@@ -51,7 +49,6 @@ class Login extends PureComponent {
         },
         isDisabled: true,
         isPasswordError: false,
-        captchaToken: '',
     };
 
     inputOnChange = async event => {
@@ -86,7 +83,8 @@ class Login extends PureComponent {
             [name]: value,
             loginErrors: {
                 ...state.loginErrors,
-                wrongLogin: value.trim().length < 2 ? t('error.min_length', { digit: 2 }) : '',
+                wrongLogin:
+                    value.trim().length < 2 ? t('error.min_length', { digit: 2 }) : '',
             },
         }));
     };
@@ -97,8 +95,12 @@ class Login extends PureComponent {
             [name]: value.trim(),
             passwordErrors: {
                 ...state.passwordErrors,
-                oneLowercaseChar: oneLowercaseChar(value) ? t('error.one_lowercase_char') : '',
-                oneUppercaseChar: oneUppercaseChar(value) ? t('error.one_upperrcase_char') : '',
+                oneLowercaseChar: oneLowercaseChar(value)
+                    ? t('error.one_lowercase_char')
+                    : '',
+                oneUppercaseChar: oneUppercaseChar(value)
+                    ? t('error.one_upperrcase_char')
+                    : '',
                 oneNumber: oneNumber(value) ? t('error.one_number') : '',
                 oneSpecialChar: oneSpecialChar(value) ? t('error.one_special_char') : '',
                 minLength: value.length < 8 ? t('error.min_length', { digit: 8 }) : '',
@@ -120,25 +122,14 @@ class Login extends PureComponent {
 
     submitLogin = event => {
         event.preventDefault();
-        const { isDisabled } = this.state;
-        if (!isDisabled) {
-            this.captchaRef.current.execute();
-        }
-    }
-
-    handleVerificationSuccess = token => {
-        this.setState({
-            captchaToken: token,
-        }, () => {
-            this.sendData();
-        });
-    }
-
-    sendData = () => {
         const { history, t, dispatch } = this.props;
-        const { login, passwordValue, captchaToken } = this.state;
-        dispatch(loginAction(login, passwordValue, captchaToken, history, t));
-    }
+        const {
+            isDisabled, login, passwordValue,
+        } = this.state;
+        if (!isDisabled) {
+            dispatch(loginAction(login, passwordValue, history, t));
+        }
+    };
 
     render() {
         const {
@@ -208,19 +199,11 @@ class Login extends PureComponent {
                     >
                         {t('login')}
                     </Button>
-                    <p className={style.form__dontHaveAccount}>
-                        {t('dontHaveAccount')}
-                    </p>
-                    <Link
-                        to={registartionPath}
-                        className={style.form__signUp}
-                    >
+                    <p className={style.form__dontHaveAccount}>{t('dontHaveAccount')}</p>
+                    <Link to={registartionPath} className={style.form__signUp}>
                         {t('signUp')}
                     </Link>
-                    <Link
-                        to={passowrdRecoveryPath}
-                        className={style.forgotPassword}
-                    >
+                    <Link to={passowrdRecoveryPath} className={style.forgotPassword}>
                         {t('forgotPassword')}
                     </Link>
                 </form>
