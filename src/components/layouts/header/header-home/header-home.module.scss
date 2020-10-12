@@ -9,18 +9,38 @@
     padding: 0 $desctop30px 0 $desctop135px;
     position: relative;
 
+    @media only screen and (max-width: 499px) {
+        height: $mobile70px;
+        padding: 0 $mobile20px 0 $mobile20px;
+    }
+
     &__leftSide,
     &__rightSide {
         display: flex;
         align-items: center;
     }
 
+    &__rightSide {
+        @media only screen and (max-width: 499px) {
+            display: none;
+        }
+
+        &_margin {
+            margin: 0 $desctop10px;
+        }
+    }
+
     &__logo {
         margin-right: $desctop35px;
 
         &_img {
-           width: $desctop70px;
-           height: $desctop27px;
+            width: $desctop70px;
+            height: $desctop27px;
+
+            @media only screen and (max-width: 499px) {
+                width: $mobile70px;
+                height: $mobile28px;
+            }
         }
 
         &_ticker {
@@ -30,11 +50,21 @@
             letter-spacing: $desctop1px;
             text-transform: uppercase;
             margin-top: $desctop3px;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile10px;
+                margin-top: $mobile2px;
+                letter-spacing: $mobile1px;
+            }
         }
 
         &_price {
             font-size: $desctop11px;
             color: $redColor;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile10px;
+            }
         }
     }
 
@@ -42,7 +72,7 @@
         display: flex;
         align-items: center;
 
-        &_item  {
+        &_item {
             display: flex;
             align-items: center;
 
@@ -51,7 +81,7 @@
             }
         }
 
-        &_item > * {
+        &_item>* {
             font-family: $Montserrat500;
             color: $whiteColor;
             font-size: $desctop10px;
@@ -69,16 +99,17 @@
         align-items: center;
         margin-right: $desctop40px;
 
-        &:hover > * {
+        &:hover>* {
             transition: all 0.2s;
 
             color: $redColor;
+
             path {
                 fill: $redColor;
             }
         }
 
-        & > * {
+        &>* {
             font-family: $Montserrat500;
             color: $whiteColor;
             font-size: $desctop10px;
@@ -92,4 +123,31 @@
             margin-right: $desctop9px;
         }
     }
+
+    &__linksWrapper {
+        @media only screen and (max-width: 499px) {
+            display: none;
+        }
+    }
+}
+
+.drawer__opened,
+.drawer__closed {
+    background: #F2F2F2;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: $mobile70px;
+    left: 0;
+    transition: transform 0.5s;
+    padding-top: 5.34vw;
+    z-index: 100;
+}
+
+.drawer__opened {
+    transform: translateX(0);
+}
+
+.drawer__closed {
+    transform: translateX(150vw);
 }

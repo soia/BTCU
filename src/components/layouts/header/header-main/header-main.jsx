@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
+import Burger from 'react-css-burger';
 import withGetService from '../../../hoc/with-get-service';
 import { compose } from '../../../../utils';
 import SearchIcon from '../../../assets/images/icons/search-icon';
@@ -24,45 +25,73 @@ class HeaderMain extends Component {
         location: PropTypes.object,
     };
 
-    state = {};
+    state = {
+        activeBurger: false,
+    };
+
+    toggleBurger = () => {
+        this.setState(state => ({
+            activeBurger: !state.activeBurger,
+        }));
+    };
 
     render() {
-        const { t, location: { pathname } } = this.props;
+        const {
+            t,
+            location: { pathname },
+        } = this.props;
+        const { activeBurger } = this.state;
 
         if (pathname === '/') {
             return null;
         }
+
+        const drawerStyle = activeBurger ? style.drawer__opened : style.drawer__closed;
+        const BurgerMenu = () => (
+            <div className={style.header__burgerMenu}>
+                <Burger
+                    onClick={this.toggleBurger}
+                    active={activeBurger}
+                    burger="spin"
+                    color="white"
+                    marginTop="0"
+                    scale={0.65}
+                />
+                <div className={drawerStyle} />
+            </div>
+        );
 
         return (
             <header className={style.header}>
                 <div className={style.header__leftSide}>
                     <div className={style.header__logo}>
                         <Link to="/">
-                            <img className={style.header__logo_img} src={logo} alt="logo" />
+                            <img
+                                className={style.header__logo_img}
+                                src={logo}
+                                alt="logo"
+                            />
                         </Link>
                         <p className={style.header__logo_ticker}>
-                        BTCU:
+                            BTCU:
                             <span className={style.header__logo_price}>(-0.23%)</span>
                         </p>
                     </div>
-                    <ListOfLinks
-                        classNameList={style.header__links}
-                        classNameItem={style.header__links_item}
-                    />
+                    <div className={style.header__linksWrapper}>
+                        <ListOfLinks
+                            classNameList={style.header__links}
+                            classNameItem={style.header__links_item}
+                        />
+                    </div>
                 </div>
                 <div className={style.header__rightSide}>
                     <Link to={loginPath} className={style.header__login}>
-                        <ProfileIcon
-                            className={style.header__login_icon}
-                        />
+                        <ProfileIcon className={style.header__login_icon} />
                         <p>{t('signIn')}</p>
                     </Link>
                     <SearchFilter
                         button={(
-                            <button
-                                className={style.filter__button}
-                                type="submit"
-                            >
+                            <button className={style.filter__button} type="submit">
                                 <SearchIcon className={style.filter__searchIcon} />
                             </button>
                         )}
@@ -71,6 +100,7 @@ class HeaderMain extends Component {
                     <div className={style.header__rightSide_margin} />
                     <SelectLangeage />
                 </div>
+                <BurgerMenu />
             </header>
         );
     }
