@@ -3,18 +3,15 @@ import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
-import classNames from 'classnames';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import withPostService from '../../hoc/with-post-service';
 import { compose } from '../../../utils';
 import Field from '../../UI/field/field';
 import Button from '../../UI/button/button';
-import LeftSide from '../left-side';
-import RightSide from '../right-side/right-side';
+import { loginPath } from '../../../constants';
 import fetchPasswordRecoveryAction from '../../../actions/post-password-recovery.actions';
-import InfoIcon from '../../assets/images/menu-icons/info_icon';
-import EmailIcon from '../../assets/images/inputs-icons/email-icon';
+import InfoIcon from '../../assets/images/icons/info_icon';
 import style from './password-restore.module.scss';
 import { emailValid } from '../../../helpers';
 
@@ -91,66 +88,41 @@ class PasswordRestore extends Component {
         } = this.state;
         const { t, loading } = this.props;
 
-        const emailIconStyle = wrongEmail
-            ? classNames(
-                style.form__inputContainer_icon,
-                style.form__inputContainer_iconError,
-            )
-            : style.form__inputContainer_icon;
-
         return (
             <div className={style.container}>
-                <LeftSide />
-                <RightSide>
-                    <form className={style.form}>
-                        <h3 className={style.form__title}>{t('forgotPassword')}?</h3>
-                        <p className={style.form__subTitle}>
-                            {t('enterEmailForRestore')}
-                        </p>
-                        <div className={style.form__inputContainer}>
-                            <Field
-                                id="email"
-                                type="email"
-                                name="email"
-                                labelText="Email"
-                                value={email}
-                                onChange={this.inputOnChange}
-                                icon={<EmailIcon className={emailIconStyle} />}
-                            />
-                            {wrongEmail ? (
-                                <div className={style.form__error}>
-                                    <InfoIcon className={style.form__error_icon} />
-                                    <p className={style.form__error_text}>
-                                        {t('error.wrong_email')}
-                                    </p>
-                                </div>
-                            ) : null}
-                        </div>
-                        <div className={style.buttonWrapper}>
-                            <Button
-                                type="submit"
-                                disabled={isDisabled}
-                                className={style.buttonWrapper__button}
-                                onClick={this.submitRestore}
-                                loading={loading}
-                            >
-                                <div className={style.buttonWrapper__button_text}>
-                                    {t('restore')}
-                                </div>
-                            </Button>
-                            <div className={style.buttonWrapper__rightSide}>
-                                <p className={style.buttonWrapper__rightSide_text}>
-                                    <Link
-                                        to="/"
-                                        className={style.buttonWrapper__rightSide_link}
-                                    >
-                                        {t('signIn')}
-                                    </Link>
+                <form className={style.form}>
+                    <h3 className={style.form__title}>{t('forgotPassword')}</h3>
+                    <div className={style.form__inputContainer}>
+                        <Field
+                            id="email"
+                            type="email"
+                            name="email"
+                            labelText="Email"
+                            value={email}
+                            onChange={this.inputOnChange}
+                        />
+                        {wrongEmail ? (
+                            <div className={style.form__error}>
+                                <InfoIcon className={style.form__error_icon} />
+                                <p className={style.form__error_text}>
+                                    {t('error.wrong_email')}
                                 </p>
                             </div>
-                        </div>
-                    </form>
-                </RightSide>
+                        ) : null}
+                    </div>
+                    <Button
+                        type="submit"
+                        disabled={isDisabled}
+                        className={style.form__button}
+                        onClick={this.submitRestore}
+                        loading={loading}
+                    >
+                        {t('restore')}
+                    </Button>
+                    <Link to={loginPath} className={style.signIn}>
+                        {t('signIn')}
+                    </Link>
+                </form>
             </div>
         );
     }
