@@ -5,7 +5,6 @@ import {
     USER_CONSTANTS,
     ERROR_EMAIL_TAKEN,
     ERROR_LOGIN_TAKEN,
-    ERROR_REFERRAL_CODE,
 } from '../constants';
 
 const registrationAction = (user, history, t) => {
@@ -57,8 +56,6 @@ const registrationAction = (user, history, t) => {
                     errorMessage = t('error.email_already_taken');
                 } else if (error.response.data.message === ERROR_LOGIN_TAKEN) {
                     errorMessage = t('error.login_already_taken');
-                } else if (error.response.data.message === ERROR_REFERRAL_CODE) {
-                    errorMessage = t('error.registrationOnlyReferral');
                 } else {
                     errorMessage = error.response.data.message;
                 }

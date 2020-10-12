@@ -57,7 +57,9 @@ const Footer = () => {
             </div>
             <div className={style.footer__bottom}>
                 <p>Prof-IT Blockchain Limited</p>
-                <p>{t('allRightsReserved')}, Bitcoin Ultimatum</p>
+                <p className={style.footer__bottom__right}>
+                    {t('allRightsReserved')}, Bitcoin Ultimatum
+                </p>
             </div>
         </footer>
     );

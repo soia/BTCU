@@ -44,6 +44,12 @@
     "dontHaveAccount": "Нет учетной записи?",
     "signUp": "Зарегистрироваться",
     "forgotPassword": "Забыли пароль?",
+    "username": "Имя пользователя",
+    "confirmPassword": "Подтвердите пароль",
+    "iAgree": "Я согласен с",
+    "confirm": "Подтвердить",
+    "alreadyHaveAccount": "Уже есть аккаунт?",
+    "termsAndConditions": "Условиями и положением",
     "error": {
         "wrong_email": "Неверный email",
         "one_lowercase_char": "Один строчный латинский символ",

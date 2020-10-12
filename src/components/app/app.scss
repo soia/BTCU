@@ -142,7 +142,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color: $tolopeaColor !important;
+    -webkit-text-fill-color: $whiteColor !important;
 }
 
 // change autofill background totransparent
@@ -164,34 +164,28 @@ input[type='file']::-webkit-file-upload-button {
         height: $desctop24px;
 
         @media only screen and (max-width: 499px) {
-            width: $mobile24px;
-            height: $mobile24px;
+            width: $mobile16px;
+            height: $mobile16px;
         }
     }
 
     .ant-checkbox-inner {
         width: $desctop24px;
         height: $desctop24px;
-        border: $desctop1px solid $redColor;
-        border-radius: $desctop8px;
+        border: $desctop1px solid $whiteColor;
+        border-radius: 50%;
         background-color: transparent;
 
         @media only screen and (max-width: 499px) {
-            width: $mobile24px;
-            height: $mobile24px;
-            border: $mobile1px solid $redColor;
-            border-radius: $mobile7px;
+            width: $mobile16px;
+            height: $mobile16px;
+            border: $mobile1px solid $whiteColor;
         }
     }
 }
 
 .ant-checkbox-checked .ant-checkbox-inner {
     background-color: $redColor;
-    box-shadow: 0px $desctop4px $desctop4px rgba(250, 72, 104, 0.45);
-
-    @media only screen and (max-width: 499px) {
-        box-shadow: 0px $mobile5px $mobile5px rgba(250, 72, 104, 0.45);
-    }
 }
 
 .ant-checkbox-wrapper:hover .ant-checkbox-inner,
@@ -206,6 +200,7 @@ input[type='file']::-webkit-file-upload-button {
 
 .ant-checkbox-wrapper {
     display: flex;
+    align-items: center;
 }
 
 .ant-checkbox-checked::after {
@@ -216,7 +211,7 @@ input[type='file']::-webkit-file-upload-button {
     border: 0.14vw solid #fff;
     border-top: 0;
     border-left: 0;
-    top: 40%;
+    top: 48%;
     left: 32%;
     width: 0.4vw;
     height: 0.8vw;
@@ -226,19 +221,19 @@ input[type='file']::-webkit-file-upload-button {
         border-top: 0;
         border-left: 0;
         width: $mobile6px;
-        height: $mobile12px;
+        height: 3vw;
         top: 43%;
-        left: 29%;
+        left: 22%;
     }
 }
 
 .ant-checkbox+span {
-    padding: 0 0 0 $desctop15px;
+    padding: 0 0 0 $desctop10px;
     top: -0.09em;
     position: relative;
 
     @media only screen and (max-width: 499px) {
-        padding: 0 0 0 $mobile15px;
+        padding: 0 0 0 $mobile10px;
     }
 }
 

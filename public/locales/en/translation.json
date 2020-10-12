@@ -44,6 +44,12 @@
     "dontHaveAccount": "Don't have an account?",
     "signUp": "Sign up",
     "forgotPassword": "Forgot password?",
+    "username": "Username",
+    "confirmPassword": "Confirm password",
+    "iAgree": "I agree with",
+    "confirm": "Confirm",
+    "alreadyHaveAccount": "Already have an account?",
+    "termsAndConditions": "Terms and Conditions",
     "error": {
         "wrong_email": "Incorrect email",
         "one_lowercase_char": "One latin lowercase character",

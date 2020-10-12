@@ -6,8 +6,9 @@ import { PageNotFound } from '../pages';
 import HomePage from '../pages/home-page/home-page';
 import Footer from '../layouts/footer';
 import Login from '../auth/login';
+import Registration from '../auth/registration';
 import HeaderMain from '../layouts/header/header-main';
-import { loginPath } from '../../constants';
+import { loginPath, registartionPath } from '../../constants';
 import '../assets/styles/reset.scss';
 import './app.scss';
 import '../assets/styles/fonts.scss';
@@ -20,6 +21,7 @@ const App = () => (
             <Switch>
                 <Route path="/" component={HomePage} exact />
                 <Route path={loginPath} component={Login} exact />
+                <Route path={registartionPath} component={Registration} exact />
                 <Route component={PageNotFound} />
             </Switch>
             <Footer />

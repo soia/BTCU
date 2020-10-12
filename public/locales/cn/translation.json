@@ -44,6 +44,12 @@
     "dontHaveAccount": "还没有帐号？",
     "signUp": "注册",
     "forgotPassword": "忘记密码？",
+    "username": "用户名",
+    "confirmPassword": "确认密码",
+    "iAgree": "我同意",
+    "confirm": "确认",
+    "alreadyHaveAccount": "已经有帐号了？",
+    "termsAndConditions": "条款和条件",
     "error": {
         "wrong_email": "不正确的电子邮件",
         "one_lowercase_char": "一个拉丁小写字符",
