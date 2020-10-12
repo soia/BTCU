@@ -128,6 +128,14 @@
             display: none;
         }
     }
+
+    &__burgerMenu {
+        display: none;
+
+        @media only screen and (max-width: 499px) {
+            display: flex;
+        }
+    }
 }
 
 .filter {
@@ -160,15 +168,15 @@
 
 .drawer__opened,
 .drawer__closed {
-    background: #F2F2F2;
+    background: #f2f2f2;
     height: 100vh;
     width: 100vw;
     position: absolute;
     top: $mobile70px;
     left: 0;
-    transition: transform 0.5s;
     padding-top: 5.34vw;
     z-index: 100;
+    transition: transform 1s ease, top 1s ease;
 }
 
 .drawer__opened {

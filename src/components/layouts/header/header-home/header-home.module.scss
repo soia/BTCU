@@ -129,6 +129,14 @@
             display: none;
         }
     }
+
+    &__burgerMenu {
+        display: none;
+
+        @media only screen and (max-width: 499px) {
+            display: block;
+        }
+    }
 }
 
 .drawer__opened,

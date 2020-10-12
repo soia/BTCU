@@ -14,7 +14,8 @@
     margin: $desctop60px 0;
 
     @media only screen and (max-width: 499px) {
-        padding: 0 $mobile15px;
+        width: 100%;
+        margin: $mobile42px $mobile25px;
     }
 
     &__title {
@@ -25,9 +26,9 @@
         line-height: $desctop34px;
 
         @media only screen and (max-width: 499px) {
-            font-size: $mobile30px;
-            line-height: $mobile30px;
-            margin-bottom: $mobile15px;
+            font-size: $mobile24px;
+            line-height: $mobile34px;
+            margin-bottom: $mobile30px;
         }
     }
 
@@ -36,7 +37,7 @@
         position: relative;
 
         @media only screen and (max-width: 499px) {
-            margin-top: $mobile15px;
+            margin-top: $mobile30px;
         }
 
         &_icon {
@@ -66,7 +67,6 @@
 
         @media only screen and (max-width: 499px) {
             bottom: -5.3vw;
-            align-items: flex-end;
         }
 
         &_icon {
@@ -106,8 +106,9 @@
         margin-top: $desctop30px;
 
         @media only screen and (max-width: 499px) {
-            width: 100%;
-            margin: 0 0 $mobile15px 0;
+            height: $mobile44px;
+            font-size: $mobile12px;
+            margin-top: $mobile30px;
         }
     }
 
@@ -125,8 +126,9 @@
         color: $whiteColor;
 
         @media only screen and (max-width: 499px) {
-            width: 100%;
-            margin: 0 0 $mobile15px 0;
+            height: $mobile44px;
+            font-size: $mobile12px;
+            margin-bottom: $mobile15px;
         }
     }
 
@@ -137,6 +139,12 @@
         text-align: center;
         color: $slateGreyColor;
         margin: $desctop11px 0;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile10px;
+            line-height: $mobile16px;
+            margin: $mobile10px 0;
+        }
     }
 }
 
@@ -157,7 +165,8 @@
     }
 
     @media only screen and (max-width: 499px) {
-        font-size: $mobile14px;
+        font-size: $mobile12px;
+        letter-spacing: $mobile1px;
     }
 }
 

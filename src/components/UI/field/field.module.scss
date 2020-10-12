@@ -18,8 +18,8 @@
             -webkit-transform: translateZ(0);
 
             @media only screen and (max-width: 499px) {
-                font-size: $mobile17px;
-                left: 9.5vw;
+                font-size: $mobile18px;
+                left: $mobile14px;
                 bottom: 3.5vw;
             }
         }
@@ -30,7 +30,7 @@
             font-size: $desctop9px;
 
             @media only screen and (max-width: 499px) {
-                bottom: 11.5vw;
+                bottom: 13vw;
                 font-size: $mobile10px;
             }
         }
@@ -49,9 +49,11 @@
             z-index: 2;
 
             @media only screen and (max-width: 499px) {
-                height: $mobile50px;
-                font-size: $mobile17px;
-                padding: 2vw 7.7vw 0 3vw;
+                border: $mobile1px solid rgba(255, 255, 255, 0.1);
+                border-radius: $mobile30px;
+                height: $mobile44px;
+                font-size: $mobile18px;
+                padding: 0 $mobile44px 0 $mobile14px;
             }
         }
 
@@ -73,6 +75,7 @@
         @media only screen and (max-width: 499px) {
             width: $mobile21px;
             height: $mobile24px;
+            right: $mobile14px;
         }
     }
 }
