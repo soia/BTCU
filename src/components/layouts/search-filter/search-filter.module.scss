@@ -15,7 +15,6 @@
         border: $mobile1px solid rgba(255, 255, 255, 0.1);
         border-radius: $mobile30px;
         height: $mobile44px;
-        width: 100%;
     }
 
     &__allFilters {
@@ -31,7 +30,7 @@
         @media only screen and (max-width: 499px) {
             padding-left: $mobile15px;
             border-right: $mobile1px solid rgba(255, 255, 255, 0.1);
-            min-width: 28vw;
+            width: 28vw;
         }
 
         &:hover {

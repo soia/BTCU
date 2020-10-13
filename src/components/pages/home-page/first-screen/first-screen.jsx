@@ -7,6 +7,7 @@ import SearchFilter from '../../../layouts/search-filter/search-filter';
 import HomeHeader from '../../../layouts/header/header-home';
 import verctor1 from './images/vector1.svg';
 import verctor2 from './images/vector2.svg';
+import mobileVerctor from './images/mobile-vector.svg';
 
 const FirstScreen = () => {
     const { t } = useTranslation();
@@ -36,6 +37,7 @@ const FirstScreen = () => {
             </div>
             <img className={style.firstScreen__vector1} src={verctor1} alt="verctor1" />
             <img className={style.firstScreen__vector2} src={verctor2} alt="verctor2" />
+            <img className={style.firstScreen__vector3} src={mobileVerctor} alt="verctor" />
         </div>
     );
 };

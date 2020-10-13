@@ -13,6 +13,10 @@
     &__vector1,
     &__vector2 {
         position: absolute;
+
+        @media only screen and (max-width: 499px) {
+            display: none;
+        }
     }
 
     &__vector1 {
@@ -30,6 +34,19 @@
         height: 13.334vw;
     }
 
+    &__vector3 {
+        display: none;
+
+        @media only screen and (max-width: 499px) {
+            display: block;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width: 100vw;
+            height: 36vw;
+        }
+    }
+
     &__title {
         font-family: $Montserrat900;
         font-size: $desctop24px;
@@ -38,7 +55,7 @@
 
         @media only screen and (max-width: 499px) {
             font-size: $mobile24px;
-            margin-bottom: $mobile30px;
+            margin: $mobile20px 0 $mobile30px;
         }
 
         span {
@@ -117,6 +134,7 @@
 
         @media only screen and (max-width: 499px) {
             min-width: auto;
+            width: 43.5vw;
         }
     }
 }

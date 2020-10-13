@@ -8,6 +8,7 @@
     height: $desctop80px;
     padding: 0 $desctop30px 0 $desctop135px;
     position: relative;
+    z-index: 2;
 
     @media only screen and (max-width: 499px) {
         height: $mobile70px;
@@ -135,6 +136,7 @@
 
         @media only screen and (max-width: 499px) {
             display: block;
+            transform: translateX($mobile10px);
         }
     }
 }
