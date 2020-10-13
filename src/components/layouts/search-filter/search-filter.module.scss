@@ -9,12 +9,12 @@
     width: fit-content;
     height: $desctop45px;
     position: relative;
-    z-index: 2;
 
     @media only screen and (max-width: 499px) {
         border: $mobile1px solid rgba(255, 255, 255, 0.1);
         border-radius: $mobile30px;
         height: $mobile44px;
+        width: 100%;
     }
 
     &__allFilters {
@@ -30,7 +30,8 @@
         @media only screen and (max-width: 499px) {
             padding-left: $mobile15px;
             border-right: $mobile1px solid rgba(255, 255, 255, 0.1);
-            width: 28vw;
+            width: 35%;
+            min-width: inherit;
         }
 
         &:hover {
@@ -105,7 +106,7 @@
                 border-radius: $mobile17px;
                 padding: $mobile10px;
                 top: 11.8vw;
-                min-width: 28vw;
+                min-width: 35%;
             }
 
             li {
@@ -133,6 +134,10 @@
     &__inputtWrapper {
         display: flex;
         height: 100%;
+
+        @media only screen and (max-width: 499px) {
+            width: 65%;
+        }
 
         &_input {
             height: 100%;

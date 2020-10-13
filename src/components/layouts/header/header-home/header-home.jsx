@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
@@ -37,17 +37,19 @@ class HomeHeader extends Component {
 
         const drawerStyle = activeBurger ? style.drawer__opened : style.drawer__closed;
         const BurgerMenu = () => (
-            <div className={style.header__burgerMenu}>
-                <Burger
-                    onClick={this.toggleBurger}
-                    active={activeBurger}
-                    burger="spin"
-                    color="white"
-                    marginTop="0"
-                    scale={0.65}
-                />
+            <Fragment>
+                <div className={style.header__burgerMenu}>
+                    <Burger
+                        onClick={this.toggleBurger}
+                        active={activeBurger}
+                        burger="spin"
+                        color="white"
+                        marginTop="0"
+                        scale={0.65}
+                    />
+                </div>
                 <div className={drawerStyle} />
-            </div>
+            </Fragment>
         );
 
         return (
