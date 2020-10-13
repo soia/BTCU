@@ -8,9 +8,15 @@
     border-radius: $desctop30px;
     width: fit-content;
     height: $desctop45px;
-    border-radius: $desctop30px;
     position: relative;
     z-index: 2;
+
+    @media only screen and (max-width: 499px) {
+        border: $mobile1px solid rgba(255, 255, 255, 0.1);
+        border-radius: $mobile30px;
+        height: $mobile44px;
+        width: 100%;
+    }
 
     &__allFilters {
         display: flex;
@@ -21,6 +27,12 @@
         cursor: pointer;
         position: relative;
         min-width: 9.9vw;
+
+        @media only screen and (max-width: 499px) {
+            padding-left: $mobile15px;
+            border-right: $mobile1px solid rgba(255, 255, 255, 0.1);
+            min-width: 28vw;
+        }
 
         &:hover {
             .filter__allFilters_text {
@@ -51,6 +63,14 @@
             color: $whiteColor;
             margin-right: auto;
             transition: all 0.25s;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile24px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
         }
 
         &_arrowDown {
@@ -58,6 +78,12 @@
             height: $desctop5px;
             margin: 0 $desctop19px;
             transition: all 0.25s;
+
+            @media only screen and (max-width: 499px) {
+                width: $mobile7px;
+                height: $mobile5px;
+                margin: 0 $mobile10px;
+            }
         }
 
         &_menu {
@@ -75,6 +101,14 @@
             pointer-events: none;
             transform: translateY(0.5vw);
 
+            @media only screen and (max-width: 499px) {
+                border: $mobile1px solid rgba(36, 36, 68, 0.1);
+                border-radius: $mobile17px;
+                padding: $mobile10px;
+                top: 11.8vw;
+                min-width: 28vw;
+            }
+
             li {
                 font-family: $Montserrat500;
                 font-size: $desctop13px;
@@ -83,6 +117,12 @@
                 cursor: pointer;
                 transition: color 0.25s;
                 padding: $desctop4px 0;
+
+                @media only screen and (max-width: 499px) {
+                    font-size: $mobile13px;
+                    line-height: $mobile19px;
+                    padding: $mobile5px 0;
+                }
 
                 &:hover {
                     color: $redColor;
@@ -106,12 +146,23 @@
             line-height: $desctop24px;
             color: $whiteColor;
 
+            @media only screen and (max-width: 499px) {
+                padding: 0 $mobile5px 0 $mobile10px;
+                font-size: $mobile13px;
+                line-height: $mobile24px;
+            }
+
             &::placeholder {
                 font-family: $Montserrat500;
                 font-size: $desctop13px;
                 line-height: $desctop24px;
                 color: $whiteColor;
                 opacity: 0.3;
+
+                @media only screen and (max-width: 499px) {
+                    font-size: $mobile13px;
+                    line-height: $mobile24px;
+                }
             }
         }
     }

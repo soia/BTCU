@@ -6,6 +6,10 @@
     height: $desctop295px;
     position: relative;
 
+    @media only screen and (max-width: 499px) {
+        height: $mobile270px;
+    }
+
     &__vector1,
     &__vector2 {
         position: absolute;
@@ -30,7 +34,12 @@
         font-family: $Montserrat900;
         font-size: $desctop24px;
         color: $whiteColor;
-        margin-bottom: 4.5vw;
+        margin: $mobile10px 0 4.5vw;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile24px;
+            margin-bottom: $mobile30px;
+        }
 
         span {
             color: $redColor;
@@ -44,6 +53,12 @@
         color: $whiteColor;
         margin-top: $desctop32px;
 
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile12px;
+            line-height: $mobile24px;
+            margin-top: $mobile10px;
+        }
+
         a {
             color: $redColor;
 
@@ -56,6 +71,10 @@
 
     &__container {
         padding: 0 $desctop148px $desctop27px;
+
+        @media only screen and (max-width: 499px) {
+            padding: 0 $mobile20px;
+        }
     }
 }
 
@@ -73,6 +92,11 @@
         cursor: pointer;
         transition: all 0.25s;
 
+        @media only screen and (max-width: 499px) {
+            border-radius: $mobile30px;
+            width: $mobile65px;
+        }
+
         &:hover {
             opacity: 0.5;
         }
@@ -81,9 +105,18 @@
     &__searchIcon {
         width: $desctop14px;
         height: $desctop14px;
+
+        @media only screen and (max-width: 499px) {
+            height: $mobile14px;
+            width: $mobile14px;
+        }
     }
 
     &__input {
         min-width: 30vw;
+
+        @media only screen and (max-width: 499px) {
+            min-width: auto;
+        }
     }
 }
