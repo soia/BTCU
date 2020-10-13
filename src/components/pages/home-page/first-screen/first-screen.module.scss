@@ -3,7 +3,7 @@
 
 .firstScreen {
     background: $blueGradient;
-    height: 31.25vw;
+    height: $desctop295px;
     position: relative;
 
     &__vector1,
@@ -12,8 +12,8 @@
     }
 
     &__vector1 {
-        right: 10vw;
-        bottom: 3vw;
+        right: 9vw;
+        bottom: -1.5vw;
         width: 33.5vw;
         height: 21.6vw;
         z-index: 1;
@@ -22,16 +22,15 @@
     &__vector2 {
         left: 0;
         bottom: 0;
-        width: 28.264vw;
-        height: 16.25vw;
+        width: 23.2vw;
+        height: 13.334vw;
     }
 
     &__title {
         font-family: $Montserrat900;
         font-size: $desctop24px;
         color: $whiteColor;
-        margin-bottom: $desctop24px;
-        padding-left: $desctop14px;
+        margin-bottom: 4.5vw;
 
         span {
             color: $redColor;
@@ -43,7 +42,6 @@
         font-size: $desctop12px;
         line-height: $desctop24px;
         color: $whiteColor;
-        padding-left: $desctop14px;
         margin-top: $desctop32px;
 
         a {
@@ -57,7 +55,7 @@
     }
 
     &__container {
-        padding: 6.5vw $desctop148px $desctop124px;
+        padding: 0 $desctop148px $desctop27px;
     }
 }
 

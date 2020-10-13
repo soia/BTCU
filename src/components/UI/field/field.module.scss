@@ -46,7 +46,6 @@
             color: $whiteColor;
             padding: 0 3.4vw 0 $desctop16px;
             position: relative;
-            z-index: 2;
 
             @media only screen and (max-width: 499px) {
                 border: $mobile1px solid rgba(255, 255, 255, 0.1);
@@ -64,7 +63,6 @@
 
     &__eye{
         position: absolute;
-        z-index: 2;
         right: $desctop16px;
         top: 50%;
         transform: translateY(-50%);
