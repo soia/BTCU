@@ -1,7 +1,7 @@
 @import '../../../assets/styles/variables';
 @import '../../../assets/styles/mixin';
 
-.latest {
+.container {
     display: flex;
     justify-content: space-between;
     padding: $desctop45px $desctop135px $desctop30px;
@@ -24,19 +24,73 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: $desctop15px;
+    }
 
-        &_button {
-            @include mainBtnStyle;
-            @include filledButton;
-            width: $desctop100px;
-            height: $desctop30px;
-            text-transform: uppercase;
+    &__wrapper {
+        background: $whiteColor;
+        box-shadow: 0 $desctop4px $desctop6px rgba(0, 0, 0, 0.05);
+        border-radius: $desctop8px;
+        padding: $desctop20px;
+    }
+
+    &__itemZerocoin {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $desctop10px;
+
+        &_labelZerocoin,
+        &_contentZerocoin,
+        &_priceZerocoin {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $midnightExpressColor;
         }
 
-        &_buttonIcon {
-            width: $desctop6px;
-            height: $desctop6px;
-            margin-right: $desctop4px;
+        &_labelZerocoin {
+            width: $desctop100px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        margin-bottom: $desctop10px;
+
+        &_label,
+        &_content,
+        &_link {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $midnightExpressColor;
+        }
+
+        &_link {
+            color: $redColor;
+
+            &:hover {
+                color: $redColor;
+                text-decoration: underline;
+            }
+        }
+
+        &_price {
+            text-align: right;
+        }
+
+        &_label {
+            width: 25%;
+            margin-right: 5%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &_content {
+            width: 70%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 }
