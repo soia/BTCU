@@ -6,6 +6,13 @@
     flex-direction: column;
     cursor: pointer;
 
+    @media only screen and (max-width: 499px) {
+        position: absolute;
+        right: $desctop50px;
+        top: 50%;
+        transform: translateY(calc(-50% - 22vw));
+    }
+
     &:hover {
         .container__lang {
             color: $redColor;
@@ -18,6 +25,11 @@
         border: $desctop2px solid rgba(241, 241, 241, 0.4);
         border-radius: 50%;
         box-sizing: content-box;
+
+        @media only screen and (max-width: 499px) {
+            width: $mobile21px;
+            height: $mobile21px;
+        }
     }
 
     &__lang {
@@ -32,5 +44,13 @@
         margin-left: $desctop1px;
         user-select: none;
         transition: all 0.2s;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile10px;
+            letter-spacing: $mobile1px;
+            bottom: -12.5vw;
+            margin-left: $mobile1px;
+            color: $tolopeaColor;
+        }
     }
 }

@@ -58,11 +58,16 @@ class MobileMenu extends Component {
                 </div>
                 <div className={drawerStyle}>
                     <SelectLangeage />
-                    <ListOfLinks />
-                    <Link to={loginPath} className={style.header__login}>
-                        <ProfileIcon className={style.header__login_icon} />
-                        <p>{t('signIn')}</p>
-                    </Link>
+                    <div className={style.linksWrapper}>
+                        <ListOfLinks
+                            classNameList={style.links}
+                            classNameItem={style.links_item}
+                        />
+                        <Link to={loginPath} className={style.login}>
+                            <ProfileIcon className={style.login_icon} />
+                            <p>{t('signIn')}</p>
+                        </Link>
+                    </div>
                 </div>
             </Fragment>
         );
