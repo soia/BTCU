@@ -98,8 +98,11 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
     margin-top: $desctop20px;
+
+    @media only screen and (max-width: 499px) {
+        margin-top: $mobile20px;
+    }
 
     &__item {
         background: $whiteColor;
@@ -109,16 +112,34 @@
         width: 47.5%;
         margin-bottom: $desctop15px;
 
+        @media only screen and (max-width: 499px) {
+            box-shadow: 0 $mobile2px $mobile6px rgba(0, 0, 0, 0.07);
+            border-radius: $mobile6px;
+            padding: $mobile18px;
+            width: 100%;
+            margin-bottom: $mobile15px;
+        }
+
         &_row {
             display: flex;
             align-items: center;
             margin-bottom: $desctop4px;
+
+            @media only screen and (max-width: 499px) {
+                margin-bottom: $mobile5px;
+            }
         }
 
         &_img {
             width: $desctop24px;
             height: $desctop24px;
             margin-right: $desctop11px;
+
+            @media only screen and (max-width: 499px) {
+                width: $mobile24px;
+                height: $mobile24px;
+                margin-right: $mobile10px;
+            }
         }
 
         &_address {
@@ -129,6 +150,11 @@
             color: $tolopeaColor;
             text-overflow: ellipsis;
             overflow: hidden;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
 
             &:hover {
                 color: $redColor;
@@ -144,6 +170,11 @@
             overflow: hidden;
             display: block;
 
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
+
             &:hover {
                 color: $redColor;
                 text-decoration: underline;
@@ -155,6 +186,11 @@
             font-size: $desctop10px;
             line-height: $desctop19px;
             color: $tolopeaColor;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile10px;
+                line-height: $mobile19px;
+            }
         }
     }
 }
