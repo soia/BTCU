@@ -76,13 +76,31 @@
         &_item {
             display: flex;
             align-items: center;
+            cursor: pointer;
+            position: relative;
+            padding: 0.9vw $desctop25px 0.9vw $desctop25px;
 
-            &:not(:last-child) {
-                margin-right: $desctop50px;
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:hover {
+                .header__subLinks {
+                    transition: transform 0.4s;
+                    opacity: 1;
+                    user-select: auto;
+                    pointer-events: auto;
+                    transform: translate(-50%, 0);
+                }
+
+                & > p,
+                & > a {
+                    color: $redColor;
+                }
             }
         }
 
-        &_item>* {
+        &_item > * {
             font-family: $Montserrat500;
             color: $whiteColor;
             font-size: $desctop10px;
@@ -95,12 +113,16 @@
         }
     }
 
+    &__subLinks {
+        @include sublink;
+    }
+
     &__login {
         display: flex;
         align-items: center;
         margin-right: $desctop40px;
 
-        &:hover>* {
+        &:hover > * {
             transition: all 0.2s;
 
             color: $redColor;
@@ -110,7 +132,7 @@
             }
         }
 
-        &>* {
+        & > * {
             font-family: $Montserrat500;
             color: $whiteColor;
             font-size: $desctop10px;

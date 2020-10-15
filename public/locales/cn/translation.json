@@ -67,6 +67,10 @@
     "lastReceived": "最后收到",
     "balance": "平衡",
     "nothingFound": "没有发现",
+    "сhartsStats": "图表和统计",
+    "topStatistics": "热门统计",
+    "BTCUDirectory": "BTCU目录",
+    "exploredApps": "Explore dApps",
     "error": {
         "wrong_email": "不正确的电子邮件",
         "one_lowercase_char": "一个拉丁小写字符",

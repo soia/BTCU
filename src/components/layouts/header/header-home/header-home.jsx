@@ -28,6 +28,7 @@ const HomeHeader = () => {
                     <ListOfLinks
                         classNameList={style.header__links}
                         classNameItem={style.header__links_item}
+                        classNameSubLinks={style.header__subLinks}
                     />
                 </div>
             </div>

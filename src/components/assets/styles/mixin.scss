@@ -116,3 +116,34 @@
         background: rgba(255, 48, 21, 0.5);
     }
 }
+
+@mixin sublink {
+    position: absolute;
+    background: $whiteColor;
+    border: $desctop1px solid rgba(36, 36, 68, 0.1);
+    border-radius: $desctop17px;
+    padding: $desctop10px;
+    top: 2.5vw;
+    left: 50%;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    transform: translate(-50%, 0.5vw);
+
+    a {
+        font-family: $Montserrat500;
+        font-size: $desctop10px;
+        line-height: $desctop10px;
+        letter-spacing: $desctop1px;
+        text-transform: uppercase;
+        color: $tolopeaColor;
+        display: flex;
+        white-space: nowrap;
+        justify-content: center;
+        padding: $desctop10px;
+
+        &:hover {
+            color: $redColor;
+        }
+    }
+}

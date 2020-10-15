@@ -67,6 +67,10 @@
     "lastReceived": "Last Received",
     "balance": "Balance",
     "nothingFound": "Nothing found",
+    "сhartsStats": "Charts & Stats",
+    "topStatistics": "Top Statistics",
+    "BTCUDirectory": "BTCU Directory",
+    "exploredApps": "Explore dApps",
     "error": {
         "wrong_email": "Incorrect email",
         "one_lowercase_char": "One latin lowercase character",

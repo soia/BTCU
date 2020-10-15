@@ -77,7 +77,28 @@
         &_item {
             display: flex;
             align-items: center;
-            margin-right: $desctop28px;
+            cursor: pointer;
+            position: relative;
+            padding: 0.9vw $desctop25px 0.9vw $desctop25px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:hover {
+                .header__subLinks {
+                    transition: transform 0.4s;
+                    opacity: 1;
+                    user-select: auto;
+                    pointer-events: auto;
+                    transform: translate(-50%, 0);
+                }
+
+                & > p,
+                & > a {
+                    color: $redColor;
+                }
+            }
         }
 
         &_item > * {
@@ -91,6 +112,10 @@
                 color: $redColor;
             }
         }
+    }
+
+    &__subLinks {
+        @include sublink;
     }
 
     &__login {

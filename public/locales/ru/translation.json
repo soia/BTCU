@@ -67,6 +67,10 @@
     "lastReceived": "Последнее получение",
     "balance": "Баланс",
     "nothingFound": "Ничего не найдено",
+    "сhartsStats": "Cтатистика",
+    "topStatistics": "Топ статистика",
+    "BTCUDirectory": "Каталог BTCU",
+    "exploredApps": "Explore dApps",
     "error": {
         "wrong_email": "Неверный email",
         "one_lowercase_char": "Один строчный латинский символ",
