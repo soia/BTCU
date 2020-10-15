@@ -63,6 +63,10 @@
     "totalMoneySupply": "Total money Supply",
     "masternodeCount": "Masternode Count",
     "nextSuperblock": "Next Superblock",
+    "searchResults": "Search Results",
+    "lastReceived": "Last Received",
+    "balance": "Balance",
+    "nothingFound": "Nothing found",
     "error": {
         "wrong_email": "Incorrect email",
         "one_lowercase_char": "One latin lowercase character",

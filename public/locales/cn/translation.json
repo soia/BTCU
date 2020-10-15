@@ -63,6 +63,10 @@
     "totalMoneySupply": "总货币供应",
     "masternodeCount": "主节点计数",
     "nextSuperblock": "下一个超级街区",
+    "searchResults": "搜索结果",
+    "lastReceived": "最后收到",
+    "balance": "平衡",
+    "nothingFound": "没有发现",
     "error": {
         "wrong_email": "不正确的电子邮件",
         "one_lowercase_char": "一个拉丁小写字符",

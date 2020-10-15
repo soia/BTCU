@@ -63,6 +63,10 @@
     "totalMoneySupply": "Общая денежная масса",
     "masternodeCount": "Количество мастерноды",
     "nextSuperblock": "Следующий суперблок",
+    "searchResults": "Результаты поиска",
+    "lastReceived": "Последнее получение",
+    "balance": "Баланс",
+    "nothingFound": "Ничего не найдено",
     "error": {
         "wrong_email": "Неверный email",
         "one_lowercase_char": "Один строчный латинский символ",

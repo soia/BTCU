@@ -4,6 +4,7 @@ import ReactNotification from 'react-notifications-component';
 import ScrollToTop from '../../helpers/scroll-to-top';
 import { PageNotFound } from '../pages';
 import HomePage from '../pages/home-page/home-page';
+import SearchPage from '../pages/search-page';
 import Footer from '../layouts/footer';
 import Login from '../auth/login';
 import Registration from '../auth/registration';
@@ -13,6 +14,7 @@ import {
     registartionPath,
     passowrdRecoveryPath,
     resetPasswordPath,
+    searchPath,
 } from '../../constants';
 import '../assets/styles/reset.scss';
 import './app.scss';
@@ -20,6 +22,7 @@ import '../assets/styles/fonts.scss';
 import 'react-notifications-component/dist/theme.css';
 import PasswordRestore from '../auth/password-restore';
 import ResetPassword from '../auth/reset-password';
+
 
 const App = () => (
     <Router>
@@ -31,6 +34,7 @@ const App = () => (
                 <Route path={registartionPath} component={Registration} exact />
                 <Route path={passowrdRecoveryPath} component={PasswordRestore} exact />
                 <Route path={resetPasswordPath} component={ResetPassword} exact />
+                <Route path={searchPath} component={SearchPage} exact />
                 <Route component={PageNotFound} />
             </Switch>
             <Footer />

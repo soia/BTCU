@@ -13,6 +13,14 @@
         transform: translateY(calc(-50% - 22vw));
     }
 
+    &__hideOnDesctop {
+        display: none;
+
+        @media only screen and (max-width: 499px) {
+            display: flex;
+        }
+    }
+
     &:hover {
         .container__lang {
             color: $redColor;

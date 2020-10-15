@@ -3,22 +3,28 @@
 import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 import classNames from 'classnames';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import style from './search-filter.module.scss';
+import { searchPath } from '../../../constants/pathLocation';
 import { compose } from '../../../utils';
 import ArrowDownIcon from '../../assets/images/icons/arrow-down-icon';
+import style from './search-filter.module.scss';
 
 class SearchFilter extends Component {
     static defaultProps = {
         t: () => {},
         button: {},
+        history: {},
         inputClassName: '',
+        filterClassName: '',
     };
 
     static propTypes = {
         t: PropTypes.func,
         button: PropTypes.object,
+        history: PropTypes.object,
         inputClassName: PropTypes.string,
+        filterClassName: PropTypes.string,
     };
 
     state = {
@@ -35,7 +41,9 @@ class SearchFilter extends Component {
 
     submitSearch = event => {
         event.preventDefault();
+        const { history } = this.props;
         const { search } = this.state;
+        history.push(searchPath);
         console.log(search, 'search');
     };
 
@@ -43,25 +51,25 @@ class SearchFilter extends Component {
         this.setState({
             filter,
         });
-    }
+    };
 
     render() {
-        const { t, button, inputClassName } = this.props;
+        const {
+            t, button, inputClassName, filterClassName,
+        } = this.props;
         const { search, filter } = this.state;
 
         const inputStyle = inputClassName
             ? classNames(style.filter__inputtWrapper_input, inputClassName)
             : style.filter__inputtWrapper_input;
 
+        const containerStyle = classNames(style.filter, filterClassName);
+
         return (
-            <div className={style.filter}>
+            <div className={containerStyle}>
                 <div className={style.filter__allFilters}>
-                    <p className={style.filter__allFilters_text}>
-                        {filter}
-                    </p>
-                    <ArrowDownIcon
-                        className={style.filter__allFilters_arrowDown}
-                    />
+                    <p className={style.filter__allFilters_text}>{filter}</p>
+                    <ArrowDownIcon className={style.filter__allFilters_arrowDown} />
                     <div className={style.filter__allFilters_menu}>
                         <ul>
                             <li onClick={() => this.setFilter(t('allFilters'))}>
@@ -104,4 +112,4 @@ class SearchFilter extends Component {
     }
 }
 
-export default compose(withTranslation())(SearchFilter);
+export default compose(withTranslation(), withRouter)(SearchFilter);

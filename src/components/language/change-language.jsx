@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
+import classNames from 'classnames';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { compose } from '../../utils';
 import i18n from '../../i18n';
@@ -26,7 +28,10 @@ class SelectLangeage extends Component {
     };
 
     render() {
-        const { locale } = this.props;
+        const {
+            locale,
+            location: { pathname },
+        } = this.props;
         let nameLocale = '';
         let flagLocale = '';
         let nextLang = '';
@@ -49,6 +54,10 @@ class SelectLangeage extends Component {
             nextLang = 'ru';
         }
 
+        const langStyle = pathname === '/'
+            ? style.container__lang
+            : classNames(style.container__lang, style.container__hideOnDesctop);
+
         return (
             <div
                 className={style.container}
@@ -56,7 +65,7 @@ class SelectLangeage extends Component {
                 onClick={() => this.onSelectLang(nextLang)}
             >
                 <img className={style.container__flagIcon} src={flagLocale} alt="flag" />
-                <p className={style.container__lang}>{nameLocale}</p>
+                <p className={langStyle}>{nameLocale}</p>
             </div>
         );
     }
@@ -82,14 +91,17 @@ const mapDispatchToProps = dispatch => bindActionCreators(
 SelectLangeage.defaultProps = {
     setLocale: () => {},
     locale: '',
+    location: {},
 };
 
 SelectLangeage.propTypes = {
     setLocale: PropTypes.func,
     locale: PropTypes.string,
+    location: PropTypes.object,
 };
 
 export default compose(
     withGetService(),
     connect(mapStateToProps, mapDispatchToProps),
+    withRouter,
 )(SelectLangeage);

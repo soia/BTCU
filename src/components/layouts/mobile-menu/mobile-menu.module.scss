@@ -74,14 +74,20 @@
 
 .drawer__opened,
 .drawer__closed {
-    background: #F2F2F2;
-    height: calc(100vh - 19vw);
-    width: 100vw;
-    position: absolute;
-    top: $mobile70px;
-    left: 0;
-    transition: transform 0.5s;
-    z-index: 100;
+    display: none;
+
+    @media only screen and (max-width: 499px) {
+        display: block;
+
+        background: $whiteSmokeColor;
+        height: calc(100vh - 19vw);
+        width: 100vw;
+        position: absolute;
+        top: $mobile70px;
+        left: 0;
+        transition: transform 0.5s;
+        z-index: 100;
+    }
 }
 
 .drawer__opened {
