@@ -7,8 +7,18 @@
     padding: $desctop45px $desctop135px $desctop30px;
     background-color: rgba(247, 248, 248, 0.45);
 
+    @media only screen and (max-width: 499px) {
+        flex-direction: column;
+        padding: 0 0 $mobile20px;
+    }
+
     &__column {
         width: 48.5%;
+
+        @media only screen and (max-width: 499px) {
+            width: 100%;
+            margin-bottom: $mobile10px;
+        }
 
         &_title {
             font-family: $Montserrat900;
@@ -16,6 +26,12 @@
             line-height: $desctop26px;
             color: $midnightExpressColor;
             padding-left: $desctop20px;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile20px;
+                line-height: $mobile26px;
+                padding-left: 0;
+            }
         }
     }
 
@@ -24,6 +40,12 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: $desctop15px;
+
+        @media only screen and (max-width: 499px) {
+            background-color: $whiteColor;
+            margin-bottom: 0;
+            padding: $mobile20px 0 0 $mobile20px;
+        }
     }
 
     &__wrapper {
@@ -31,12 +53,22 @@
         box-shadow: 0 $desctop4px $desctop6px rgba(0, 0, 0, 0.05);
         border-radius: $desctop8px;
         padding: $desctop20px;
+
+        @media only screen and (max-width: 499px) {
+            padding: $mobile20px;
+            box-shadow: 0 $mobile5px $mobile6px rgba(0, 0, 0, 0.05);
+            border-radius: $mobile7px;
+        }
     }
 
     &__itemZerocoin {
         display: flex;
         justify-content: space-between;
         margin-bottom: $desctop10px;
+
+        @media only screen and (max-width: 499px) {
+            margin-bottom: $mobile10px;
+        }
 
         &_labelZerocoin,
         &_contentZerocoin,
@@ -45,16 +77,44 @@
             font-size: $desctop13px;
             line-height: $desctop19px;
             color: $midnightExpressColor;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
         }
 
         &_labelZerocoin {
             width: $desctop100px;
+
+            @media only screen and (max-width: 499px) {
+                width: 24vw;
+            }
+        }
+
+        &_contentZerocoin {
+            @media only screen and (max-width: 499px) {
+                width: 14vw;
+            }
+        }
+
+        &_priceZerocoin {
+            @media only screen and (max-width: 499px) {
+                width: 44vw;
+            }
         }
     }
 
     &__item {
         display: flex;
         margin-bottom: $desctop10px;
+
+        @media only screen and (max-width: 499px) {
+            margin-bottom: $mobile10px;
+        }
 
         &_label,
         &_content,
@@ -63,6 +123,11 @@
             font-size: $desctop13px;
             line-height: $desctop19px;
             color: $midnightExpressColor;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
         }
 
         &_link {
@@ -84,6 +149,11 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+
+            @media only screen and (max-width: 499px) {
+                width: 48%;
+                margin-right: 4%;
+            }
         }
 
         &_content {
@@ -91,6 +161,10 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+
+            @media only screen and (max-width: 499px) {
+                width: 48%;
+            }
         }
     }
 }
