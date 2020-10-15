@@ -3,6 +3,7 @@
 
 .firstScreen {
     background: $blueGradient;
+    height: $desctop295px;
     position: relative;
 
     @media only screen and (max-width: 499px) {
@@ -50,7 +51,7 @@
         font-family: $Montserrat900;
         font-size: $desctop24px;
         color: $whiteColor;
-        margin: $mobile10px 0 4.5vw;
+        margin: 0 0 4.5vw;
 
         @media only screen and (max-width: 499px) {
             font-size: $mobile24px;
