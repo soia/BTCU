@@ -35,6 +35,13 @@ class MobileMenu extends Component {
         const { activeBurger } = this.state;
 
         const drawerStyle = activeBurger ? style.drawer__opened : style.drawer__closed;
+
+        if (activeBurger) {
+            document.documentElement.style.overflowY = 'hidden';
+        } else {
+            document.documentElement.style.overflowY = 'inherit';
+        }
+
         return (
             <Fragment>
                 <div className={style.burgerMenu}>
