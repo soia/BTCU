@@ -165,24 +165,3 @@
         min-width: 22.46vw;
     }
 }
-
-.drawer__opened,
-.drawer__closed {
-    background: #f2f2f2;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: $mobile70px;
-    left: 0;
-    padding-top: 5.34vw;
-    z-index: 100;
-    transition: transform 1s ease, top 1s ease;
-}
-
-.drawer__opened {
-    transform: translateX(0);
-}
-
-.drawer__closed {
-    transform: translateX(150vw);
-}

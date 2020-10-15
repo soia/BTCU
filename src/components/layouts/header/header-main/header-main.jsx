@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
-import Burger from 'react-css-burger';
+import MobileMenu from '../../mobile-menu';
 import withGetService from '../../../hoc/with-get-service';
 import { compose } from '../../../../utils';
 import SearchIcon from '../../../assets/images/icons/search-icon';
@@ -25,41 +25,17 @@ class HeaderMain extends Component {
         location: PropTypes.object,
     };
 
-    state = {
-        activeBurger: false,
-    };
-
-    toggleBurger = () => {
-        this.setState(state => ({
-            activeBurger: !state.activeBurger,
-        }));
-    };
+    state = {};
 
     render() {
         const {
             t,
             location: { pathname },
         } = this.props;
-        const { activeBurger } = this.state;
 
         if (pathname === '/') {
             return null;
         }
-
-        const drawerStyle = activeBurger ? style.drawer__opened : style.drawer__closed;
-        const BurgerMenu = () => (
-            <div className={style.header__burgerMenu}>
-                <Burger
-                    onClick={this.toggleBurger}
-                    active={activeBurger}
-                    burger="spin"
-                    color="white"
-                    marginTop="0"
-                    scale={0.65}
-                />
-                <div className={drawerStyle} />
-            </div>
-        );
 
         return (
             <header className={style.header}>
@@ -100,7 +76,7 @@ class HeaderMain extends Component {
                     <div className={style.header__rightSide_margin} />
                     <SelectLangeage />
                 </div>
-                <BurgerMenu />
+                <MobileMenu />
             </header>
         );
     }

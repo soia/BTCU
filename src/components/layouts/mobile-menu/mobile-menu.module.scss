@@ -1,0 +1,32 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixin';
+
+.burgerMenu {
+    display: none;
+
+    @media only screen and (max-width: 499px) {
+        display: block;
+        transform: translateX($mobile10px);
+    }
+}
+
+.drawer__opened,
+.drawer__closed {
+    background: #F2F2F2;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: $mobile70px;
+    left: 0;
+    transition: transform 0.5s;
+    padding-top: 5.34vw;
+    z-index: 100;
+}
+
+.drawer__opened {
+    transform: translateX(0);
+}
+
+.drawer__closed {
+    transform: translateX(150vw);
+}
