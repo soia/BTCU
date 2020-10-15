@@ -9,7 +9,7 @@
 
     @media only screen and (max-width: 499px) {
         flex-direction: column;
-        padding: 0 0 $mobile20px;
+        padding: 0;
     }
 
     &__column {
@@ -18,6 +18,10 @@
         @media only screen and (max-width: 499px) {
             width: 100%;
             margin-bottom: $mobile10px;
+
+            &:last-child {
+                margin-bottom: $mobile30px;
+            }
         }
 
         &_title {

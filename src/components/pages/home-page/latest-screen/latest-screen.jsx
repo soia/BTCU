@@ -130,7 +130,12 @@ class LatestScreen extends Component {
                         return (
                             <div key={number} className={style.card}>
                                 <img className={style.card__logo} src={logo} alt="logo" />
-                                <div className={style.card__item}>
+                                <div
+                                    className={classNames(
+                                        style.card__item,
+                                        style.card__item_info,
+                                    )}
+                                >
                                     <Link
                                         to="/"
                                         className={classNames(
@@ -142,7 +147,12 @@ class LatestScreen extends Component {
                                     </Link>
                                     <p className={style.card__item_gray}>{time}</p>
                                 </div>
-                                <div className={style.card__item}>
+                                <div
+                                    className={classNames(
+                                        style.card__item,
+                                        style.card__item_addresses,
+                                    )}
+                                >
                                     <div className={style.card__item_row}>
                                         <p className={style.card__item_label}>
                                             {t('from')}
