@@ -118,6 +118,8 @@
     "career": "Career",
     "grant": "Grant",
     "tools": "Tools",
+    "iAmMasterNode": "I’m master node",
+    "addressMasterNode": "Address of master node",
     "error": {
         "wrong_email": "Incorrect email",
         "one_lowercase_char": "One latin lowercase character",

@@ -119,6 +119,8 @@
     "career": "Карьера",
     "grant": "Грант",
     "tools": "Инструменты",
+    "iAmMasterNode": "I’m master node",
+    "addressMasterNode": "Адрес мастер ноды",
     "error": {
         "wrong_email": "Неверный email",
         "one_lowercase_char": "Один строчный латинский символ",

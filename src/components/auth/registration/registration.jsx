@@ -45,6 +45,7 @@ class Registration extends PureComponent {
         email: '',
         passwordValue: '',
         repeatPassword: '',
+        addressMasterNode: '',
         loginErrors: {
             wrongLogin: '',
         },
@@ -61,10 +62,14 @@ class Registration extends PureComponent {
         confirmPasswordErrors: {
             passwordDoesntMatch: '',
         },
+        addressMasterNodeErrors: {
+            wrongAddressMasterNode: '',
+        },
         isDisabled: true,
         isPasswordError: false,
         isConfirmPasswordError: false,
         checkbox: false,
+        isMasterNode: false,
         captchaToken: '',
     };
 
@@ -87,6 +92,10 @@ class Registration extends PureComponent {
 
         if (name === 'repeatPassword') {
             await this.confirmPasswordValidation(name, value);
+        }
+
+        if (name === 'addressMasterNode') {
+            await this.addressMasterNodeValidation(name, value);
         }
 
         await this.checkPasswordError();
@@ -147,6 +156,18 @@ class Registration extends PureComponent {
         });
     };
 
+    addressMasterNodeValidation = (name, value) => {
+        const { t } = this.props;
+        this.setState(state => ({
+            [name]: value,
+            addressMasterNodeErrors: {
+                ...state.addressMasterNodeErrors,
+                wrongAddressMasterNode:
+                    value.trim().length < 6 ? t('error.min_length', { digit: 6 }) : '',
+            },
+        }));
+    };
+
     checkPasswordError = () => {
         const { passwordErrors, confirmPasswordErrors } = this.state;
         const copyPasswordErrors = { ...passwordErrors };
@@ -192,10 +213,25 @@ class Registration extends PureComponent {
         });
     };
 
-    onChange = e => {
+    onChangePrivacyPolicy = e => {
         this.setState(
             {
                 checkbox: e.target.checked,
+            },
+            () => {
+                this.checkDisableButton();
+            },
+        );
+    };
+
+    onChangeMastreNode = e => {
+        this.setState(
+            {
+                isMasterNode: e.target.checked,
+                addressMasterNode: '',
+                addressMasterNodeErrors: {
+                    wrongAddressMasterNode: '',
+                },
             },
             () => {
                 this.checkDisableButton();
@@ -252,6 +288,9 @@ class Registration extends PureComponent {
             passwordErrors,
             repeatPassword,
             isDisabled,
+            isMasterNode,
+            addressMasterNode,
+            addressMasterNodeErrors: { wrongAddressMasterNode },
             confirmPasswordErrors: { passwordDoesntMatch },
         } = this.state;
         const { t, loading } = this.props;
@@ -267,7 +306,7 @@ class Registration extends PureComponent {
                     <div className={style.form__inputContainer}>
                         <Field
                             id="login"
-                            type="login"
+                            type="text"
                             name="login"
                             labelText={t('login')}
                             value={login}
@@ -341,7 +380,35 @@ class Registration extends PureComponent {
                         ) : null}
                     </div>
                     <div className={style.form__checkboxContainer}>
-                        <Checkbox onChange={this.onChange}>
+                        <Checkbox onChange={this.onChangeMastreNode}>
+                            <p className={style.form__checkboxContainer_text}>
+                                {t('iAmMasterNode')}
+                            </p>
+                        </Checkbox>
+                    </div>
+                    {isMasterNode ? (
+                        <div className={style.form__inputContainer}>
+                            <Field
+                                id="addressMasterNode"
+                                type="text"
+                                name="addressMasterNode"
+                                labelText={t('addressMasterNode')}
+                                value={addressMasterNode}
+                                onChange={this.inputOnChange}
+                            />
+                            {wrongAddressMasterNode ? (
+                                <div className={style.form__error}>
+                                    <InfoIcon className={style.form__error_icon} />
+                                    <p className={style.form__error_text}>
+                                        {wrongAddressMasterNode}
+                                    </p>
+                                </div>
+                            ) : null}
+                        </div>
+                    ) : null}
+
+                    <div className={style.form__checkboxContainer}>
+                        <Checkbox onChange={this.onChangePrivacyPolicy}>
                             <p className={style.form__checkboxContainer_text}>
                                 {t('iAgree')}{' '}
                                 <a

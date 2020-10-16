@@ -119,6 +119,8 @@
     "career": "事业",
     "grant": "格兰特",
     "tools": "工具类",
+    "iAmMasterNode": "I’m master node",
+    "addressMasterNode": "地址master node",
     "error": {
         "wrong_email": "不正确的电子邮件",
         "one_lowercase_char": "一个拉丁小写字符",
