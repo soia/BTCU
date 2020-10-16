@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
+import ListOfMoreLinks from '../header-more-links';
 import MobileMenu from '../../mobile-menu';
 import withGetService from '../../../hoc/with-get-service';
 import { compose } from '../../../../utils';
@@ -58,6 +59,11 @@ class HeaderMain extends Component {
                             classNameList={style.header__links}
                             classNameItem={style.header__links_item}
                             classNameSubLinks={style.header__subLinks}
+                        />
+                        <ListOfMoreLinks
+                            classNameContainer={style.header__more_links}
+                            classNameSubLinks={style.header__more_subLinks}
+                            classNameItem={style.header__more_item}
                         />
                     </div>
                 </div>

@@ -139,11 +139,55 @@
         color: $tolopeaColor;
         display: flex;
         white-space: nowrap;
-        justify-content: center;
+        justify-content: flex-start;
         padding: $desctop10px;
 
         &:hover {
             color: $redColor;
         }
     }
+}
+
+
+@mixin moreLinks {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding: 0.9vw $desctop25px 0.9vw $desctop25px;
+    z-index: 101;
+    font-family: $Montserrat500;
+    color: $whiteColor;
+    font-size: $desctop10px;
+    letter-spacing: $desctop1px;
+    text-transform: uppercase;
+
+    &:hover {
+        color: $redColor;
+
+        .header__more_subLinks {
+            transition: transform 0.4s;
+            opacity: 1;
+            user-select: auto;
+            pointer-events: auto;
+            transform: translate(-50%, 0);
+        }
+
+        &>a {
+            color: $redColor;
+        }
+    }
+}
+
+@mixin moreLinksItem {
+    font-family: $Montserrat600;
+    font-size: $desctop10px;
+    line-height: $desctop10px;
+    letter-spacing: $desctop1px;
+    text-transform: uppercase;
+    color: $blackColor;
+    text-align: left;
+    border-bottom: $desctop1px solid rgba(38, 38, 66, 0.1);
+    padding: $desctop5px $desctop10px $desctop9px $desctop10px;
+    cursor: default;
 }

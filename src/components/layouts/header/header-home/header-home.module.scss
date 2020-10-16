@@ -94,14 +94,14 @@
                     transform: translate(-50%, 0);
                 }
 
-                & > p,
-                & > a {
+                &>p,
+                &>a {
                     color: $redColor;
                 }
             }
         }
 
-        &_item > * {
+        &_item>* {
             font-family: $Montserrat500;
             color: $whiteColor;
             font-size: $desctop10px;
@@ -118,12 +118,29 @@
         @include sublink;
     }
 
+    &__more {
+        &_links {
+            @include moreLinks;
+        }
+
+        &_subLinks {
+            @include sublink;
+            display: flex;
+        }
+
+        &_item {
+            p {
+                @include moreLinksItem;
+            }
+        }
+    }
+
     &__login {
         display: flex;
         align-items: center;
         margin-right: $desctop40px;
 
-        &:hover > * {
+        &:hover>* {
             transition: all 0.2s;
 
             color: $redColor;
@@ -133,7 +150,7 @@
             }
         }
 
-        & > * {
+        &>* {
             font-family: $Montserrat500;
             color: $whiteColor;
             font-size: $desctop10px;
@@ -149,6 +166,8 @@
     }
 
     &__linksWrapper {
+        display: flex;
+
         @media only screen and (max-width: 499px) {
             display: none;
         }

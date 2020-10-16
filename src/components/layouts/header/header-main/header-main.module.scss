@@ -119,6 +119,23 @@
         @include sublink;
     }
 
+    &__more {
+        &_links {
+            @include moreLinks;
+        }
+
+        &_subLinks {
+            @include sublink;
+            display: flex;
+        }
+
+        &_item {
+            p {
+                @include moreLinksItem;
+            }
+        }
+    }
+
     &__login {
         display: flex;
         align-items: center;
@@ -150,6 +167,8 @@
     }
 
     &__linksWrapper {
+        display: flex;
+
         @media only screen and (max-width: 499px) {
             display: none;
         }

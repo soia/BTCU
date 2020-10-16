@@ -94,12 +94,6 @@ const ListOfLinks = ({ classNameList, classNameItem, classNameSubLinks }) => {
                 },
             ],
         },
-        {
-            id: 5,
-            name: t('more'),
-            path: '/',
-            subLinks: null,
-        },
     ];
 
     return (

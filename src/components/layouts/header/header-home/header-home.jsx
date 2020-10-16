@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import MobileMenu from '../../mobile-menu';
 import ListOfLinks from '../header-links';
+import ListOfMoreLinks from '../header-more-links';
 import { loginPath } from '../../../../constants';
 import SelectLangeage from '../../../language';
 import ProfileIcon from '../../../assets/images/icons/profile-icon';
@@ -29,6 +30,11 @@ const HomeHeader = () => {
                         classNameList={style.header__links}
                         classNameItem={style.header__links_item}
                         classNameSubLinks={style.header__subLinks}
+                    />
+                    <ListOfMoreLinks
+                        classNameContainer={style.header__more_links}
+                        classNameSubLinks={style.header__more_subLinks}
+                        classNameItem={style.header__more_item}
                     />
                 </div>
             </div>
