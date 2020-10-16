@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
+import { BTCUDirectoryPath } from '../../../constants';
 
 const ListOfLinks = ({ classNameList, classNameItem, classNameSubLinks }) => {
     const { t } = useTranslation();
@@ -83,7 +84,7 @@ const ListOfLinks = ({ classNameList, classNameItem, classNameSubLinks }) => {
                 },
                 {
                     title: t('BTCUDirectory'),
-                    subPath: '/',
+                    subPath: BTCUDirectoryPath,
                     border: false,
                 },
                 {

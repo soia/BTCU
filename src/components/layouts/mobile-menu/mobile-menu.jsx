@@ -62,6 +62,7 @@ class MobileMenu extends Component {
                         <ListOfLinks
                             classNameList={style.links}
                             classNameItem={style.links_item}
+                            classNameSubLinks={style.links_subLinks}
                         />
                         <Link to={loginPath} className={style.login}>
                             <ProfileIcon className={style.login_icon} />

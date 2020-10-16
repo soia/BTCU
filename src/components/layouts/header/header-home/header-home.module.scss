@@ -8,7 +8,7 @@
     height: $desctop80px;
     padding: 0 $desctop30px 0 $desctop135px;
     position: relative;
-    z-index: 2;
+    z-index: 101;
 
     @media only screen and (max-width: 499px) {
         height: $mobile70px;
@@ -79,6 +79,7 @@
             cursor: pointer;
             position: relative;
             padding: 0.9vw $desctop25px 0.9vw $desctop25px;
+            z-index: 101;
 
             &:first-child {
                 padding-left: 0;

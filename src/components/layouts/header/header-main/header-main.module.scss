@@ -80,6 +80,7 @@
             cursor: pointer;
             position: relative;
             padding: 0.9vw $desctop20px 0.9vw $desctop20px;
+            z-index: 101;
 
             &:first-child {
                 padding-left: 0;

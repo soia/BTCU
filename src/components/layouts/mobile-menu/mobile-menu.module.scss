@@ -37,6 +37,10 @@
             color: $redColor;
         }
     }
+
+    &_subLinks {
+        display: none;
+    }
 }
 
 .login {
