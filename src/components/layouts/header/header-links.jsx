@@ -17,13 +17,55 @@ const ListOfLinks = ({ classNameList, classNameItem, classNameSubLinks }) => {
             id: 2,
             name: t('blockchain'),
             path: '/',
-            subLinks: null,
+            subLinks: [
+                {
+                    title: t('viewTxns'),
+                    subPath: '/',
+                    border: false,
+                },
+                {
+                    title: t('pendingTxns'),
+                    subPath: '/',
+                    border: false,
+                },
+                {
+                    title: t('contractInternalTxns'),
+                    subPath: '/',
+                    border: false,
+                },
+                {
+                    title: t('blocks'),
+                    subPath: '/',
+                    border: true,
+                },
+                {
+                    title: t('topAccounts'),
+                    subPath: '/',
+                    border: false,
+                },
+                {
+                    title: t('verifiedСontracts'),
+                    subPath: '/',
+                    border: false,
+                },
+            ],
         },
         {
             id: 3,
             name: t('tokens'),
             path: '/',
-            subLinks: null,
+            subLinks: [
+                {
+                    title: t('ERC20TopTokens'),
+                    subPath: '/',
+                    border: false,
+                },
+                {
+                    title: t('viewERC20Transfers'),
+                    subPath: '/',
+                    border: false,
+                },
+            ],
         },
         {
             id: 4,
