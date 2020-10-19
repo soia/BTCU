@@ -8,9 +8,10 @@ import { connect } from 'react-redux';
 import { mobileSublinksActions } from '../../../actions/mobile-sublinks.actions';
 import ArrowLeftIcon from '../../assets/images/icons/arrow-left';
 import ProfileIcon from '../../assets/images/icons/profile-icon';
-import { loginPath } from '../../../constants';
+import { loginPath, MORE_LINKS } from '../../../constants';
 import SelectLangeage from '../../language';
 import ListOfLinks from '../header/header-links';
+import ListOfMoreLinks from '../header/header-more-links';
 import withGetService from '../../hoc/with-get-service';
 import { compose } from '../../../utils';
 import style from './mobile-menu.module.scss';
@@ -78,10 +79,21 @@ class MobileMenu extends Component {
                         </div>
                     ) : null}
                     <div className={style.linksWrapper}>
-                        <ListOfLinks
-                            classNameList={style.links}
-                            classNameItem={style.links_item}
-                            classNameSubLinks={style.links_subLinks}
+                        { mobileSublinks === MORE_LINKS
+                            ? null
+                            : (
+                                <ListOfLinks
+                                    classNameList={style.links}
+                                    classNameItem={style.links_item}
+                                    classNameSubLinks={style.links_subLinks}
+                                />
+                            )
+
+                        }
+                        <ListOfMoreLinks
+                            classNameContainer={style.links__more_links}
+                            classNameSubLinks={style.links__more_subLinks}
+                            classNameItem={style.links__more_item}
                         />
                         {!mobileSublinks ? (
                             <Link to={loginPath} className={style.login}>

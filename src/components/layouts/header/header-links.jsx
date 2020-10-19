@@ -9,7 +9,7 @@ import { BTCUDirectoryPath } from '../../../constants';
 import { compose } from '../../../utils';
 
 class ListOfLinks extends Component {
-    mobileWidth = window.innerWidth;
+    mobileWidth = window.innerWidth < 500;
 
     static defaultProps = {
         t: () => {},
@@ -31,7 +31,7 @@ class ListOfLinks extends Component {
 
     selectCategory = id => {
         const { setSubLinks } = this.props;
-        if (this.mobileWidth < 500) {
+        if (this.mobileWidth) {
             setSubLinks(id);
         }
     };
@@ -167,7 +167,7 @@ class ListOfLinks extends Component {
                             ) : (
                                 <div onClick={() => this.selectCategory(id)}>{name}</div>
                             )}
-                            {this.mobileWidth > 499 && subLinks ? (
+                            {!this.mobileWidth && subLinks ? (
                                 <div className={classNameSubLinks}>
                                     {subLinks.map(list => {
                                         const { title, subPath, border } = list;

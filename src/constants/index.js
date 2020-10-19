@@ -8,3 +8,4 @@ export * from './post-verification-user.constants';
 export * from './post-password-recovery.constants';
 export * from './post-reset-password.constants';
 export * from './user.constants';
+export * from './general.constants';
