@@ -434,3 +434,40 @@ header #selectLangeage div:hover {
 }
 
 // highcharts
+
+
+// ant.design tab
+.ant-tabs-tab {
+    font-family: $Montserrat500;
+    font-size: $desctop13px;
+    line-height: $desctop19px;
+    color: $midnightExpressColor;
+
+    @media only screen and (max-width: 499px) {
+        font-size: $mobile13px;
+        line-height: $mobile19px;
+    }
+}
+
+.ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-nav .ant-tabs-tab:hover {
+    color: $redColor;
+}
+
+.ant-tabs-ink-bar {
+    height: $desctop2px;
+    background-color: $redColor;
+
+    @media only screen and (max-width: 499px) {
+        height: $mobile2px;
+    }
+}
+
+.ant-tabs-bar {
+    border-bottom: $desctop1px solid $solitudeColor;
+
+    @media only screen and (max-width: 499px) {
+        border-bottom: $mobile1px solid $solitudeColor;
+    }
+}
+// ant.design tab

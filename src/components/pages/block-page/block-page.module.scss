@@ -169,3 +169,195 @@
         }
     }
 }
+
+.transaction {
+    &__row {
+        padding: $desctop20px;
+        background: $whiteColor;
+        box-shadow: 0px $desctop2px $desctop6px rgba(0, 0, 0, 0.07);
+        border-radius: $desctop8px;
+        margin-bottom: $desctop30px;
+        display: flex;
+
+        @media only screen and (max-width: 499px) {
+            padding: $mobile20px;
+            box-shadow: 0px $mobile2px $mobile6px rgba(0, 0, 0, 0.07);
+            border-radius: $mobile10px;
+            margin-bottom: $mobile15px;
+            flex-wrap: wrap;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: $desctop15px;
+        }
+
+        @media only screen and (max-width: 499px) {
+            &:not(:last-child) {
+                margin-bottom: $mobile15px;
+            }
+        }
+    }
+
+    &__item {
+        &_label {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $blackColor;
+            margin-bottom: $desctop5px;
+            height: $desctop20px;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile13px;
+                margin-bottom: $mobile5px;
+                height: $mobile12px;
+            }
+        }
+
+        &_hash,
+        &_valueOut,
+        &_fromAmount,
+        &_toAmount,
+        &_price {
+            &:not(:last-child) {
+                margin-right: $desctop20px;
+            }
+
+            @media only screen and (max-width: 499px) {
+                &:not(:last-child) {
+                    margin-right: $mobile20px;
+                }
+            }
+
+            a,
+            span {
+                display: block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                font-family: $Montserrat500;
+                font-size: $desctop13px;
+                line-height: $desctop19px;
+
+                @media only screen and (max-width: 499px) {
+                    font-size: $mobile13px;
+                    line-height: $mobile19px;
+                    width: 100% !important;
+                }
+            }
+
+            a {
+                color: $redColor;
+
+                &:hover {
+                    color: rgba(255, 48, 21, 0.5);
+                }
+            }
+
+            span {
+                color: $nightRiderColor;
+            }
+        }
+
+        &_hash {
+            min-width: 11vw;
+
+            @media only screen and (max-width: 499px) {
+                width: 45%;
+                margin-bottom: $mobile15px;
+            }
+
+            a,
+            span {
+                width: 11vw;
+            }
+        }
+
+        &_valueOut {
+            min-width: 11vw;
+
+            @media only screen and (max-width: 499px) {
+                width: 45%;
+                margin-right: 0 !important;
+                margin-bottom: $mobile15px;
+            }
+
+            a,
+            span {
+                width: 11vw;
+            }
+        }
+
+        &_fromAmount,
+        &_toAmount {
+            min-width: 21vw;
+
+            @media only screen and (max-width: 499px) {
+                width: 45%;
+            }
+
+            span,
+            a {
+                width: 21vw;
+            }
+        }
+
+        &_toAmount {
+            @media only screen and (max-width: 499px) {
+                margin-right: 0 !important;
+            }
+        }
+
+        &_price {
+            min-width: 11vw;
+
+            span {
+                width: 11vw;
+            }
+        }
+    }
+}
+
+.rawBlock {
+    padding: $desctop20px;
+    background: $whiteColor;
+    box-shadow: 0px $desctop2px $desctop6px rgba(0, 0, 0, 0.07);
+    border-radius: $desctop8px;
+    margin-bottom: $desctop30px;
+
+    @media only screen and (max-width: 499px) {
+        padding: $mobile20px;
+        box-shadow: 0px $mobile2px $mobile6px rgba(0, 0, 0, 0.07);
+        border-radius: $mobile10px;
+        margin-bottom: $mobile15px;
+    }
+
+    &__wrapper {
+        border: $desctop1px solid rgba(36, 36, 68, 0.1);
+        border-radius: $desctop17px;
+        padding: $desctop15px $desctop19px;
+
+        @media only screen and (max-width: 499px) {
+            border: $mobile1px solid rgba(36, 36, 68, 0.1);
+            border-radius: $mobile17px;
+            padding: $mobile15px $mobile19px;
+        }
+
+        pre {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $slateGreyColor;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
+        }
+    }
+}
