@@ -6,6 +6,7 @@ import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Tooltip } from 'antd';
 import { compose } from '../../../../utils';
+import { blockPath } from '../../../../constants';
 import style from './block-screen.module.scss';
 
 class BlockScreen extends Component {
@@ -26,7 +27,7 @@ class BlockScreen extends Component {
             {
                 title: t('lastIndexedBlock'),
                 value: '2539166',
-                link: '/',
+                link: blockPath,
             },
             {
                 title: t('latestBlockHash'),
@@ -129,7 +130,7 @@ class BlockScreen extends Component {
                                     </Tooltip>
                                     {link ? (
                                         <Link
-                                            to={link}
+                                            to={`${link}/${value}`}
                                             className={style.container__item_link}
                                         >
                                             {value}

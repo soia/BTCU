@@ -1,0 +1,20 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixin';
+
+.block {
+    background: $whiteSmokeColor;
+    padding: $desctop45px 6vw $desctop15px $desctop135px;
+    flex: 1;
+
+    @media only screen and (max-width: 499px) {
+        padding: $mobile20px;
+    }
+
+    &__title {
+        font-family: $Montserrat900;
+        font-size: $desctop24px;
+        line-height: $desctop24px;
+        color: $midnightExpressColor;
+        margin-bottom: $desctop19px;
+    }
+}

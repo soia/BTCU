@@ -6,6 +6,7 @@ import { PageNotFound } from '../pages';
 import HomePage from '../pages/home-page/home-page';
 import SearchPage from '../pages/search-page';
 import DirectoryPage from '../pages/directory-page';
+import BlockPage from '../pages/block-page';
 import Footer from '../layouts/footer';
 import Login from '../auth/login';
 import Registration from '../auth/registration';
@@ -17,6 +18,7 @@ import {
     resetPasswordPath,
     searchPath,
     BTCUDirectoryPath,
+    blockPath,
 } from '../../constants';
 import '../assets/styles/reset.scss';
 import './app.scss';
@@ -37,6 +39,7 @@ const App = () => (
                 <Route path={resetPasswordPath} component={ResetPassword} exact />
                 <Route path={searchPath} component={SearchPage} exact />
                 <Route path={BTCUDirectoryPath} component={DirectoryPage} exact />
+                <Route path={`${blockPath}/:id?`} component={BlockPage} exact />
                 <Route component={PageNotFound} />
             </Switch>
             <Footer />

@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import { Tooltip } from 'antd';
 import ArrowRightIcon from '../../../assets/images/icons/arrow-right';
 import { compose } from '../../../../utils';
+import { blockPath } from '../../../../constants';
 import logo from '../../../assets/images/icons/btcu-blue-icon.svg';
 import style from './latest-screen.module.scss';
 import Button from '../../../UI/button';
@@ -137,7 +138,7 @@ class LatestScreen extends Component {
                                     )}
                                 >
                                     <Link
-                                        to="/"
+                                        to={`${blockPath}/${number}`}
                                         className={classNames(
                                             style.card__item_red,
                                             style.card__item_tx,
