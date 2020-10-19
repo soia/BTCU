@@ -16,5 +16,156 @@
         line-height: $desctop24px;
         color: $midnightExpressColor;
         margin-bottom: $desctop19px;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile24px;
+            line-height: $mobile24px;
+            margin-bottom: $mobile30px;
+        }
+    }
+
+    &__top {
+        padding: $desctop20px;
+        background: $whiteColor;
+        box-shadow: 0px $desctop2px $desctop6px rgba(0, 0, 0, 0.07);
+        border-radius: $desctop8px;
+        margin-bottom: $desctop15px;
+
+        @media only screen and (max-width: 499px) {
+            padding: $mobile20px;
+            box-shadow: 0px $mobile2px $mobile6px rgba(0, 0, 0, 0.07);
+            border-radius: $mobile10px;
+            margin-bottom: $mobile15px;
+        }
+
+        &_address {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $redColor;
+            margin-bottom: $desctop5px;
+            display: flex;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+                margin-bottom: $mobile5px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: block;
+            }
+
+            &:hover {
+                color: $redColor;
+                text-decoration: underline;
+            }
+        }
+
+        &_wrapper {
+            display: flex;
+
+            @media only screen and (max-width: 499px) {
+                flex-wrap: wrap;
+            }
+        }
+
+        &_date {
+            font-family: $Montserrat500;
+            font-size: $desctop12px;
+            line-height: $desctop17px;
+            color: $suvaGreyColor;
+            margin-right: $desctop20px;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile12px;
+                line-height: $mobile17px;
+                margin-right: 0;
+                width: 100%;
+                margin-bottom: $mobile5px;
+            }
+        }
+
+        &_transactions {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $midnightExpressColor;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
+
+            span {
+                background: rgba(119, 131, 143, 0.1);
+                border-radius: $desctop4px;
+                padding: $desctop2px $desctop6px;
+                margin-left: $desctop5px;
+                font-family: $Montserrat500;
+                font-size: $desctop10px;
+                line-height: $desctop17px;
+                letter-spacing: $desctop1px;
+                color: $slateGreyColor;
+
+                @media only screen and (max-width: 499px) {
+                    border-radius: $mobile5px;
+                    padding: $mobile2px $mobile6px;
+                    margin-left: $mobile5px;
+                    font-size: $mobile10px;
+                    line-height: $mobile17px;
+                    letter-spacing: $mobile1px;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        padding: $desctop20px;
+        background: $whiteColor;
+        box-shadow: 0px $desctop2px $desctop6px rgba(0, 0, 0, 0.07);
+        border-radius: $desctop8px;
+        margin-bottom: $desctop30px;
+
+        @media only screen and (max-width: 499px) {
+            padding: $mobile20px;
+            box-shadow: 0px $mobile2px $mobile6px rgba(0, 0, 0, 0.07);
+            border-radius: $mobile10px;
+            margin-bottom: $mobile15px;
+        }
+
+        &_item {
+            display: flex;
+
+            &:not(:last-child) {
+                margin-bottom: $desctop15px;
+
+                @media only screen and (max-width: 499px) {
+                    margin-bottom: $mobile15px;
+                }
+            }
+        }
+
+        &_label,
+        &_value {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $midnightExpressColor;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
+        }
+
+        &_label {
+            margin-right: $desctop20px;
+            min-width: 6vw;
+
+            @media only screen and (max-width: 499px) {
+                margin-right: $mobile20px;
+                min-width: 23vw;
+            }
+        }
     }
 }
