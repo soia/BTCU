@@ -138,6 +138,7 @@
     "labelWordCloud": "标签词云",
     "BTCUMiningCalculator": "BTCU采矿计算器",
     "verifiedSignature": "验证签名",
+    "back": "背部",
     "error": {
         "wrong_email": "不正确的电子邮件",
         "one_lowercase_char": "一个拉丁小写字符",

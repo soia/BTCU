@@ -137,6 +137,7 @@
     "labelWordCloud": "Label Word Cloud",
     "BTCUMiningCalculator": "BTCU Mining Calculator",
     "verifiedSignature": "Verified Signature",
+    "back": "Back",
     "error": {
         "wrong_email": "Incorrect email",
         "one_lowercase_char": "One latin lowercase character",

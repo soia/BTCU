@@ -4,6 +4,7 @@ import { alert } from './alert.reducer';
 import { authentication } from './authentication.reducer';
 import { currentLocale } from './current-locale.reducer';
 import modl from './get-modl.reducer';
+import mobileSublinks from './mobile-links.reducer';
 import passwordRecovery from './post-password-recovery.reducer';
 import resetPassword from './post-reset-password.reducer';
 import verificationUser from './post-verification-user.reducer';
@@ -20,6 +21,7 @@ const rootReducer = combineReducers({
     users,
     passwordRecovery,
     resetPassword,
+    mobileSublinks,
 });
 
 export default rootReducer;

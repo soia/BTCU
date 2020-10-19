@@ -14,7 +14,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, calc(-50% - 13vw));
+    transform: translate(-50%, -50%);
 }
 
 .links {
@@ -39,7 +39,26 @@
     }
 
     &_subLinks {
-        display: none;
+        @media only screen and (max-width: 499px) {
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: $mobile32px;
+            }
+
+            a {
+                font-family: $Montserrat500;
+                color: $tolopeaColor;
+                font-size: $mobile10px;
+                letter-spacing: $mobile1px;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $redColor;
+                }
+            }
+        }
     }
 }
 
@@ -100,4 +119,22 @@
 
 .drawer__closed {
     transform: translateX(150vw);
+}
+
+.back {
+    width: fit-content;
+    padding: $mobile15px;
+    margin: $mobile15px auto;
+    font-family: $Montserrat500;
+    font-size: $mobile13px;
+    line-height: $mobile10px;
+    letter-spacing: $mobile1px;
+    text-transform: uppercase;
+    color: rgba(38, 38, 66, 0.5);
+
+    &__arrow {
+        width: $mobile5px;
+        height: $mobile7px;
+        margin-right: $mobile5px;
+    }
 }

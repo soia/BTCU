@@ -1,4 +1,5 @@
 export * from './alert.constants';
+export * from './mobile-sublinks.constants';
 export * from './api-errors';
 export * from './get-modl.constants';
 export * from './locale.constants';

@@ -138,6 +138,7 @@
     "labelWordCloud": "Label Word Cloud",
     "BTCUMiningCalculator": "Калькулятор майнинга BTCU",
     "verifiedSignature": "Подтвержденная подпись",
+    "back": "Назад",
     "error": {
         "wrong_email": "Неверный email",
         "one_lowercase_char": "Один строчный латинский символ",
