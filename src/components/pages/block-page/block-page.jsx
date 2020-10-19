@@ -77,7 +77,7 @@ class BlockPage extends Component {
         return (
             <div className={style.block}>
                 <h1 className={style.block__title}>
-                    BTCU{t('blockHeight')} #{block}
+                    BTCU{' '}{t('blockHeight')} #{block}
                 </h1>
                 <div className={style.block__top}>
                     <Link to="/" className={style.block__top_address}>
