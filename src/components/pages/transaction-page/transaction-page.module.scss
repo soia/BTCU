@@ -48,12 +48,14 @@
     }
 }
 
-.totalOutput {
+.totalOutput,
+.privateNote,
+.rawBlock {
     padding: $desctop20px;
     background: $whiteColor;
     box-shadow: 0px $desctop2px $desctop6px rgba(0, 0, 0, 0.07);
     border-radius: $desctop8px;
-    margin-bottom: $desctop30px;
+    margin-bottom: $desctop15px;
 
     @media only screen and (max-width: 499px) {
         padding: $mobile20px;
@@ -61,7 +63,9 @@
         border-radius: $mobile10px;
         margin-bottom: $mobile15px;
     }
+}
 
+.totalOutput {
     &__top {
         display: flex;
         align-items: center;
@@ -132,20 +136,28 @@
     }
 }
 
-.rawBlock {
-    padding: $desctop20px;
-    background: $whiteColor;
-    box-shadow: 0px $desctop2px $desctop6px rgba(0, 0, 0, 0.07);
-    border-radius: $desctop8px;
-    margin-bottom: $desctop30px;
+.privateNote {
+    font-family: $Montserrat500;
+    font-size: $desctop13px;
+    line-height: $desctop19px;
+    color: $midnightExpressColor;
 
     @media only screen and (max-width: 499px) {
-        padding: $mobile20px;
-        box-shadow: 0px $mobile2px $mobile6px rgba(0, 0, 0, 0.07);
-        border-radius: $mobile10px;
-        margin-bottom: $mobile15px;
+        font-size: $mobile12px;
+        line-height: $mobile18px;
     }
 
+    a {
+        color: $redColor;
+
+        &:hover {
+            color: $redColor;
+            text-decoration: underline;
+        }
+    }
+}
+
+.rawBlock {
     &__wrapper {
         border: $desctop1px solid rgba(36, 36, 68, 0.1);
         border-radius: $desctop17px;

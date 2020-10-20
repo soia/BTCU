@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 import { Tabs } from 'antd';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { compose } from '../../../utils';
 import Code from './raw-block';
+import { loginPath } from '../../../constants/pathLocation';
 import successIcon from '../../assets/images/icons/success-icon.svg';
 import style from './transaction-page.module.scss';
 
@@ -66,9 +67,15 @@ class TransactionPage extends Component {
                                 </span>
                             </div>
                             <div className={style.totalOutput__bottom}>
-                                <span>{t('proofStakeFees')}: 0.0063640918 BTCU ($2.16)</span>
+                                <span>
+                                    {t('proofStakeFees')}: 0.0063640918 BTCU ($2.16)
+                                </span>
                                 <span>{t('added')}: Sep 22 2020 02:46:17 (PM +UTC)</span>
                             </div>
+                        </div>
+                        <div className={style.privateNote}>
+                            {t('privateNote')}: {t('yoAccessPrivateNote')}{' '}
+                            <Link to={loginPath}>{t('loggedIn')}</Link>
                         </div>
                     </TabPane>
                     <TabPane tab={t('rawTransaction')} key="2">
