@@ -5,6 +5,7 @@ const resetPasswordPath = '/reset-password';
 const searchPath = '/search';
 const BTCUDirectoryPath = '/directory';
 const blockPath = '/block';
+const transactionPath = '/transaction';
 
 export {
     loginPath,
@@ -14,4 +15,5 @@ export {
     searchPath,
     BTCUDirectoryPath,
     blockPath,
+    transactionPath,
 };

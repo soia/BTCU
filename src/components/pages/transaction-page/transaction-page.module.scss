@@ -1,0 +1,176 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixin';
+
+.block {
+    background: $whiteSmokeColor;
+    padding: $desctop45px 6vw $desctop15px $desctop135px;
+    flex: 1;
+
+    @media only screen and (max-width: 499px) {
+        padding: $mobile20px;
+    }
+
+    &__title {
+        font-family: $Montserrat900;
+        font-size: $desctop24px;
+        line-height: $desctop24px;
+        color: $midnightExpressColor;
+        margin-bottom: $desctop19px;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile24px;
+            line-height: $mobile24px;
+            margin-bottom: $mobile15px;
+        }
+    }
+
+    &__subTitle {
+        font-family: $Montserrat500;
+        font-size: $desctop13px;
+        line-height: $desctop19px;
+        color: $bunkerColor;
+        margin-bottom: $desctop28px;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile13px;
+            line-height: $mobile19px;
+            margin-bottom: $mobile20px;
+        }
+
+        a {
+            color: $redColor;
+
+            &:hover {
+                color: $redColor;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.totalOutput {
+    padding: $desctop20px;
+    background: $whiteColor;
+    box-shadow: 0px $desctop2px $desctop6px rgba(0, 0, 0, 0.07);
+    border-radius: $desctop8px;
+    margin-bottom: $desctop30px;
+
+    @media only screen and (max-width: 499px) {
+        padding: $mobile20px;
+        box-shadow: 0px $mobile2px $mobile6px rgba(0, 0, 0, 0.07);
+        border-radius: $mobile10px;
+        margin-bottom: $mobile15px;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        font-family: $Montserrat500;
+        font-size: $desctop13px;
+        line-height: $desctop19px;
+        color: $midnightExpressColor;
+
+        @media only screen and (max-width: 499px) {
+            flex-wrap: wrap;
+            font-size: $mobile12px;
+            line-height: $mobile18px;
+        }
+
+        &_amount {
+            font-size: $desctop24px;
+            line-height: $desctop34px;
+            margin: 0 $desctop10px;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile24px;
+                line-height: $mobile34px;
+                margin: 0 $mobile10px;
+            }
+        }
+
+        &_icon {
+            width: $desctop16px;
+            height: $desctop16px;
+            margin: 0 $desctop5px;
+
+            @media only screen and (max-width: 499px) {
+                width: $mobile16px;
+                height: $mobile16px;
+                margin: 0 $mobile5px 0 0;
+            }
+        }
+
+        &_success {
+            color: $redColor;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        margin-top: $desctop10px;
+        font-family: $Montserrat500;
+        font-size: $desctop10px;
+        line-height: $desctop16px;
+        color: $slateGreyColor;
+
+        @media only screen and (max-width: 499px) {
+            flex-wrap: wrap;
+            margin-top: $mobile10px;
+            font-size: $mobile10px;
+            line-height: $mobile16px;
+        }
+
+        span {
+            margin-right: $desctop16px;
+
+            @media only screen and (max-width: 499px) {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.rawBlock {
+    padding: $desctop20px;
+    background: $whiteColor;
+    box-shadow: 0px $desctop2px $desctop6px rgba(0, 0, 0, 0.07);
+    border-radius: $desctop8px;
+    margin-bottom: $desctop30px;
+
+    @media only screen and (max-width: 499px) {
+        padding: $mobile20px;
+        box-shadow: 0px $mobile2px $mobile6px rgba(0, 0, 0, 0.07);
+        border-radius: $mobile10px;
+        margin-bottom: $mobile15px;
+    }
+
+    &__wrapper {
+        border: $desctop1px solid rgba(36, 36, 68, 0.1);
+        border-radius: $desctop17px;
+        padding: $desctop15px $desctop19px;
+
+        @media only screen and (max-width: 499px) {
+            border: $mobile1px solid rgba(36, 36, 68, 0.1);
+            border-radius: $mobile17px;
+            padding: $mobile15px $mobile19px;
+        }
+
+        pre {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $slateGreyColor;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
+        }
+    }
+}
