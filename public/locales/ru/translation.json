@@ -183,6 +183,7 @@
     "successNotification": "Успешно!",
     "сopiedToClipboard": "Скопировано в буфер обмена.",
     "blockConfirmations": "Блокированных подтверждений",
+    "in": "в",
     "error": {
         "wrong_email": "Неверный email",
         "one_lowercase_char": "Один строчный латинский символ",

@@ -51,7 +51,8 @@
 .totalOutput,
 .privateNote,
 .rawBlock,
-.transBlock {
+.transBlock,
+.inputs {
     padding: $desctop20px;
     background: $whiteColor;
     box-shadow: 0px $desctop2px $desctop6px rgba(0, 0, 0, 0.07);
@@ -63,6 +64,77 @@
         box-shadow: 0px $mobile2px $mobile6px rgba(0, 0, 0, 0.07);
         border-radius: $mobile10px;
         margin-bottom: $mobile15px;
+    }
+}
+
+.totalOutput {
+    &__top {
+        display: flex;
+        align-items: center;
+        font-family: $Montserrat500;
+        font-size: $desctop13px;
+        line-height: $desctop19px;
+        color: $midnightExpressColor;
+
+        @media only screen and (max-width: 499px) {
+            flex-wrap: wrap;
+            font-size: $mobile12px;
+            line-height: $mobile18px;
+        }
+
+        &_amount {
+            font-size: $desctop24px;
+            line-height: $desctop34px;
+            margin: 0 $desctop10px;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile24px;
+                line-height: $mobile34px;
+                margin: 0 $mobile10px;
+            }
+        }
+
+        &_icon {
+            width: $desctop16px;
+            height: $desctop16px;
+            margin: 0 $desctop5px;
+
+            @media only screen and (max-width: 499px) {
+                width: $mobile16px;
+                height: $mobile16px;
+                margin: 0 $mobile5px 0 0;
+            }
+        }
+
+        &_success {
+            color: $redColor;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        margin-top: $desctop10px;
+        font-family: $Montserrat500;
+        font-size: $desctop10px;
+        line-height: $desctop16px;
+        color: $slateGreyColor;
+
+        @media only screen and (max-width: 499px) {
+            flex-wrap: wrap;
+            margin-top: $mobile10px;
+            font-size: $mobile10px;
+            line-height: $mobile16px;
+        }
+
+        span {
+            margin-right: $desctop16px;
+
+            @media only screen and (max-width: 499px) {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
     }
 }
 
@@ -105,11 +177,10 @@
     }
 
     &__label {
-        min-width: 12.5vw;
+        min-width: 14.1vw;
         margin-right: $desctop50px;
 
         @media only screen and (max-width: 499px) {
-            min-width: 12.5vw;
             width: 100%;
             margin: 0 0 $mobile5px 0;
         }
@@ -139,7 +210,7 @@
         &_successIcon {
             width: $desctop14px;
             height: $desctop14px;
-            margin: 0 $desctop5px;
+            margin: 0 $desctop5px 0 0;
 
             @media only screen and (max-width: 499px) {
                 width: $mobile14px;
@@ -200,14 +271,6 @@
             @media only screen and (max-width: 499px) {
                 margin-right: $mobile5px;
                 display: none;
-            }
-        }
-
-        &_redBoxDapp {
-            margin-left: $desctop5px;
-
-            @media only screen and (max-width: 499px) {
-                margin-left: 0;
             }
         }
 
@@ -319,12 +382,10 @@
             svg {
                 width: $desctop14px;
                 height: $desctop14px;
-                margin-right: $desctop5px;
 
                 @media only screen and (max-width: 499px) {
                     width: $mobile14px;
                     height: $mobile14px;
-                    margin-right: $mobile5px;
                 }
             }
         }
@@ -332,88 +393,173 @@
         &_left {
             margin-right: $desctop45px;
             color: $midnightExpressColor;
+            margin-right: 7.5vw;
 
             @media only screen and (max-width: 499px) {
                 margin: 0 0 $mobile10px 0;
+            }
+
+            svg  {
+                margin-right: $desctop5px;
+
+                @media only screen and (max-width: 499px) {
+                    margin-right: $mobile5px;
+                }
             }
         }
 
         &_right {
             color: $slateGreyColor;
 
-            svg path {
-                fill: $slateGreyColor;
+            svg  {
+                margin-right: $desctop8px;
+
+                @media only screen and (max-width: 499px) {
+                    margin-right: $mobile5px;
+                }
+
+                path {
+                    fill: $slateGreyColor;
+                }
             }
         }
     }
 }
 
-.totalOutput {
-    &__top {
+.inputs {
+    &__title {
+        font-family: $Montserrat500;
+        font-size: $desctop14px;
+        line-height: $desctop20px;
+        color: $blackColor;
+        margin-bottom: $desctop10px;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile14px;
+            line-height: $mobile20px;
+            margin-bottom: $mobile10px;
+        }
+    }
+
+    &__wrapper {
         display: flex;
-        align-items: center;
+        margin-bottom: $desctop20px;
+
+        @media only screen and (max-width: 499px) {
+            margin-bottom: $mobile20px;
+        }
+    }
+
+    &__label {
         font-family: $Montserrat500;
         font-size: $desctop13px;
         line-height: $desctop19px;
         color: $midnightExpressColor;
+        margin-bottom: $desctop10px;
 
         @media only screen and (max-width: 499px) {
-            flex-wrap: wrap;
-            font-size: $mobile12px;
-            line-height: $mobile18px;
-        }
-
-        &_amount {
-            font-size: $desctop24px;
-            line-height: $desctop34px;
-            margin: 0 $desctop10px;
-
-            @media only screen and (max-width: 499px) {
-                font-size: $mobile24px;
-                line-height: $mobile34px;
-                margin: 0 $mobile10px;
-            }
-        }
-
-        &_icon {
-            width: $desctop16px;
-            height: $desctop16px;
-            margin: 0 $desctop5px;
-
-            @media only screen and (max-width: 499px) {
-                width: $mobile16px;
-                height: $mobile16px;
-                margin: 0 $mobile5px 0 0;
-            }
-        }
-
-        &_success {
-            color: $redColor;
+            font-size: $mobile13px;
+            line-height: $mobile19px;
+            margin-bottom: $mobile10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 
-    &__bottom {
-        display: flex;
-        align-items: center;
-        margin-top: $desctop10px;
-        font-family: $Montserrat500;
-        font-size: $desctop10px;
-        line-height: $desctop16px;
-        color: $slateGreyColor;
+    &__indexItem,
+    &__outputItem,
+    &__addressItem {
+        margin-right: $desctop20px;
 
         @media only screen and (max-width: 499px) {
-            flex-wrap: wrap;
-            margin-top: $mobile10px;
-            font-size: $mobile10px;
-            line-height: $mobile16px;
+            margin-right: 3vw;
+        }
+    }
+
+    &__indexItem {
+        min-width: $desctop55px;
+
+        @media only screen and (max-width: 499px) {
+            min-width: 11vw;
+        }
+    }
+
+    &__outputItem {
+        min-width: 11vw;
+
+        @media only screen and (max-width: 499px) {
+            min-width: 16.5vw;
         }
 
-        span {
-            margin-right: $desctop16px;
+        &_output {
+            color: $redColor;
+            max-width: 11vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
 
             @media only screen and (max-width: 499px) {
-                width: 100%;
-                margin-right: 0;
+                max-width: 16.5vw;
+            }
+
+            &:hover {
+                color: $redColor;
+                opacity: 0.5;
+            }
+        }
+
+        &_block {
+            color: $redColor;
+
+            &:hover {
+                color: $redColor;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &__black,
+    &__gray {
+        font-family: $Montserrat500;
+        font-size: $desctop13px;
+        line-height: $desctop19px;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile13px;
+            line-height: $mobile19px;
+        }
+    }
+
+    &__black {
+        color: $midnightExpressColor;
+
+        @media only screen and (max-width: 499px) {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+
+    &__gray {
+        color: $slateGreyColor;
+    }
+
+    &__addressItem {
+        @media only screen and (max-width: 499px) {
+            max-width: 17vw;
+        }
+
+        &_address {
+            color: $redColor;
+            max-width: 25vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+
+            &:hover {
+                color: $redColor;
+                opacity: 0.5;
             }
         }
     }

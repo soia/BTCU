@@ -192,6 +192,123 @@ class TransactionPage extends Component {
                                 </div>
                             </div>
                         </div>
+                        <div className={style.inputs}>
+                            <p className={style.inputs__title}>{t('inputs')}</p>
+                            <div className={style.inputs__wrapper}>
+                                <div className={style.inputs__indexItem}>
+                                    <p className={style.inputs__label}>{t('index')}</p>
+                                    <p className={style.inputs__black}>0</p>
+                                </div>
+                                <div className={style.inputs__outputItem}>
+                                    <p className={style.inputs__label}>
+                                        {t('previousOutput')}
+                                    </p>
+                                    <Link
+                                        to="/"
+                                        className={style.inputs__outputItem_output}
+                                    >
+                                        85a0d38c114847dfjhfjewfhj234
+                                    </Link>
+                                    <p style={{ whiteSpace: 'nowrap' }}>
+                                        <span className={style.inputs__black}>
+                                            {t('in')}
+                                        </span>{' '}
+                                        <Link
+                                            to="/"
+                                            className={style.inputs__outputItem_block}
+                                        >
+                                            2454114
+                                        </Link>
+                                    </p>
+                                </div>
+                                <div className={style.inputs__addressItem}>
+                                    <p className={style.inputs__label}>
+                                        {t('address')}
+                                    </p>
+                                    <Link
+                                        to="/"
+                                        className={style.inputs__addressItem_address}
+                                    >
+                                    D6WRqaYKyUpA5TzeJ9386KTupo817eXmD6WRqaYKyUpA5TzeJ9386KTupo817eXm..
+                                    </Link>
+                                </div>
+                                <div className={style.inputs__addressItem}>
+                                    <p className={style.inputs__label}>
+                                        {t('amount')}
+                                    </p>
+                                    <p className={style.inputs__black}>
+                                    514.14285714 BTCU
+                                    </p>
+                                </div>
+                            </div>
+                            <p className={style.inputs__title}>{t('outputs')}</p>
+                            <div className={style.inputs__wrapper}>
+                                <div className={style.inputs__indexItem}>
+                                    <p className={style.inputs__label}>{t('index')}</p>
+                                    <p className={style.inputs__black}>0</p>
+                                </div>
+                                <div className={style.inputs__outputItem}>
+                                    <p className={style.inputs__label}>
+                                        {t('redeemedIn')}
+                                    </p>
+                                    <p className={style.inputs__gray}>
+                                        {t('notYetRedeemed')}
+                                    </p>
+                                </div>
+                                <div className={style.inputs__addressItem}>
+                                    <p className={style.inputs__label}>
+                                        {t('address')}
+                                    </p>
+                                    <Link
+                                        to="/"
+                                        className={style.inputs__addressItem_address}
+                                    >
+                                D6WRqaYKyUpA5TzeJ9386KTupo817eXmD6WRqaYKyUpA5TzeJ9386KTupo817eXm..
+                                    </Link>
+                                </div>
+                                <div className={style.inputs__addressItem}>
+                                    <p className={style.inputs__label}>
+                                        {t('amount')}
+                                    </p>
+                                    <p className={style.inputs__black}>
+                                514.14285714 BTCU
+                                    </p>
+                                </div>
+                            </div>
+                            <div className={style.inputs__wrapper}>
+                                <div className={style.inputs__indexItem}>
+                                    <p className={style.inputs__label}>{t('index')}</p>
+                                    <p className={style.inputs__black}>1</p>
+                                </div>
+                                <div className={style.inputs__outputItem}>
+                                    <p className={style.inputs__label}>
+                                        {t('redeemedIn')}
+                                    </p>
+                                    <p className={style.inputs__gray}>
+                                        {t('notYetRedeemed')}
+                                    </p>
+                                </div>
+                                <div className={style.inputs__addressItem}>
+                                    <p className={style.inputs__label}>
+                                        {t('address')}
+                                    </p>
+                                    <Link
+                                        to="/"
+                                        className={style.inputs__addressItem_address}
+                                    >
+                            D6WRqaYKyUpA5TzeJ9386KTupo817eXmD6WRqaYKyUpA5TzeJ9386KTupo817eXm..
+                                    </Link>
+                                </div>
+                                <div className={style.inputs__addressItem}>
+                                    <p className={style.inputs__label}>
+                                        {t('amount')}
+                                    </p>
+                                    <p className={style.inputs__black}>
+                            514.14285714 BTCU
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                         <div className={style.privateNote}>
                             {t('privateNote')}: {t('yoAccessPrivateNote')}{' '}
                             <Link to={loginPath}>{t('loggedIn')}</Link>

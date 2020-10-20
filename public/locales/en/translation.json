@@ -182,6 +182,7 @@
     "successNotification": "Success!",
     "сopiedToClipboard": "Copied to the clipboard.",
     "blockConfirmations": "Block Confirmations",
+    "in": "in",
     "error": {
         "wrong_email": "Incorrect email",
         "one_lowercase_char": "One latin lowercase character",
