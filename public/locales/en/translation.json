@@ -179,6 +179,9 @@
     "privateNote": "Private Note",
     "yoAccessPrivateNote": "To access the Private Note feature, you must be",
     "loggedIn": "Logged In",
+    "successNotification": "Success!",
+    "сopiedToClipboard": "Copied to the clipboard.",
+    "blockConfirmations": "Block Confirmations",
     "error": {
         "wrong_email": "Incorrect email",
         "one_lowercase_char": "One latin lowercase character",

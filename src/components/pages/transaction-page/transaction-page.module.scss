@@ -50,7 +50,8 @@
 
 .totalOutput,
 .privateNote,
-.rawBlock {
+.rawBlock,
+.transBlock {
     padding: $desctop20px;
     background: $whiteColor;
     box-shadow: 0px $desctop2px $desctop6px rgba(0, 0, 0, 0.07);
@@ -62,6 +63,288 @@
         box-shadow: 0px $mobile2px $mobile6px rgba(0, 0, 0, 0.07);
         border-radius: $mobile10px;
         margin-bottom: $mobile15px;
+    }
+}
+
+.transBlock {
+
+    &__hash,
+    &__block,
+    &__timestamp,
+    &__from {
+        display: flex;
+        align-items: center;
+        margin-bottom: $desctop25px;
+
+        @media only screen and (max-width: 499px) {
+            margin-bottom: $mobile20px;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__interacted {
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: 499px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__label,
+    &__hash {
+        font-family: $Montserrat500;
+        font-size: $desctop13px;
+        line-height: $desctop19px;
+        color: $midnightExpressColor;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile13px;
+            line-height: $mobile19px;
+        }
+    }
+
+    &__label {
+        min-width: 12.5vw;
+        margin-right: $desctop50px;
+
+        @media only screen and (max-width: 499px) {
+            min-width: 12.5vw;
+            width: 100%;
+            margin: 0 0 $mobile5px 0;
+        }
+    }
+
+    &__hashWrapper {
+        display: flex;
+        align-items: center;
+
+        p {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $midnightExpressColor;
+
+            @media only screen and (max-width: 499px) {
+                max-width: 72vw;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
+        }
+    }
+
+    &__from {
+        &_successIcon {
+            width: $desctop14px;
+            height: $desctop14px;
+            margin: 0 $desctop5px;
+
+            @media only screen and (max-width: 499px) {
+                width: $mobile14px;
+                height: $mobile14px;
+                margin: 0 0 0 $mobile15px ;
+            }
+        }
+    }
+
+    &__fromWrapper {
+        display: flex;
+        align-items: center;
+
+        p {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $redColor;
+            max-width: 25.7vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media only screen and (max-width: 499px) {
+                max-width: 64vw;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
+        }
+    }
+
+    &__interactedWr {
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: 499px) {
+            flex-wrap: wrap;
+        }
+
+        &_contract,
+        &_redBoxDapp {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $midnightExpressColor;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
+        }
+
+
+        &_contract {
+            margin-right: $desctop5px;
+
+            @media only screen and (max-width: 499px) {
+                margin-right: $mobile5px;
+                display: none;
+            }
+        }
+
+        &_redBoxDapp {
+            margin-left: $desctop5px;
+
+            @media only screen and (max-width: 499px) {
+                margin-left: 0;
+            }
+        }
+
+        p {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $redColor;
+            max-width: 21.2vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media only screen and (max-width: 499px) {
+                max-width: 71.5vw;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
+        }
+    }
+
+    &__copy {
+        box-sizing: content-box;
+        display: flex;
+
+        svg {
+            padding: 0 $desctop10px;
+            cursor: pointer;
+            width: $desctop12px;
+            height: $desctop12px;
+
+            @media only screen and (max-width: 499px) {
+                padding: 0 0 0 $mobile10px;
+                width: $mobile12px;
+                height: $mobile12px;
+            }
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &__block {
+        &_blockNumber {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $redColor;
+            margin-right: $desctop5px;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+                margin-right: $mobile5px;
+            }
+
+            &:hover {
+                color: $redColor;
+                text-decoration: underline;
+            }
+        }
+
+        &_confirmations {
+            background: rgba(119, 131, 143, 0.1);
+            border-radius: $desctop4px;
+            padding: $desctop2px $desctop6px;
+            margin-left: $desctop5px;
+            font-family: $Montserrat500;
+            font-size: $desctop10px;
+            line-height: $desctop17px;
+            letter-spacing: $desctop1px;
+            color: $slateGreyColor;
+
+            @media only screen and (max-width: 499px) {
+                border-radius: $mobile5px;
+                padding: $mobile2px $mobile6px;
+                margin-left: $mobile5px;
+                font-size: $mobile10px;
+                line-height: $mobile17px;
+                letter-spacing: $mobile1px;
+            }
+        }
+    }
+
+    &__timestampWrapper {
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: 499px) {
+            flex-wrap: wrap;
+        }
+
+        &_left,
+        &_right {
+            display: flex;
+            align-items: center;
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+                width: 100%;
+            }
+
+            svg {
+                width: $desctop14px;
+                height: $desctop14px;
+                margin-right: $desctop5px;
+
+                @media only screen and (max-width: 499px) {
+                    width: $mobile14px;
+                    height: $mobile14px;
+                    margin-right: $mobile5px;
+                }
+            }
+        }
+
+        &_left {
+            margin-right: $desctop45px;
+            color: $midnightExpressColor;
+
+            @media only screen and (max-width: 499px) {
+                margin: 0 0 $mobile10px 0;
+            }
+        }
+
+        &_right {
+            color: $slateGreyColor;
+
+            svg path {
+                fill: $slateGreyColor;
+            }
+        }
     }
 }
 

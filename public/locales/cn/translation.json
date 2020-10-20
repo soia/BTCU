@@ -180,6 +180,9 @@
     "privateNote": "私人票据",
     "yoAccessPrivateNote": "要访问私人注释功能，您必须",
     "loggedIn": "登录",
+    "successNotification": "成功!",
+    "сopiedToClipboard": "复制到剪贴板.",
+    "blockConfirmations": "阻止确认",
     "error": {
         "wrong_email": "不正确的电子邮件",
         "one_lowercase_char": "一个拉丁小写字符",

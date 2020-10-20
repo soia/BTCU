@@ -180,6 +180,9 @@
     "privateNote": "Частная заметка",
     "yoAccessPrivateNote": "Чтобы получить доступ к функции личных заметок, вы должны быть",
     "loggedIn": "Авторизованы",
+    "successNotification": "Успешно!",
+    "сopiedToClipboard": "Скопировано в буфер обмена.",
+    "blockConfirmations": "Блокированных подтверждений",
     "error": {
         "wrong_email": "Неверный email",
         "one_lowercase_char": "Один строчный латинский символ",
