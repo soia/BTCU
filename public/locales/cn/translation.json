@@ -184,6 +184,13 @@
     "сopiedToClipboard": "复制到剪贴板.",
     "blockConfirmations": "阻止确认",
     "in": "在",
+    "name": "名称",
+    "topics": "主题",
+    "data": "数据",
+    "matchesTopics": "比赛主题",
+    "transfer": "转让",
+    "viewSource": "查看资料",
+    "transactionReceiptEventLogs": "交易收据事件日志",
     "error": {
         "wrong_email": "不正确的电子邮件",
         "one_lowercase_char": "一个拉丁小写字符",

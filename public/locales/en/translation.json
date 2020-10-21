@@ -183,6 +183,13 @@
     "сopiedToClipboard": "Copied to the clipboard.",
     "blockConfirmations": "Block Confirmations",
     "in": "in",
+    "name": "Name",
+    "topics": "Topics",
+    "data": "Data",
+    "matchesTopics": "matches topics",
+    "transfer": "Transfer",
+    "viewSource": "View Source",
+    "transactionReceiptEventLogs": "Transaction Receipt Event Logs",
     "error": {
         "wrong_email": "Incorrect email",
         "one_lowercase_char": "One latin lowercase character",

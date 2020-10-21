@@ -52,7 +52,8 @@
 .privateNote,
 .rawBlock,
 .transBlock,
-.inputs {
+.inputs,
+.logs {
     padding: $desctop20px;
     background: $whiteColor;
     box-shadow: 0px $desctop2px $desctop6px rgba(0, 0, 0, 0.07);
@@ -215,7 +216,7 @@
             @media only screen and (max-width: 499px) {
                 width: $mobile14px;
                 height: $mobile14px;
-                margin: 0 0 0 $mobile15px ;
+                margin: 0 0 0 $mobile15px;
             }
         }
     }
@@ -399,7 +400,7 @@
                 margin: 0 0 $mobile10px 0;
             }
 
-            svg  {
+            svg {
                 margin-right: $desctop5px;
 
                 @media only screen and (max-width: 499px) {
@@ -411,7 +412,7 @@
         &_right {
             color: $slateGreyColor;
 
-            svg  {
+            svg {
                 margin-right: $desctop8px;
 
                 @media only screen and (max-width: 499px) {
@@ -611,6 +612,211 @@
             @media only screen and (max-width: 499px) {
                 font-size: $mobile13px;
                 line-height: $mobile19px;
+            }
+        }
+    }
+}
+
+.logs {
+    &__title {
+        font-family: $Montserrat500;
+        font-size: $desctop13px;
+        line-height: $desctop19px;
+        color: $tolopeaColor;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile13px;
+            line-height: $mobile18px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: $desctop15px;
+
+        @media only screen and (max-width: 499px) {
+            margin-bottom: $mobile15px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+
+        &_item {
+            display: flex;
+
+            &:not(:last-child) {
+                margin-bottom: $desctop16px;
+
+
+                @media only screen and (max-width: 499px) {
+                    margin-bottom: $mobile16px;
+                }
+            }
+        }
+
+        &_label {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $tolopeaColor;
+            margin-right: $desctop32px;
+            min-width: 4vw;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile12px;
+                line-height: $mobile18px;
+                margin-right: $mobile20px;
+                min-width: 13vw;
+            }
+        }
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $desctop40px;
+        height: $desctop40px;
+        background: rgba(255, 41, 17, 0.15);
+        border-radius: $desctop50px;
+        margin-right: $desctop40px;
+
+        @media only screen and (max-width: 499px) {
+            display: none;
+            width: $mobile42px;
+            height: $mobile42px;
+            border-radius: $mobile50px;
+            margin: 0 0 0 $mobile17px;
+        }
+
+        span {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $redColor;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
+        }
+
+        &_mobile {
+            display: none;
+
+            @media only screen and (max-width: 499px) {
+                display: flex;
+            }
+
+        }
+    }
+
+    &__red,
+    &__green,
+    &__link,
+    &__black,
+    &__dec {
+        font-family: $Montserrat500;
+        font-size: $desctop13px;
+        line-height: $desctop19px;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile13px;
+            line-height: $mobile18px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: inline-block;
+            max-width: 43vw;
+        }
+    }
+
+    &__red {
+        color: $redColor;
+    }
+
+    &__black {
+        color: $tolopeaColor;
+    }
+
+    &__dec {
+        color: $tolopeaColor;
+        margin-right: $desctop8px;
+
+        @media only screen and (max-width: 499px) {
+            margin-right: $mobile7px;
+        }
+    }
+
+    &__link {
+        color: $redColor;
+
+        &:hover {
+            color: $redColor;
+            text-decoration: underline;
+        }
+    }
+
+    &__green {
+        color: $greenColor;
+    }
+
+    &__index {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: $desctop22px;
+        height: $desctop22px;
+        background: $zirconColor;
+        border-radius: 50%;
+        font-family: $Montserrat400;
+        font-size: $desctop10px;
+        color: $tolopeaColor;
+        margin-right: $desctop8px;
+
+        @media only screen and (max-width: 499px) {
+            width: $mobile21px;
+            height: $mobile21px;
+            font-size: $mobile10px;
+            margin-right: $mobile7px;
+        }
+    }
+
+    &__topicItem {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: $desctop8px;
+
+            @media only screen and (max-width: 499px) {
+                margin-bottom: $mobile7px;
+            }
+        }
+    }
+
+    &__data {
+        width: 100%;
+        border: $desctop1px solid rgba(36, 36, 68, 0.1);
+        border-radius: $desctop17px;
+        padding: $desctop20px;
+
+        @media only screen and (max-width: 499px) {
+            border: $mobile1px solid rgba(36, 36, 68, 0.1);
+            border-radius: $mobile17px;
+            padding: $mobile20px;
+        }
+
+        &_tokens {
+            font-family: $Montserrat400;
+            font-size: $desctop13px;
+            color: $slateGreyColor;
+            margin-right: $desctop5px;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                margin-right: $mobile5px;
             }
         }
     }

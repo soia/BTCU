@@ -184,6 +184,13 @@
     "сopiedToClipboard": "Скопировано в буфер обмена.",
     "blockConfirmations": "Блокированных подтверждений",
     "in": "в",
+    "name": "Имя",
+    "topics": "Темы",
+    "data": "Данные",
+    "matchesTopics": "соответствует темам",
+    "transfer": "Перевод",
+    "viewSource": "Просмотреть исходный код",
+    "transactionReceiptEventLogs": "Логи получения транзакций",
     "error": {
         "wrong_email": "Неверный email",
         "one_lowercase_char": "Один строчный латинский символ",

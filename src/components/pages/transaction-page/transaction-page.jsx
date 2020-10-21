@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import classNames from 'classnames';
 import { store } from 'react-notifications-component';
 import { Tabs } from 'antd';
 import { Link, withRouter } from 'react-router-dom';
@@ -222,22 +223,18 @@ class TransactionPage extends Component {
                                     </p>
                                 </div>
                                 <div className={style.inputs__addressItem}>
-                                    <p className={style.inputs__label}>
-                                        {t('address')}
-                                    </p>
+                                    <p className={style.inputs__label}>{t('address')}</p>
                                     <Link
                                         to="/"
                                         className={style.inputs__addressItem_address}
                                     >
-                                    D6WRqaYKyUpA5TzeJ9386KTupo817eXmD6WRqaYKyUpA5TzeJ9386KTupo817eXm..
+                                        D6WRqaYKyUpA5TzeJ9386KTupo817eXmD6WRqaYKyUpA5TzeJ9386KTupo817eXm..
                                     </Link>
                                 </div>
                                 <div className={style.inputs__addressItem}>
-                                    <p className={style.inputs__label}>
-                                        {t('amount')}
-                                    </p>
+                                    <p className={style.inputs__label}>{t('amount')}</p>
                                     <p className={style.inputs__black}>
-                                    514.14285714 BTCU
+                                        514.14285714 BTCU
                                     </p>
                                 </div>
                             </div>
@@ -256,22 +253,18 @@ class TransactionPage extends Component {
                                     </p>
                                 </div>
                                 <div className={style.inputs__addressItem}>
-                                    <p className={style.inputs__label}>
-                                        {t('address')}
-                                    </p>
+                                    <p className={style.inputs__label}>{t('address')}</p>
                                     <Link
                                         to="/"
                                         className={style.inputs__addressItem_address}
                                     >
-                                D6WRqaYKyUpA5TzeJ9386KTupo817eXmD6WRqaYKyUpA5TzeJ9386KTupo817eXm..
+                                        D6WRqaYKyUpA5TzeJ9386KTupo817eXmD6WRqaYKyUpA5TzeJ9386KTupo817eXm..
                                     </Link>
                                 </div>
                                 <div className={style.inputs__addressItem}>
-                                    <p className={style.inputs__label}>
-                                        {t('amount')}
-                                    </p>
+                                    <p className={style.inputs__label}>{t('amount')}</p>
                                     <p className={style.inputs__black}>
-                                514.14285714 BTCU
+                                        514.14285714 BTCU
                                     </p>
                                 </div>
                             </div>
@@ -289,22 +282,18 @@ class TransactionPage extends Component {
                                     </p>
                                 </div>
                                 <div className={style.inputs__addressItem}>
-                                    <p className={style.inputs__label}>
-                                        {t('address')}
-                                    </p>
+                                    <p className={style.inputs__label}>{t('address')}</p>
                                     <Link
                                         to="/"
                                         className={style.inputs__addressItem_address}
                                     >
-                            D6WRqaYKyUpA5TzeJ9386KTupo817eXmD6WRqaYKyUpA5TzeJ9386KTupo817eXm..
+                                        D6WRqaYKyUpA5TzeJ9386KTupo817eXmD6WRqaYKyUpA5TzeJ9386KTupo817eXm..
                                     </Link>
                                 </div>
                                 <div className={style.inputs__addressItem}>
-                                    <p className={style.inputs__label}>
-                                        {t('amount')}
-                                    </p>
+                                    <p className={style.inputs__label}>{t('amount')}</p>
                                     <p className={style.inputs__black}>
-                            514.14285714 BTCU
+                                        514.14285714 BTCU
                                     </p>
                                 </div>
                             </div>
@@ -322,8 +311,116 @@ class TransactionPage extends Component {
                         </div>
                     </TabPane>
                     <TabPane tab={t('logs')} key="3">
-                        <div className={style.rawBlock}>
-                            <div className={style.rawBlock__wrapper}>3</div>
+                        <div className={style.logs}>
+                            <div className={style.logs__header}>
+                                <p className={style.logs__title}>
+                                    {t('transactionReceiptEventLogs')}
+                                </p>
+                                <div
+                                    className={classNames(
+                                        style.logs__left,
+                                        style.logs__left_mobile,
+                                    )}
+                                >
+                                    <span>69</span>
+                                </div>
+                            </div>
+                            <div className={style.logs__wrapper}>
+                                <div className={style.logs__left}>
+                                    <span>69</span>
+                                </div>
+                                <div>
+                                    <div className={style.logs__wrapper_item}>
+                                        <p className={style.logs__wrapper_label}>
+                                            {t('address')}
+                                        </p>
+                                        <Link className={style.logs__link} to="/">
+                                            {ADDRESS} {t('matchesTopics')}
+                                        </Link>
+                                    </div>
+                                    <div className={style.logs__wrapper_item}>
+                                        <p className={style.logs__wrapper_label}>
+                                            {t('name')}
+                                        </p>
+                                        <p>
+                                            <span className={style.logs__black}>
+                                                {t('transfer')} (index_topic_1
+                                            </span>{' '}
+                                            <span className={style.logs__green}>
+                                                address
+                                            </span>{' '}
+                                            <span className={style.logs__red}>from {' '}</span>
+                                            <span className={style.logs__black}>
+                                                index_topic_2
+                                            </span>{' '}
+                                            <span className={style.logs__green}>
+                                                address
+                                            </span>{' '}
+                                            <span className={style.logs__red}>to </span>
+                                            <span className={style.logs__green}>
+                                                uint256
+                                            </span>{' '}
+                                            <span className={style.logs__red}>
+                                                tokens
+                                            </span>
+                                            <span className={style.logs__black}>){' '}</span>
+                                            <Link className={style.logs__link} to="/">
+                                                {t('viewSource')}
+                                            </Link>
+                                        </p>
+                                    </div>
+                                    <div className={style.logs__wrapper_item}>
+                                        <p className={style.logs__wrapper_label}>
+                                            {t('topics')}
+                                        </p>
+                                        <div>
+                                            <p className={style.logs__topicItem}>
+                                                <span className={style.logs__index}>
+                                                    0
+                                                </span>
+                                                <span className={style.logs__black}>
+                                                    {ADDRESS}
+                                                </span>
+                                            </p>
+                                            <p className={style.logs__topicItem}>
+                                                <span className={style.logs__index}>
+                                                    1
+                                                </span>
+                                                <span className={style.logs__dec}>
+                                                    Dec
+                                                </span>
+                                                <Link to="/" className={style.logs__link}>
+                                                    {ADDRESS}
+                                                </Link>
+                                            </p>
+                                            <p className={style.logs__topicItem}>
+                                                <span className={style.logs__index}>
+                                                    2
+                                                </span>
+                                                <span className={style.logs__dec}>
+                                                    Dec
+                                                </span>
+                                                <Link to="/" className={style.logs__link}>
+                                                    {ADDRESS}
+                                                </Link>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className={style.logs__wrapper_item}>
+                                        <p className={style.logs__wrapper_label}>
+                                            {t('data')}
+                                        </p>
+                                        <div className={style.logs__data}>
+                                            <span className={style.logs__data_tokens}>
+                                                tokens:
+                                            </span>
+                                            <span className={style.logs__black}>
+                                                1641318590960000000000
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </TabPane>
                     <TabPane tab={t('state')} key="4">
