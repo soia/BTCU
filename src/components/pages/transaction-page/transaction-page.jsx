@@ -72,7 +72,7 @@ class TransactionPage extends Component {
                 <p className={style.block__subTitle}>
                     {t('featuredTrackDeposits')} <a href="/">BeaconScan.com!</a>
                 </p>
-                <Tabs defaultActiveKey="4">
+                <Tabs defaultActiveKey="1">
                     <TabPane tab={t('overview')} key="1">
                         <div className={style.totalOutput}>
                             <div className={style.totalOutput__top}>
