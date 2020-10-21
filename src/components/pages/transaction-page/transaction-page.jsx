@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Overview from './overview';
 import StateBlock from './state-block';
+import Comments from './comments';
 import Logs from './logs';
 import { compose } from '../../../utils';
 import Code from './raw-block';
@@ -67,9 +68,7 @@ class TransactionPage extends Component {
                         <StateBlock />
                     </TabPane>
                     <TabPane tab={t('comments')} key="5">
-                        <div className={style.rawBlock}>
-                            <div className={style.rawBlock__wrapper}>5</div>
-                        </div>
+                        <Comments />
                     </TabPane>
                 </Tabs>
             </div>

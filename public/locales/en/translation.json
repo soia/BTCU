@@ -194,6 +194,8 @@
     "after": "After",
     "stateDifference": "State difference",
     "nonce": "Nonce",
+    "disqusPrivacypolicy": "Disqus’ Privacy policy",
+    "authorizeWriteComments": "Authorize for ability write a comments!",
     "error": {
         "wrong_email": "Incorrect email",
         "one_lowercase_char": "One latin lowercase character",

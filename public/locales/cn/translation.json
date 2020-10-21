@@ -195,6 +195,8 @@
     "after": "后",
     "stateDifference": "状态差异",
     "nonce": "Nonce",
+    "disqusPrivacypolicy": "隐私政策",
+    "authorizeWriteComments": "授权才能发表评论！",
     "error": {
         "wrong_email": "不正确的电子邮件",
         "one_lowercase_char": "一个拉丁小写字符",
