@@ -499,9 +499,13 @@
             overflow: hidden;
             text-overflow: ellipsis;
             display: block;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
 
             @media only screen and (max-width: 499px) {
                 max-width: 16.5vw;
+                font-size: $mobile13px;
+                line-height: $mobile19px;
             }
 
             &:hover {
@@ -512,6 +516,13 @@
 
         &_block {
             color: $redColor;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
 
             &:hover {
                 color: $redColor;
@@ -557,6 +568,13 @@
             overflow: hidden;
             text-overflow: ellipsis;
             display: block;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+            }
 
             &:hover {
                 color: $redColor;
