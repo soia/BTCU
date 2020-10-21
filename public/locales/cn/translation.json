@@ -191,6 +191,10 @@
     "transfer": "转让",
     "viewSource": "查看资料",
     "transactionReceiptEventLogs": "交易收据事件日志",
+    "before": "之前",
+    "after": "后",
+    "stateDifference": "状态差异",
+    "nonce": "Nonce",
     "error": {
         "wrong_email": "不正确的电子邮件",
         "one_lowercase_char": "一个拉丁小写字符",

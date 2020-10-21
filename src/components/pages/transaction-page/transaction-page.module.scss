@@ -821,3 +821,177 @@
         }
     }
 }
+
+.state {
+    &__item {
+        display: flex;
+        padding: $desctop20px;
+        background: $whiteColor;
+        box-shadow: 0px $desctop2px $desctop6px rgba(0, 0, 0, 0.07);
+        border-radius: $desctop8px;
+        margin-bottom: $desctop15px;
+
+        @media only screen and (max-width: 499px) {
+            flex-wrap: wrap;
+            padding: $mobile20px;
+            box-shadow: 0px $mobile2px $mobile6px rgba(0, 0, 0, 0.07);
+            border-radius: $mobile10px;
+            margin-bottom: $mobile15px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: $desctop15px;
+
+            @media only screen and (max-width: 499px) {
+                margin-bottom: $mobile15px;
+            }
+        }
+    }
+
+    &__label {
+        font-family: $Montserrat500;
+        font-size: $desctop13px;
+        line-height: $desctop19px;
+        color: $midnightExpressColor;
+        margin-bottom: $desctop10px;
+        height: $desctop19px;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile13px;
+            line-height: $mobile19px;
+            margin-bottom: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: initial;
+        }
+    }
+
+    &__addressItem,
+    &__beforeItem,
+    &__afterItem,
+    &__stateItem {
+        @media only screen and (max-width: 499px) {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    &__addressItem,
+    &__beforeItem,
+    &__afterItem {
+        margin-right: $desctop25px;
+
+        @media only screen and (max-width: 499px) {
+            margin: 0 0 $mobile18px 0;
+        }
+    }
+
+    &__addressItem {
+        min-width: 27vw;
+
+        &_value {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $blackColor;
+            max-width: 27vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__beforeItem {
+        min-width: 17.3vw;
+
+        &_value {
+            display: block;
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $blackColor;
+            max-width: 18vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+                max-width: 100%;
+            }
+        }
+
+        &_more {
+            display: flex;
+            align-items: center;
+            margin-left: $desctop40px;
+            color: $redColor;
+            cursor: pointer;
+
+            @media only screen and (max-width: 499px) {
+                margin-left: $mobile42px;
+            }
+
+            &:hover {
+                opacity: 0.5;
+            }
+
+            svg {
+                width: $desctop10px;
+                height: $desctop10px;
+                margin-left: $desctop4px;
+
+                @media only screen and (max-width: 499px) {
+                    width: $mobile10px;
+                    height: $mobile10px;
+                    margin-left: $mobile5px;
+                }
+            }
+        }
+    }
+
+    &__afterItem {
+        min-width: 18vw;
+    }
+
+    &__stateItem {
+        &_value {
+            font-family: $Montserrat500;
+            font-size: $desctop13px;
+            line-height: $desctop19px;
+            color: $blackColor;
+            max-width: 14vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            @media only screen and (max-width: 499px) {
+                font-size: $mobile13px;
+                line-height: $mobile19px;
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__gray {
+        font-family: $Montserrat500;
+        font-size: $desctop10px;
+        line-height: $desctop17px;
+        letter-spacing: $desctop1px;
+        color: $slateGreyColor;
+
+        @media only screen and (max-width: 499px) {
+            font-size: $mobile10px;
+            line-height: $mobile17px;
+            letter-spacing: $mobile1px;
+        }
+    }
+}

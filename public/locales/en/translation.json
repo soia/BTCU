@@ -190,6 +190,10 @@
     "transfer": "Transfer",
     "viewSource": "View Source",
     "transactionReceiptEventLogs": "Transaction Receipt Event Logs",
+    "before": "Before",
+    "after": "After",
+    "stateDifference": "State difference",
+    "nonce": "Nonce",
     "error": {
         "wrong_email": "Incorrect email",
         "one_lowercase_char": "One latin lowercase character",

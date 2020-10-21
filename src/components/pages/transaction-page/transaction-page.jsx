@@ -8,6 +8,7 @@ import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { compose } from '../../../utils';
 import Code from './raw-block';
+import ArrowDownRedFilledIcon from '../../assets/images/icons/arrow-down-red-filled-icon';
 import CopyIcon from '../../assets/images/icons/copy-icon';
 import ClockIcon from '../../assets/images/icons/clock-icon';
 import { loginPath, blockPath } from '../../../constants/pathLocation';
@@ -71,7 +72,7 @@ class TransactionPage extends Component {
                 <p className={style.block__subTitle}>
                     {t('featuredTrackDeposits')} <a href="/">BeaconScan.com!</a>
                 </p>
-                <Tabs defaultActiveKey="1">
+                <Tabs defaultActiveKey="4">
                     <TabPane tab={t('overview')} key="1">
                         <div className={style.totalOutput}>
                             <div className={style.totalOutput__top}>
@@ -349,7 +350,7 @@ class TransactionPage extends Component {
                                             <span className={style.logs__green}>
                                                 address
                                             </span>{' '}
-                                            <span className={style.logs__red}>from {' '}</span>
+                                            <span className={style.logs__red}>from </span>
                                             <span className={style.logs__black}>
                                                 index_topic_2
                                             </span>{' '}
@@ -363,7 +364,7 @@ class TransactionPage extends Component {
                                             <span className={style.logs__red}>
                                                 tokens
                                             </span>
-                                            <span className={style.logs__black}>){' '}</span>
+                                            <span className={style.logs__black}>) </span>
                                             <Link className={style.logs__link} to="/">
                                                 {t('viewSource')}
                                             </Link>
@@ -424,8 +425,86 @@ class TransactionPage extends Component {
                         </div>
                     </TabPane>
                     <TabPane tab={t('state')} key="4">
-                        <div className={style.rawBlock}>
-                            <div className={style.rawBlock__wrapper}>4</div>
+                        <div className={style.state}>
+                            <div className={style.state__item}>
+                                <div className={style.state__addressItem}>
+                                    <p className={style.state__label}>{t('address')}</p>
+                                    <p className={style.state__addressItem_value}>
+                                        0x7105ec15995a97496ec25de36cf7eec47b703375
+                                    </p>
+                                </div>
+                                <div className={style.state__beforeItem}>
+                                    <p className={style.state__label}>{t('before')}</p>
+                                    <p className={style.state__beforeItem_value}>
+                                        1,877.3065985 BTCU
+                                    </p>
+                                </div>
+                                <div className={style.state__afterItem}>
+                                    <p className={style.state__label}>{t('after')}</p>
+                                    <p className={style.state__beforeItem_value}>1,877.3065985 BTCU</p>
+                                </div>
+                                <div className={style.state__stateItem}>
+                                    <p className={style.state__label}>
+                                        {t('stateDifference')}
+                                    </p>
+                                    <p className={style.state__stateItem_value}>
+                                        0.00636409180
+                                    </p>
+                                </div>
+                            </div>
+                            <div className={style.state__item}>
+                                <div className={style.state__addressItem}>
+                                    <p className={style.state__label}>{t('address')}</p>
+                                    <p className={style.state__addressItem_value}>
+                                        0x7105ec15995a97496ec25de36cf7eec47b703375
+                                    </p>
+                                </div>
+                                <div className={style.state__beforeItem}>
+                                    <p className={style.state__label}>{t('before')}</p>
+                                    <p className={style.state__beforeItem_value}>
+                                        1,877.306598594643362884 BTCU
+                                    </p>
+                                    <p className={style.state__gray}>
+                                        {t('nonce')}: 152724
+                                    </p>
+                                </div>
+                                <div className={style.state__afterItem}>
+                                    <p className={style.state__label}>{t('after')}</p>
+                                    <p className={style.state__beforeItem_value}>
+                                    1,877.3065985 BTCU
+                                    </p>
+                                    <p className={style.state__gray}>
+                                        {t('nonce')}: 152724
+                                    </p>
+                                </div>
+                                <div className={style.state__stateItem}>
+                                    <p className={style.state__label}>
+                                        {t('stateDifference')}
+                                    </p>
+                                    <p className={style.state__stateItem_value}>
+                                        0.00636409180
+                                    </p>
+                                </div>
+                            </div>
+                            <div className={style.state__item}>
+                                <div className={style.state__addressItem}>
+                                    <p className={style.state__label}>{t('address')}</p>
+                                    <p className={style.state__addressItem_value}>
+                                        0x7105ec15995a97496ec25de36cf7eec47b703375
+                                    </p>
+                                </div>
+                                <div className={style.state__beforeItem}>
+                                    <p className={style.state__label} />
+                                    <p className={style.state__beforeItem_value} style={{ display: 'flex' }}>
+                                        RBD{' '}
+                                        <span
+                                            className={style.state__beforeItem_more}
+                                        >
+                                            {t('more')} <ArrowDownRedFilledIcon />
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </TabPane>
                     <TabPane tab={t('comments')} key="5">

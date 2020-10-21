@@ -191,6 +191,10 @@
     "transfer": "Перевод",
     "viewSource": "Просмотреть исходный код",
     "transactionReceiptEventLogs": "Логи получения транзакций",
+    "before": "До",
+    "after": "После",
+    "stateDifference": "Различие состояний",
+    "nonce": "Nonce",
     "error": {
         "wrong_email": "Неверный email",
         "one_lowercase_char": "Один строчный латинский символ",
